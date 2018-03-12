@@ -20,187 +20,257 @@ import Data.StrMap as StrMap
 import AWS.Request as Request
 import AWS.Request.Types as Types
 
-serviceName = "AlexaForBusiness" :: String
-
 
 -- | <p>Associates a device to a given room. This applies all the settings from the room profile to the device, and all the skills in any skill groups added to that room. This operation requires the device to be online, or a manual sync is required. </p>
 associateDeviceWithRoom :: forall eff. AssociateDeviceWithRoomRequest -> Aff (exception :: EXCEPTION | eff) AssociateDeviceWithRoomResponse
-associateDeviceWithRoom = Request.request serviceName "associateDeviceWithRoom" 
+associateDeviceWithRoom = Request.request service method  where
+    service = Request.ServiceName "AlexaForBusiness"
+    method = Request.MethodName "associateDeviceWithRoom"
 
 
 -- | <p>Associates a skill group to a given room. This enables all skills in the associated skill group on all devices in the room.</p>
 associateSkillGroupWithRoom :: forall eff. AssociateSkillGroupWithRoomRequest -> Aff (exception :: EXCEPTION | eff) AssociateSkillGroupWithRoomResponse
-associateSkillGroupWithRoom = Request.request serviceName "associateSkillGroupWithRoom" 
+associateSkillGroupWithRoom = Request.request service method  where
+    service = Request.ServiceName "AlexaForBusiness"
+    method = Request.MethodName "associateSkillGroupWithRoom"
 
 
 -- | <p>Creates a new room profile with the specified details.</p>
 createProfile :: forall eff. CreateProfileRequest -> Aff (exception :: EXCEPTION | eff) CreateProfileResponse
-createProfile = Request.request serviceName "createProfile" 
+createProfile = Request.request service method  where
+    service = Request.ServiceName "AlexaForBusiness"
+    method = Request.MethodName "createProfile"
 
 
 -- | <p>Creates a room with the specified details.</p>
 createRoom :: forall eff. CreateRoomRequest -> Aff (exception :: EXCEPTION | eff) CreateRoomResponse
-createRoom = Request.request serviceName "createRoom" 
+createRoom = Request.request service method  where
+    service = Request.ServiceName "AlexaForBusiness"
+    method = Request.MethodName "createRoom"
 
 
 -- | <p>Creates a skill group with a specified name and description.</p>
 createSkillGroup :: forall eff. CreateSkillGroupRequest -> Aff (exception :: EXCEPTION | eff) CreateSkillGroupResponse
-createSkillGroup = Request.request serviceName "createSkillGroup" 
+createSkillGroup = Request.request service method  where
+    service = Request.ServiceName "AlexaForBusiness"
+    method = Request.MethodName "createSkillGroup"
 
 
 -- | <p>Creates a user.</p>
 createUser :: forall eff. CreateUserRequest -> Aff (exception :: EXCEPTION | eff) CreateUserResponse
-createUser = Request.request serviceName "createUser" 
+createUser = Request.request service method  where
+    service = Request.ServiceName "AlexaForBusiness"
+    method = Request.MethodName "createUser"
 
 
 -- | <p>Deletes a room profile by the profile ARN.</p>
 deleteProfile :: forall eff. DeleteProfileRequest -> Aff (exception :: EXCEPTION | eff) DeleteProfileResponse
-deleteProfile = Request.request serviceName "deleteProfile" 
+deleteProfile = Request.request service method  where
+    service = Request.ServiceName "AlexaForBusiness"
+    method = Request.MethodName "deleteProfile"
 
 
 -- | <p>Deletes a room by the room ARN.</p>
 deleteRoom :: forall eff. DeleteRoomRequest -> Aff (exception :: EXCEPTION | eff) DeleteRoomResponse
-deleteRoom = Request.request serviceName "deleteRoom" 
+deleteRoom = Request.request service method  where
+    service = Request.ServiceName "AlexaForBusiness"
+    method = Request.MethodName "deleteRoom"
 
 
 -- | <p>Deletes room skill parameter details by room, skill, and parameter key ID.</p>
 deleteRoomSkillParameter :: forall eff. DeleteRoomSkillParameterRequest -> Aff (exception :: EXCEPTION | eff) DeleteRoomSkillParameterResponse
-deleteRoomSkillParameter = Request.request serviceName "deleteRoomSkillParameter" 
+deleteRoomSkillParameter = Request.request service method  where
+    service = Request.ServiceName "AlexaForBusiness"
+    method = Request.MethodName "deleteRoomSkillParameter"
 
 
 -- | <p>Deletes a skill group by skill group ARN.</p>
 deleteSkillGroup :: forall eff. DeleteSkillGroupRequest -> Aff (exception :: EXCEPTION | eff) DeleteSkillGroupResponse
-deleteSkillGroup = Request.request serviceName "deleteSkillGroup" 
+deleteSkillGroup = Request.request service method  where
+    service = Request.ServiceName "AlexaForBusiness"
+    method = Request.MethodName "deleteSkillGroup"
 
 
 -- | <p>Deletes a specified user by user ARN and enrollment ARN.</p>
 deleteUser :: forall eff. DeleteUserRequest -> Aff (exception :: EXCEPTION | eff) DeleteUserResponse
-deleteUser = Request.request serviceName "deleteUser" 
+deleteUser = Request.request service method  where
+    service = Request.ServiceName "AlexaForBusiness"
+    method = Request.MethodName "deleteUser"
 
 
 -- | <p>Disassociates a device from its current room. The device continues to be connected to the Wi-Fi network and is still registered to the account. The device settings and skills are removed from the room.</p>
 disassociateDeviceFromRoom :: forall eff. DisassociateDeviceFromRoomRequest -> Aff (exception :: EXCEPTION | eff) DisassociateDeviceFromRoomResponse
-disassociateDeviceFromRoom = Request.request serviceName "disassociateDeviceFromRoom" 
+disassociateDeviceFromRoom = Request.request service method  where
+    service = Request.ServiceName "AlexaForBusiness"
+    method = Request.MethodName "disassociateDeviceFromRoom"
 
 
 -- | <p>Disassociates a skill group from a specified room. This disables all skills in the skill group on all devices in the room.</p>
 disassociateSkillGroupFromRoom :: forall eff. DisassociateSkillGroupFromRoomRequest -> Aff (exception :: EXCEPTION | eff) DisassociateSkillGroupFromRoomResponse
-disassociateSkillGroupFromRoom = Request.request serviceName "disassociateSkillGroupFromRoom" 
+disassociateSkillGroupFromRoom = Request.request service method  where
+    service = Request.ServiceName "AlexaForBusiness"
+    method = Request.MethodName "disassociateSkillGroupFromRoom"
 
 
 -- | <p>Gets the details of a device by device ARN.</p>
 getDevice :: forall eff. GetDeviceRequest -> Aff (exception :: EXCEPTION | eff) GetDeviceResponse
-getDevice = Request.request serviceName "getDevice" 
+getDevice = Request.request service method  where
+    service = Request.ServiceName "AlexaForBusiness"
+    method = Request.MethodName "getDevice"
 
 
 -- | <p>Gets the details of a room profile by profile ARN.</p>
 getProfile :: forall eff. GetProfileRequest -> Aff (exception :: EXCEPTION | eff) GetProfileResponse
-getProfile = Request.request serviceName "getProfile" 
+getProfile = Request.request service method  where
+    service = Request.ServiceName "AlexaForBusiness"
+    method = Request.MethodName "getProfile"
 
 
 -- | <p>Gets room details by room ARN.</p>
 getRoom :: forall eff. GetRoomRequest -> Aff (exception :: EXCEPTION | eff) GetRoomResponse
-getRoom = Request.request serviceName "getRoom" 
+getRoom = Request.request service method  where
+    service = Request.ServiceName "AlexaForBusiness"
+    method = Request.MethodName "getRoom"
 
 
 -- | <p>Gets room skill parameter details by room, skill, and parameter key ARN.</p>
 getRoomSkillParameter :: forall eff. GetRoomSkillParameterRequest -> Aff (exception :: EXCEPTION | eff) GetRoomSkillParameterResponse
-getRoomSkillParameter = Request.request serviceName "getRoomSkillParameter" 
+getRoomSkillParameter = Request.request service method  where
+    service = Request.ServiceName "AlexaForBusiness"
+    method = Request.MethodName "getRoomSkillParameter"
 
 
 -- | <p>Gets skill group details by skill group ARN.</p>
 getSkillGroup :: forall eff. GetSkillGroupRequest -> Aff (exception :: EXCEPTION | eff) GetSkillGroupResponse
-getSkillGroup = Request.request serviceName "getSkillGroup" 
+getSkillGroup = Request.request service method  where
+    service = Request.ServiceName "AlexaForBusiness"
+    method = Request.MethodName "getSkillGroup"
 
 
 -- | <p>Lists all enabled skills in a specific skill group.</p>
 listSkills :: forall eff. ListSkillsRequest -> Aff (exception :: EXCEPTION | eff) ListSkillsResponse
-listSkills = Request.request serviceName "listSkills" 
+listSkills = Request.request service method  where
+    service = Request.ServiceName "AlexaForBusiness"
+    method = Request.MethodName "listSkills"
 
 
 -- | <p>Lists all tags for a specific resource.</p>
 listTags :: forall eff. ListTagsRequest -> Aff (exception :: EXCEPTION | eff) ListTagsResponse
-listTags = Request.request serviceName "listTags" 
+listTags = Request.request service method  where
+    service = Request.ServiceName "AlexaForBusiness"
+    method = Request.MethodName "listTags"
 
 
 -- | <p>Updates room skill parameter details by room, skill, and parameter key ID. Not all skills have a room skill parameter.</p>
 putRoomSkillParameter :: forall eff. PutRoomSkillParameterRequest -> Aff (exception :: EXCEPTION | eff) PutRoomSkillParameterResponse
-putRoomSkillParameter = Request.request serviceName "putRoomSkillParameter" 
+putRoomSkillParameter = Request.request service method  where
+    service = Request.ServiceName "AlexaForBusiness"
+    method = Request.MethodName "putRoomSkillParameter"
 
 
 -- | <p>Determines the details for the room from which a skill request was invoked. This operation is used by skill developers.</p>
 resolveRoom :: forall eff. ResolveRoomRequest -> Aff (exception :: EXCEPTION | eff) ResolveRoomResponse
-resolveRoom = Request.request serviceName "resolveRoom" 
+resolveRoom = Request.request service method  where
+    service = Request.ServiceName "AlexaForBusiness"
+    method = Request.MethodName "resolveRoom"
 
 
 -- | <p>Revokes an invitation and invalidates the enrollment URL.</p>
 revokeInvitation :: forall eff. RevokeInvitationRequest -> Aff (exception :: EXCEPTION | eff) RevokeInvitationResponse
-revokeInvitation = Request.request serviceName "revokeInvitation" 
+revokeInvitation = Request.request service method  where
+    service = Request.ServiceName "AlexaForBusiness"
+    method = Request.MethodName "revokeInvitation"
 
 
 -- | <p>Searches devices and lists the ones that meet a set of filter criteria.</p>
 searchDevices :: forall eff. SearchDevicesRequest -> Aff (exception :: EXCEPTION | eff) SearchDevicesResponse
-searchDevices = Request.request serviceName "searchDevices" 
+searchDevices = Request.request service method  where
+    service = Request.ServiceName "AlexaForBusiness"
+    method = Request.MethodName "searchDevices"
 
 
 -- | <p>Searches room profiles and lists the ones that meet a set of filter criteria.</p>
 searchProfiles :: forall eff. SearchProfilesRequest -> Aff (exception :: EXCEPTION | eff) SearchProfilesResponse
-searchProfiles = Request.request serviceName "searchProfiles" 
+searchProfiles = Request.request service method  where
+    service = Request.ServiceName "AlexaForBusiness"
+    method = Request.MethodName "searchProfiles"
 
 
 -- | <p>Searches rooms and lists the ones that meet a set of filter and sort criteria.</p>
 searchRooms :: forall eff. SearchRoomsRequest -> Aff (exception :: EXCEPTION | eff) SearchRoomsResponse
-searchRooms = Request.request serviceName "searchRooms" 
+searchRooms = Request.request service method  where
+    service = Request.ServiceName "AlexaForBusiness"
+    method = Request.MethodName "searchRooms"
 
 
 -- | <p>Searches skill groups and lists the ones that meet a set of filter and sort criteria.</p>
 searchSkillGroups :: forall eff. SearchSkillGroupsRequest -> Aff (exception :: EXCEPTION | eff) SearchSkillGroupsResponse
-searchSkillGroups = Request.request serviceName "searchSkillGroups" 
+searchSkillGroups = Request.request service method  where
+    service = Request.ServiceName "AlexaForBusiness"
+    method = Request.MethodName "searchSkillGroups"
 
 
 -- | <p>Searches users and lists the ones that meet a set of filter and sort criteria.</p>
 searchUsers :: forall eff. SearchUsersRequest -> Aff (exception :: EXCEPTION | eff) SearchUsersResponse
-searchUsers = Request.request serviceName "searchUsers" 
+searchUsers = Request.request service method  where
+    service = Request.ServiceName "AlexaForBusiness"
+    method = Request.MethodName "searchUsers"
 
 
 -- | <p>Sends an enrollment invitation email with a URL to a user. The URL is valid for 72 hours or until you call this operation again, whichever comes first. </p>
 sendInvitation :: forall eff. SendInvitationRequest -> Aff (exception :: EXCEPTION | eff) SendInvitationResponse
-sendInvitation = Request.request serviceName "sendInvitation" 
+sendInvitation = Request.request service method  where
+    service = Request.ServiceName "AlexaForBusiness"
+    method = Request.MethodName "sendInvitation"
 
 
 -- | <p>Resets a device and its account to the known default settings by clearing all information and settings set by previous users.</p>
 startDeviceSync :: forall eff. StartDeviceSyncRequest -> Aff (exception :: EXCEPTION | eff) StartDeviceSyncResponse
-startDeviceSync = Request.request serviceName "startDeviceSync" 
+startDeviceSync = Request.request service method  where
+    service = Request.ServiceName "AlexaForBusiness"
+    method = Request.MethodName "startDeviceSync"
 
 
 -- | <p>Adds metadata tags to a specified resource.</p>
 tagResource :: forall eff. TagResourceRequest -> Aff (exception :: EXCEPTION | eff) TagResourceResponse
-tagResource = Request.request serviceName "tagResource" 
+tagResource = Request.request service method  where
+    service = Request.ServiceName "AlexaForBusiness"
+    method = Request.MethodName "tagResource"
 
 
 -- | <p>Removes metadata tags from a specified resource.</p>
 untagResource :: forall eff. UntagResourceRequest -> Aff (exception :: EXCEPTION | eff) UntagResourceResponse
-untagResource = Request.request serviceName "untagResource" 
+untagResource = Request.request service method  where
+    service = Request.ServiceName "AlexaForBusiness"
+    method = Request.MethodName "untagResource"
 
 
 -- | <p>Updates the device name by device ARN.</p>
 updateDevice :: forall eff. UpdateDeviceRequest -> Aff (exception :: EXCEPTION | eff) UpdateDeviceResponse
-updateDevice = Request.request serviceName "updateDevice" 
+updateDevice = Request.request service method  where
+    service = Request.ServiceName "AlexaForBusiness"
+    method = Request.MethodName "updateDevice"
 
 
 -- | <p>Updates an existing room profile by room profile ARN.</p>
 updateProfile :: forall eff. UpdateProfileRequest -> Aff (exception :: EXCEPTION | eff) UpdateProfileResponse
-updateProfile = Request.request serviceName "updateProfile" 
+updateProfile = Request.request service method  where
+    service = Request.ServiceName "AlexaForBusiness"
+    method = Request.MethodName "updateProfile"
 
 
 -- | <p>Updates room details by room ARN.</p>
 updateRoom :: forall eff. UpdateRoomRequest -> Aff (exception :: EXCEPTION | eff) UpdateRoomResponse
-updateRoom = Request.request serviceName "updateRoom" 
+updateRoom = Request.request service method  where
+    service = Request.ServiceName "AlexaForBusiness"
+    method = Request.MethodName "updateRoom"
 
 
 -- | <p>Updates skill group details by skill group ARN.</p>
 updateSkillGroup :: forall eff. UpdateSkillGroupRequest -> Aff (exception :: EXCEPTION | eff) UpdateSkillGroupResponse
-updateSkillGroup = Request.request serviceName "updateSkillGroup" 
+updateSkillGroup = Request.request service method  where
+    service = Request.ServiceName "AlexaForBusiness"
+    method = Request.MethodName "updateSkillGroup"
 
 
 newtype Address = Address String
