@@ -5,7 +5,6 @@ import Prelude
 import Data.Foreign.Class (class Decode, class Encode)
 import Data.Foreign.Generic (defaultOptions, genericDecode, genericEncode)
 import Data.Foreign.Generic.Types (Options)
-import Data.Foreign.NullOrUndefined (NullOrUndefined(..))
 import Data.Generic.Rep (class Generic)
 import Data.Generic.Rep.Show (genericShow)
 import Data.Maybe (Maybe(..))
@@ -29,7 +28,7 @@ instance encodeAddress :: Encode Address where encode = genericEncode options
 
 -- | <p>The resource being created already exists. HTTP Status Code: 400</p>
 newtype AlreadyExistsException = AlreadyExistsException 
-  { "Message" :: NullOrUndefined (ErrorMessage)
+  { "Message" :: Maybe (ErrorMessage)
   }
 derive instance newtypeAlreadyExistsException :: Newtype AlreadyExistsException _
 derive instance repGenericAlreadyExistsException :: Generic AlreadyExistsException _
@@ -39,12 +38,12 @@ instance encodeAlreadyExistsException :: Encode AlreadyExistsException where enc
 
 -- | Constructs AlreadyExistsException from required parameters
 newAlreadyExistsException :: AlreadyExistsException
-newAlreadyExistsException  = AlreadyExistsException { "Message": (NullOrUndefined Nothing) }
+newAlreadyExistsException  = AlreadyExistsException { "Message": Nothing }
 
 -- | Constructs AlreadyExistsException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newAlreadyExistsException' :: ( { "Message" :: NullOrUndefined (ErrorMessage) } -> {"Message" :: NullOrUndefined (ErrorMessage) } ) -> AlreadyExistsException
-newAlreadyExistsException'  customize = (AlreadyExistsException <<< customize) { "Message": (NullOrUndefined Nothing) }
+newAlreadyExistsException' :: ( { "Message" :: Maybe (ErrorMessage) } -> {"Message" :: Maybe (ErrorMessage) } ) -> AlreadyExistsException
+newAlreadyExistsException'  customize = (AlreadyExistsException <<< customize) { "Message": Nothing }
 
 
 
@@ -58,8 +57,8 @@ instance encodeArn :: Encode Arn where encode = genericEncode options
 
 
 newtype AssociateDeviceWithRoomRequest = AssociateDeviceWithRoomRequest 
-  { "DeviceArn" :: NullOrUndefined (Arn)
-  , "RoomArn" :: NullOrUndefined (Arn)
+  { "DeviceArn" :: Maybe (Arn)
+  , "RoomArn" :: Maybe (Arn)
   }
 derive instance newtypeAssociateDeviceWithRoomRequest :: Newtype AssociateDeviceWithRoomRequest _
 derive instance repGenericAssociateDeviceWithRoomRequest :: Generic AssociateDeviceWithRoomRequest _
@@ -69,12 +68,12 @@ instance encodeAssociateDeviceWithRoomRequest :: Encode AssociateDeviceWithRoomR
 
 -- | Constructs AssociateDeviceWithRoomRequest from required parameters
 newAssociateDeviceWithRoomRequest :: AssociateDeviceWithRoomRequest
-newAssociateDeviceWithRoomRequest  = AssociateDeviceWithRoomRequest { "DeviceArn": (NullOrUndefined Nothing), "RoomArn": (NullOrUndefined Nothing) }
+newAssociateDeviceWithRoomRequest  = AssociateDeviceWithRoomRequest { "DeviceArn": Nothing, "RoomArn": Nothing }
 
 -- | Constructs AssociateDeviceWithRoomRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newAssociateDeviceWithRoomRequest' :: ( { "DeviceArn" :: NullOrUndefined (Arn) , "RoomArn" :: NullOrUndefined (Arn) } -> {"DeviceArn" :: NullOrUndefined (Arn) , "RoomArn" :: NullOrUndefined (Arn) } ) -> AssociateDeviceWithRoomRequest
-newAssociateDeviceWithRoomRequest'  customize = (AssociateDeviceWithRoomRequest <<< customize) { "DeviceArn": (NullOrUndefined Nothing), "RoomArn": (NullOrUndefined Nothing) }
+newAssociateDeviceWithRoomRequest' :: ( { "DeviceArn" :: Maybe (Arn) , "RoomArn" :: Maybe (Arn) } -> {"DeviceArn" :: Maybe (Arn) , "RoomArn" :: Maybe (Arn) } ) -> AssociateDeviceWithRoomRequest
+newAssociateDeviceWithRoomRequest'  customize = (AssociateDeviceWithRoomRequest <<< customize) { "DeviceArn": Nothing, "RoomArn": Nothing }
 
 
 
@@ -88,8 +87,8 @@ instance encodeAssociateDeviceWithRoomResponse :: Encode AssociateDeviceWithRoom
 
 
 newtype AssociateSkillGroupWithRoomRequest = AssociateSkillGroupWithRoomRequest 
-  { "SkillGroupArn" :: NullOrUndefined (Arn)
-  , "RoomArn" :: NullOrUndefined (Arn)
+  { "SkillGroupArn" :: Maybe (Arn)
+  , "RoomArn" :: Maybe (Arn)
   }
 derive instance newtypeAssociateSkillGroupWithRoomRequest :: Newtype AssociateSkillGroupWithRoomRequest _
 derive instance repGenericAssociateSkillGroupWithRoomRequest :: Generic AssociateSkillGroupWithRoomRequest _
@@ -99,12 +98,12 @@ instance encodeAssociateSkillGroupWithRoomRequest :: Encode AssociateSkillGroupW
 
 -- | Constructs AssociateSkillGroupWithRoomRequest from required parameters
 newAssociateSkillGroupWithRoomRequest :: AssociateSkillGroupWithRoomRequest
-newAssociateSkillGroupWithRoomRequest  = AssociateSkillGroupWithRoomRequest { "RoomArn": (NullOrUndefined Nothing), "SkillGroupArn": (NullOrUndefined Nothing) }
+newAssociateSkillGroupWithRoomRequest  = AssociateSkillGroupWithRoomRequest { "RoomArn": Nothing, "SkillGroupArn": Nothing }
 
 -- | Constructs AssociateSkillGroupWithRoomRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newAssociateSkillGroupWithRoomRequest' :: ( { "SkillGroupArn" :: NullOrUndefined (Arn) , "RoomArn" :: NullOrUndefined (Arn) } -> {"SkillGroupArn" :: NullOrUndefined (Arn) , "RoomArn" :: NullOrUndefined (Arn) } ) -> AssociateSkillGroupWithRoomRequest
-newAssociateSkillGroupWithRoomRequest'  customize = (AssociateSkillGroupWithRoomRequest <<< customize) { "RoomArn": (NullOrUndefined Nothing), "SkillGroupArn": (NullOrUndefined Nothing) }
+newAssociateSkillGroupWithRoomRequest' :: ( { "SkillGroupArn" :: Maybe (Arn) , "RoomArn" :: Maybe (Arn) } -> {"SkillGroupArn" :: Maybe (Arn) , "RoomArn" :: Maybe (Arn) } ) -> AssociateSkillGroupWithRoomRequest
+newAssociateSkillGroupWithRoomRequest'  customize = (AssociateSkillGroupWithRoomRequest <<< customize) { "RoomArn": Nothing, "SkillGroupArn": Nothing }
 
 
 
@@ -134,10 +133,10 @@ newtype CreateProfileRequest = CreateProfileRequest
   , "DistanceUnit" :: (DistanceUnit)
   , "TemperatureUnit" :: (TemperatureUnit)
   , "WakeWord" :: (WakeWord)
-  , "ClientRequestToken" :: NullOrUndefined (ClientRequestToken)
-  , "SetupModeDisabled" :: NullOrUndefined (Boolean)
-  , "MaxVolumeLimit" :: NullOrUndefined (MaxVolumeLimit)
-  , "PSTNEnabled" :: NullOrUndefined (Boolean)
+  , "ClientRequestToken" :: Maybe (ClientRequestToken)
+  , "SetupModeDisabled" :: Maybe (Boolean)
+  , "MaxVolumeLimit" :: Maybe (MaxVolumeLimit)
+  , "PSTNEnabled" :: Maybe (Boolean)
   }
 derive instance newtypeCreateProfileRequest :: Newtype CreateProfileRequest _
 derive instance repGenericCreateProfileRequest :: Generic CreateProfileRequest _
@@ -147,17 +146,17 @@ instance encodeCreateProfileRequest :: Encode CreateProfileRequest where encode 
 
 -- | Constructs CreateProfileRequest from required parameters
 newCreateProfileRequest :: Address -> DistanceUnit -> ProfileName -> TemperatureUnit -> Timezone -> WakeWord -> CreateProfileRequest
-newCreateProfileRequest _Address _DistanceUnit _ProfileName _TemperatureUnit _Timezone _WakeWord = CreateProfileRequest { "Address": _Address, "DistanceUnit": _DistanceUnit, "ProfileName": _ProfileName, "TemperatureUnit": _TemperatureUnit, "Timezone": _Timezone, "WakeWord": _WakeWord, "ClientRequestToken": (NullOrUndefined Nothing), "MaxVolumeLimit": (NullOrUndefined Nothing), "PSTNEnabled": (NullOrUndefined Nothing), "SetupModeDisabled": (NullOrUndefined Nothing) }
+newCreateProfileRequest _Address _DistanceUnit _ProfileName _TemperatureUnit _Timezone _WakeWord = CreateProfileRequest { "Address": _Address, "DistanceUnit": _DistanceUnit, "ProfileName": _ProfileName, "TemperatureUnit": _TemperatureUnit, "Timezone": _Timezone, "WakeWord": _WakeWord, "ClientRequestToken": Nothing, "MaxVolumeLimit": Nothing, "PSTNEnabled": Nothing, "SetupModeDisabled": Nothing }
 
 -- | Constructs CreateProfileRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateProfileRequest' :: Address -> DistanceUnit -> ProfileName -> TemperatureUnit -> Timezone -> WakeWord -> ( { "ProfileName" :: (ProfileName) , "Timezone" :: (Timezone) , "Address" :: (Address) , "DistanceUnit" :: (DistanceUnit) , "TemperatureUnit" :: (TemperatureUnit) , "WakeWord" :: (WakeWord) , "ClientRequestToken" :: NullOrUndefined (ClientRequestToken) , "SetupModeDisabled" :: NullOrUndefined (Boolean) , "MaxVolumeLimit" :: NullOrUndefined (MaxVolumeLimit) , "PSTNEnabled" :: NullOrUndefined (Boolean) } -> {"ProfileName" :: (ProfileName) , "Timezone" :: (Timezone) , "Address" :: (Address) , "DistanceUnit" :: (DistanceUnit) , "TemperatureUnit" :: (TemperatureUnit) , "WakeWord" :: (WakeWord) , "ClientRequestToken" :: NullOrUndefined (ClientRequestToken) , "SetupModeDisabled" :: NullOrUndefined (Boolean) , "MaxVolumeLimit" :: NullOrUndefined (MaxVolumeLimit) , "PSTNEnabled" :: NullOrUndefined (Boolean) } ) -> CreateProfileRequest
-newCreateProfileRequest' _Address _DistanceUnit _ProfileName _TemperatureUnit _Timezone _WakeWord customize = (CreateProfileRequest <<< customize) { "Address": _Address, "DistanceUnit": _DistanceUnit, "ProfileName": _ProfileName, "TemperatureUnit": _TemperatureUnit, "Timezone": _Timezone, "WakeWord": _WakeWord, "ClientRequestToken": (NullOrUndefined Nothing), "MaxVolumeLimit": (NullOrUndefined Nothing), "PSTNEnabled": (NullOrUndefined Nothing), "SetupModeDisabled": (NullOrUndefined Nothing) }
+newCreateProfileRequest' :: Address -> DistanceUnit -> ProfileName -> TemperatureUnit -> Timezone -> WakeWord -> ( { "ProfileName" :: (ProfileName) , "Timezone" :: (Timezone) , "Address" :: (Address) , "DistanceUnit" :: (DistanceUnit) , "TemperatureUnit" :: (TemperatureUnit) , "WakeWord" :: (WakeWord) , "ClientRequestToken" :: Maybe (ClientRequestToken) , "SetupModeDisabled" :: Maybe (Boolean) , "MaxVolumeLimit" :: Maybe (MaxVolumeLimit) , "PSTNEnabled" :: Maybe (Boolean) } -> {"ProfileName" :: (ProfileName) , "Timezone" :: (Timezone) , "Address" :: (Address) , "DistanceUnit" :: (DistanceUnit) , "TemperatureUnit" :: (TemperatureUnit) , "WakeWord" :: (WakeWord) , "ClientRequestToken" :: Maybe (ClientRequestToken) , "SetupModeDisabled" :: Maybe (Boolean) , "MaxVolumeLimit" :: Maybe (MaxVolumeLimit) , "PSTNEnabled" :: Maybe (Boolean) } ) -> CreateProfileRequest
+newCreateProfileRequest' _Address _DistanceUnit _ProfileName _TemperatureUnit _Timezone _WakeWord customize = (CreateProfileRequest <<< customize) { "Address": _Address, "DistanceUnit": _DistanceUnit, "ProfileName": _ProfileName, "TemperatureUnit": _TemperatureUnit, "Timezone": _Timezone, "WakeWord": _WakeWord, "ClientRequestToken": Nothing, "MaxVolumeLimit": Nothing, "PSTNEnabled": Nothing, "SetupModeDisabled": Nothing }
 
 
 
 newtype CreateProfileResponse = CreateProfileResponse 
-  { "ProfileArn" :: NullOrUndefined (Arn)
+  { "ProfileArn" :: Maybe (Arn)
   }
 derive instance newtypeCreateProfileResponse :: Newtype CreateProfileResponse _
 derive instance repGenericCreateProfileResponse :: Generic CreateProfileResponse _
@@ -167,22 +166,22 @@ instance encodeCreateProfileResponse :: Encode CreateProfileResponse where encod
 
 -- | Constructs CreateProfileResponse from required parameters
 newCreateProfileResponse :: CreateProfileResponse
-newCreateProfileResponse  = CreateProfileResponse { "ProfileArn": (NullOrUndefined Nothing) }
+newCreateProfileResponse  = CreateProfileResponse { "ProfileArn": Nothing }
 
 -- | Constructs CreateProfileResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateProfileResponse' :: ( { "ProfileArn" :: NullOrUndefined (Arn) } -> {"ProfileArn" :: NullOrUndefined (Arn) } ) -> CreateProfileResponse
-newCreateProfileResponse'  customize = (CreateProfileResponse <<< customize) { "ProfileArn": (NullOrUndefined Nothing) }
+newCreateProfileResponse' :: ( { "ProfileArn" :: Maybe (Arn) } -> {"ProfileArn" :: Maybe (Arn) } ) -> CreateProfileResponse
+newCreateProfileResponse'  customize = (CreateProfileResponse <<< customize) { "ProfileArn": Nothing }
 
 
 
 newtype CreateRoomRequest = CreateRoomRequest 
   { "RoomName" :: (RoomName)
-  , "Description" :: NullOrUndefined (RoomDescription)
-  , "ProfileArn" :: NullOrUndefined (Arn)
-  , "ProviderCalendarId" :: NullOrUndefined (ProviderCalendarId)
-  , "ClientRequestToken" :: NullOrUndefined (ClientRequestToken)
-  , "Tags" :: NullOrUndefined (TagList)
+  , "Description" :: Maybe (RoomDescription)
+  , "ProfileArn" :: Maybe (Arn)
+  , "ProviderCalendarId" :: Maybe (ProviderCalendarId)
+  , "ClientRequestToken" :: Maybe (ClientRequestToken)
+  , "Tags" :: Maybe (TagList)
   }
 derive instance newtypeCreateRoomRequest :: Newtype CreateRoomRequest _
 derive instance repGenericCreateRoomRequest :: Generic CreateRoomRequest _
@@ -192,17 +191,17 @@ instance encodeCreateRoomRequest :: Encode CreateRoomRequest where encode = gene
 
 -- | Constructs CreateRoomRequest from required parameters
 newCreateRoomRequest :: RoomName -> CreateRoomRequest
-newCreateRoomRequest _RoomName = CreateRoomRequest { "RoomName": _RoomName, "ClientRequestToken": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "ProfileArn": (NullOrUndefined Nothing), "ProviderCalendarId": (NullOrUndefined Nothing), "Tags": (NullOrUndefined Nothing) }
+newCreateRoomRequest _RoomName = CreateRoomRequest { "RoomName": _RoomName, "ClientRequestToken": Nothing, "Description": Nothing, "ProfileArn": Nothing, "ProviderCalendarId": Nothing, "Tags": Nothing }
 
 -- | Constructs CreateRoomRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateRoomRequest' :: RoomName -> ( { "RoomName" :: (RoomName) , "Description" :: NullOrUndefined (RoomDescription) , "ProfileArn" :: NullOrUndefined (Arn) , "ProviderCalendarId" :: NullOrUndefined (ProviderCalendarId) , "ClientRequestToken" :: NullOrUndefined (ClientRequestToken) , "Tags" :: NullOrUndefined (TagList) } -> {"RoomName" :: (RoomName) , "Description" :: NullOrUndefined (RoomDescription) , "ProfileArn" :: NullOrUndefined (Arn) , "ProviderCalendarId" :: NullOrUndefined (ProviderCalendarId) , "ClientRequestToken" :: NullOrUndefined (ClientRequestToken) , "Tags" :: NullOrUndefined (TagList) } ) -> CreateRoomRequest
-newCreateRoomRequest' _RoomName customize = (CreateRoomRequest <<< customize) { "RoomName": _RoomName, "ClientRequestToken": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing), "ProfileArn": (NullOrUndefined Nothing), "ProviderCalendarId": (NullOrUndefined Nothing), "Tags": (NullOrUndefined Nothing) }
+newCreateRoomRequest' :: RoomName -> ( { "RoomName" :: (RoomName) , "Description" :: Maybe (RoomDescription) , "ProfileArn" :: Maybe (Arn) , "ProviderCalendarId" :: Maybe (ProviderCalendarId) , "ClientRequestToken" :: Maybe (ClientRequestToken) , "Tags" :: Maybe (TagList) } -> {"RoomName" :: (RoomName) , "Description" :: Maybe (RoomDescription) , "ProfileArn" :: Maybe (Arn) , "ProviderCalendarId" :: Maybe (ProviderCalendarId) , "ClientRequestToken" :: Maybe (ClientRequestToken) , "Tags" :: Maybe (TagList) } ) -> CreateRoomRequest
+newCreateRoomRequest' _RoomName customize = (CreateRoomRequest <<< customize) { "RoomName": _RoomName, "ClientRequestToken": Nothing, "Description": Nothing, "ProfileArn": Nothing, "ProviderCalendarId": Nothing, "Tags": Nothing }
 
 
 
 newtype CreateRoomResponse = CreateRoomResponse 
-  { "RoomArn" :: NullOrUndefined (Arn)
+  { "RoomArn" :: Maybe (Arn)
   }
 derive instance newtypeCreateRoomResponse :: Newtype CreateRoomResponse _
 derive instance repGenericCreateRoomResponse :: Generic CreateRoomResponse _
@@ -212,19 +211,19 @@ instance encodeCreateRoomResponse :: Encode CreateRoomResponse where encode = ge
 
 -- | Constructs CreateRoomResponse from required parameters
 newCreateRoomResponse :: CreateRoomResponse
-newCreateRoomResponse  = CreateRoomResponse { "RoomArn": (NullOrUndefined Nothing) }
+newCreateRoomResponse  = CreateRoomResponse { "RoomArn": Nothing }
 
 -- | Constructs CreateRoomResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateRoomResponse' :: ( { "RoomArn" :: NullOrUndefined (Arn) } -> {"RoomArn" :: NullOrUndefined (Arn) } ) -> CreateRoomResponse
-newCreateRoomResponse'  customize = (CreateRoomResponse <<< customize) { "RoomArn": (NullOrUndefined Nothing) }
+newCreateRoomResponse' :: ( { "RoomArn" :: Maybe (Arn) } -> {"RoomArn" :: Maybe (Arn) } ) -> CreateRoomResponse
+newCreateRoomResponse'  customize = (CreateRoomResponse <<< customize) { "RoomArn": Nothing }
 
 
 
 newtype CreateSkillGroupRequest = CreateSkillGroupRequest 
   { "SkillGroupName" :: (SkillGroupName)
-  , "Description" :: NullOrUndefined (SkillGroupDescription)
-  , "ClientRequestToken" :: NullOrUndefined (ClientRequestToken)
+  , "Description" :: Maybe (SkillGroupDescription)
+  , "ClientRequestToken" :: Maybe (ClientRequestToken)
   }
 derive instance newtypeCreateSkillGroupRequest :: Newtype CreateSkillGroupRequest _
 derive instance repGenericCreateSkillGroupRequest :: Generic CreateSkillGroupRequest _
@@ -234,17 +233,17 @@ instance encodeCreateSkillGroupRequest :: Encode CreateSkillGroupRequest where e
 
 -- | Constructs CreateSkillGroupRequest from required parameters
 newCreateSkillGroupRequest :: SkillGroupName -> CreateSkillGroupRequest
-newCreateSkillGroupRequest _SkillGroupName = CreateSkillGroupRequest { "SkillGroupName": _SkillGroupName, "ClientRequestToken": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing) }
+newCreateSkillGroupRequest _SkillGroupName = CreateSkillGroupRequest { "SkillGroupName": _SkillGroupName, "ClientRequestToken": Nothing, "Description": Nothing }
 
 -- | Constructs CreateSkillGroupRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateSkillGroupRequest' :: SkillGroupName -> ( { "SkillGroupName" :: (SkillGroupName) , "Description" :: NullOrUndefined (SkillGroupDescription) , "ClientRequestToken" :: NullOrUndefined (ClientRequestToken) } -> {"SkillGroupName" :: (SkillGroupName) , "Description" :: NullOrUndefined (SkillGroupDescription) , "ClientRequestToken" :: NullOrUndefined (ClientRequestToken) } ) -> CreateSkillGroupRequest
-newCreateSkillGroupRequest' _SkillGroupName customize = (CreateSkillGroupRequest <<< customize) { "SkillGroupName": _SkillGroupName, "ClientRequestToken": (NullOrUndefined Nothing), "Description": (NullOrUndefined Nothing) }
+newCreateSkillGroupRequest' :: SkillGroupName -> ( { "SkillGroupName" :: (SkillGroupName) , "Description" :: Maybe (SkillGroupDescription) , "ClientRequestToken" :: Maybe (ClientRequestToken) } -> {"SkillGroupName" :: (SkillGroupName) , "Description" :: Maybe (SkillGroupDescription) , "ClientRequestToken" :: Maybe (ClientRequestToken) } ) -> CreateSkillGroupRequest
+newCreateSkillGroupRequest' _SkillGroupName customize = (CreateSkillGroupRequest <<< customize) { "SkillGroupName": _SkillGroupName, "ClientRequestToken": Nothing, "Description": Nothing }
 
 
 
 newtype CreateSkillGroupResponse = CreateSkillGroupResponse 
-  { "SkillGroupArn" :: NullOrUndefined (Arn)
+  { "SkillGroupArn" :: Maybe (Arn)
   }
 derive instance newtypeCreateSkillGroupResponse :: Newtype CreateSkillGroupResponse _
 derive instance repGenericCreateSkillGroupResponse :: Generic CreateSkillGroupResponse _
@@ -254,22 +253,22 @@ instance encodeCreateSkillGroupResponse :: Encode CreateSkillGroupResponse where
 
 -- | Constructs CreateSkillGroupResponse from required parameters
 newCreateSkillGroupResponse :: CreateSkillGroupResponse
-newCreateSkillGroupResponse  = CreateSkillGroupResponse { "SkillGroupArn": (NullOrUndefined Nothing) }
+newCreateSkillGroupResponse  = CreateSkillGroupResponse { "SkillGroupArn": Nothing }
 
 -- | Constructs CreateSkillGroupResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateSkillGroupResponse' :: ( { "SkillGroupArn" :: NullOrUndefined (Arn) } -> {"SkillGroupArn" :: NullOrUndefined (Arn) } ) -> CreateSkillGroupResponse
-newCreateSkillGroupResponse'  customize = (CreateSkillGroupResponse <<< customize) { "SkillGroupArn": (NullOrUndefined Nothing) }
+newCreateSkillGroupResponse' :: ( { "SkillGroupArn" :: Maybe (Arn) } -> {"SkillGroupArn" :: Maybe (Arn) } ) -> CreateSkillGroupResponse
+newCreateSkillGroupResponse'  customize = (CreateSkillGroupResponse <<< customize) { "SkillGroupArn": Nothing }
 
 
 
 newtype CreateUserRequest = CreateUserRequest 
   { "UserId" :: (User_UserId')
-  , "FirstName" :: NullOrUndefined (User_FirstName')
-  , "LastName" :: NullOrUndefined (User_LastName')
-  , "Email" :: NullOrUndefined (Email)
-  , "ClientRequestToken" :: NullOrUndefined (ClientRequestToken)
-  , "Tags" :: NullOrUndefined (TagList)
+  , "FirstName" :: Maybe (User_FirstName')
+  , "LastName" :: Maybe (User_LastName')
+  , "Email" :: Maybe (Email)
+  , "ClientRequestToken" :: Maybe (ClientRequestToken)
+  , "Tags" :: Maybe (TagList)
   }
 derive instance newtypeCreateUserRequest :: Newtype CreateUserRequest _
 derive instance repGenericCreateUserRequest :: Generic CreateUserRequest _
@@ -279,17 +278,17 @@ instance encodeCreateUserRequest :: Encode CreateUserRequest where encode = gene
 
 -- | Constructs CreateUserRequest from required parameters
 newCreateUserRequest :: User_UserId' -> CreateUserRequest
-newCreateUserRequest _UserId = CreateUserRequest { "UserId": _UserId, "ClientRequestToken": (NullOrUndefined Nothing), "Email": (NullOrUndefined Nothing), "FirstName": (NullOrUndefined Nothing), "LastName": (NullOrUndefined Nothing), "Tags": (NullOrUndefined Nothing) }
+newCreateUserRequest _UserId = CreateUserRequest { "UserId": _UserId, "ClientRequestToken": Nothing, "Email": Nothing, "FirstName": Nothing, "LastName": Nothing, "Tags": Nothing }
 
 -- | Constructs CreateUserRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateUserRequest' :: User_UserId' -> ( { "UserId" :: (User_UserId') , "FirstName" :: NullOrUndefined (User_FirstName') , "LastName" :: NullOrUndefined (User_LastName') , "Email" :: NullOrUndefined (Email) , "ClientRequestToken" :: NullOrUndefined (ClientRequestToken) , "Tags" :: NullOrUndefined (TagList) } -> {"UserId" :: (User_UserId') , "FirstName" :: NullOrUndefined (User_FirstName') , "LastName" :: NullOrUndefined (User_LastName') , "Email" :: NullOrUndefined (Email) , "ClientRequestToken" :: NullOrUndefined (ClientRequestToken) , "Tags" :: NullOrUndefined (TagList) } ) -> CreateUserRequest
-newCreateUserRequest' _UserId customize = (CreateUserRequest <<< customize) { "UserId": _UserId, "ClientRequestToken": (NullOrUndefined Nothing), "Email": (NullOrUndefined Nothing), "FirstName": (NullOrUndefined Nothing), "LastName": (NullOrUndefined Nothing), "Tags": (NullOrUndefined Nothing) }
+newCreateUserRequest' :: User_UserId' -> ( { "UserId" :: (User_UserId') , "FirstName" :: Maybe (User_FirstName') , "LastName" :: Maybe (User_LastName') , "Email" :: Maybe (Email) , "ClientRequestToken" :: Maybe (ClientRequestToken) , "Tags" :: Maybe (TagList) } -> {"UserId" :: (User_UserId') , "FirstName" :: Maybe (User_FirstName') , "LastName" :: Maybe (User_LastName') , "Email" :: Maybe (Email) , "ClientRequestToken" :: Maybe (ClientRequestToken) , "Tags" :: Maybe (TagList) } ) -> CreateUserRequest
+newCreateUserRequest' _UserId customize = (CreateUserRequest <<< customize) { "UserId": _UserId, "ClientRequestToken": Nothing, "Email": Nothing, "FirstName": Nothing, "LastName": Nothing, "Tags": Nothing }
 
 
 
 newtype CreateUserResponse = CreateUserResponse 
-  { "UserArn" :: NullOrUndefined (Arn)
+  { "UserArn" :: Maybe (Arn)
   }
 derive instance newtypeCreateUserResponse :: Newtype CreateUserResponse _
 derive instance repGenericCreateUserResponse :: Generic CreateUserResponse _
@@ -299,17 +298,17 @@ instance encodeCreateUserResponse :: Encode CreateUserResponse where encode = ge
 
 -- | Constructs CreateUserResponse from required parameters
 newCreateUserResponse :: CreateUserResponse
-newCreateUserResponse  = CreateUserResponse { "UserArn": (NullOrUndefined Nothing) }
+newCreateUserResponse  = CreateUserResponse { "UserArn": Nothing }
 
 -- | Constructs CreateUserResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newCreateUserResponse' :: ( { "UserArn" :: NullOrUndefined (Arn) } -> {"UserArn" :: NullOrUndefined (Arn) } ) -> CreateUserResponse
-newCreateUserResponse'  customize = (CreateUserResponse <<< customize) { "UserArn": (NullOrUndefined Nothing) }
+newCreateUserResponse' :: ( { "UserArn" :: Maybe (Arn) } -> {"UserArn" :: Maybe (Arn) } ) -> CreateUserResponse
+newCreateUserResponse'  customize = (CreateUserResponse <<< customize) { "UserArn": Nothing }
 
 
 
 newtype DeleteProfileRequest = DeleteProfileRequest 
-  { "ProfileArn" :: NullOrUndefined (Arn)
+  { "ProfileArn" :: Maybe (Arn)
   }
 derive instance newtypeDeleteProfileRequest :: Newtype DeleteProfileRequest _
 derive instance repGenericDeleteProfileRequest :: Generic DeleteProfileRequest _
@@ -319,12 +318,12 @@ instance encodeDeleteProfileRequest :: Encode DeleteProfileRequest where encode 
 
 -- | Constructs DeleteProfileRequest from required parameters
 newDeleteProfileRequest :: DeleteProfileRequest
-newDeleteProfileRequest  = DeleteProfileRequest { "ProfileArn": (NullOrUndefined Nothing) }
+newDeleteProfileRequest  = DeleteProfileRequest { "ProfileArn": Nothing }
 
 -- | Constructs DeleteProfileRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDeleteProfileRequest' :: ( { "ProfileArn" :: NullOrUndefined (Arn) } -> {"ProfileArn" :: NullOrUndefined (Arn) } ) -> DeleteProfileRequest
-newDeleteProfileRequest'  customize = (DeleteProfileRequest <<< customize) { "ProfileArn": (NullOrUndefined Nothing) }
+newDeleteProfileRequest' :: ( { "ProfileArn" :: Maybe (Arn) } -> {"ProfileArn" :: Maybe (Arn) } ) -> DeleteProfileRequest
+newDeleteProfileRequest'  customize = (DeleteProfileRequest <<< customize) { "ProfileArn": Nothing }
 
 
 
@@ -338,7 +337,7 @@ instance encodeDeleteProfileResponse :: Encode DeleteProfileResponse where encod
 
 
 newtype DeleteRoomRequest = DeleteRoomRequest 
-  { "RoomArn" :: NullOrUndefined (Arn)
+  { "RoomArn" :: Maybe (Arn)
   }
 derive instance newtypeDeleteRoomRequest :: Newtype DeleteRoomRequest _
 derive instance repGenericDeleteRoomRequest :: Generic DeleteRoomRequest _
@@ -348,12 +347,12 @@ instance encodeDeleteRoomRequest :: Encode DeleteRoomRequest where encode = gene
 
 -- | Constructs DeleteRoomRequest from required parameters
 newDeleteRoomRequest :: DeleteRoomRequest
-newDeleteRoomRequest  = DeleteRoomRequest { "RoomArn": (NullOrUndefined Nothing) }
+newDeleteRoomRequest  = DeleteRoomRequest { "RoomArn": Nothing }
 
 -- | Constructs DeleteRoomRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDeleteRoomRequest' :: ( { "RoomArn" :: NullOrUndefined (Arn) } -> {"RoomArn" :: NullOrUndefined (Arn) } ) -> DeleteRoomRequest
-newDeleteRoomRequest'  customize = (DeleteRoomRequest <<< customize) { "RoomArn": (NullOrUndefined Nothing) }
+newDeleteRoomRequest' :: ( { "RoomArn" :: Maybe (Arn) } -> {"RoomArn" :: Maybe (Arn) } ) -> DeleteRoomRequest
+newDeleteRoomRequest'  customize = (DeleteRoomRequest <<< customize) { "RoomArn": Nothing }
 
 
 
@@ -367,7 +366,7 @@ instance encodeDeleteRoomResponse :: Encode DeleteRoomResponse where encode = ge
 
 
 newtype DeleteRoomSkillParameterRequest = DeleteRoomSkillParameterRequest 
-  { "RoomArn" :: NullOrUndefined (Arn)
+  { "RoomArn" :: Maybe (Arn)
   , "SkillId" :: (SkillId)
   , "ParameterKey" :: (RoomSkillParameterKey)
   }
@@ -379,12 +378,12 @@ instance encodeDeleteRoomSkillParameterRequest :: Encode DeleteRoomSkillParamete
 
 -- | Constructs DeleteRoomSkillParameterRequest from required parameters
 newDeleteRoomSkillParameterRequest :: RoomSkillParameterKey -> SkillId -> DeleteRoomSkillParameterRequest
-newDeleteRoomSkillParameterRequest _ParameterKey _SkillId = DeleteRoomSkillParameterRequest { "ParameterKey": _ParameterKey, "SkillId": _SkillId, "RoomArn": (NullOrUndefined Nothing) }
+newDeleteRoomSkillParameterRequest _ParameterKey _SkillId = DeleteRoomSkillParameterRequest { "ParameterKey": _ParameterKey, "SkillId": _SkillId, "RoomArn": Nothing }
 
 -- | Constructs DeleteRoomSkillParameterRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDeleteRoomSkillParameterRequest' :: RoomSkillParameterKey -> SkillId -> ( { "RoomArn" :: NullOrUndefined (Arn) , "SkillId" :: (SkillId) , "ParameterKey" :: (RoomSkillParameterKey) } -> {"RoomArn" :: NullOrUndefined (Arn) , "SkillId" :: (SkillId) , "ParameterKey" :: (RoomSkillParameterKey) } ) -> DeleteRoomSkillParameterRequest
-newDeleteRoomSkillParameterRequest' _ParameterKey _SkillId customize = (DeleteRoomSkillParameterRequest <<< customize) { "ParameterKey": _ParameterKey, "SkillId": _SkillId, "RoomArn": (NullOrUndefined Nothing) }
+newDeleteRoomSkillParameterRequest' :: RoomSkillParameterKey -> SkillId -> ( { "RoomArn" :: Maybe (Arn) , "SkillId" :: (SkillId) , "ParameterKey" :: (RoomSkillParameterKey) } -> {"RoomArn" :: Maybe (Arn) , "SkillId" :: (SkillId) , "ParameterKey" :: (RoomSkillParameterKey) } ) -> DeleteRoomSkillParameterRequest
+newDeleteRoomSkillParameterRequest' _ParameterKey _SkillId customize = (DeleteRoomSkillParameterRequest <<< customize) { "ParameterKey": _ParameterKey, "SkillId": _SkillId, "RoomArn": Nothing }
 
 
 
@@ -398,7 +397,7 @@ instance encodeDeleteRoomSkillParameterResponse :: Encode DeleteRoomSkillParamet
 
 
 newtype DeleteSkillGroupRequest = DeleteSkillGroupRequest 
-  { "SkillGroupArn" :: NullOrUndefined (Arn)
+  { "SkillGroupArn" :: Maybe (Arn)
   }
 derive instance newtypeDeleteSkillGroupRequest :: Newtype DeleteSkillGroupRequest _
 derive instance repGenericDeleteSkillGroupRequest :: Generic DeleteSkillGroupRequest _
@@ -408,12 +407,12 @@ instance encodeDeleteSkillGroupRequest :: Encode DeleteSkillGroupRequest where e
 
 -- | Constructs DeleteSkillGroupRequest from required parameters
 newDeleteSkillGroupRequest :: DeleteSkillGroupRequest
-newDeleteSkillGroupRequest  = DeleteSkillGroupRequest { "SkillGroupArn": (NullOrUndefined Nothing) }
+newDeleteSkillGroupRequest  = DeleteSkillGroupRequest { "SkillGroupArn": Nothing }
 
 -- | Constructs DeleteSkillGroupRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDeleteSkillGroupRequest' :: ( { "SkillGroupArn" :: NullOrUndefined (Arn) } -> {"SkillGroupArn" :: NullOrUndefined (Arn) } ) -> DeleteSkillGroupRequest
-newDeleteSkillGroupRequest'  customize = (DeleteSkillGroupRequest <<< customize) { "SkillGroupArn": (NullOrUndefined Nothing) }
+newDeleteSkillGroupRequest' :: ( { "SkillGroupArn" :: Maybe (Arn) } -> {"SkillGroupArn" :: Maybe (Arn) } ) -> DeleteSkillGroupRequest
+newDeleteSkillGroupRequest'  customize = (DeleteSkillGroupRequest <<< customize) { "SkillGroupArn": Nothing }
 
 
 
@@ -427,7 +426,7 @@ instance encodeDeleteSkillGroupResponse :: Encode DeleteSkillGroupResponse where
 
 
 newtype DeleteUserRequest = DeleteUserRequest 
-  { "UserArn" :: NullOrUndefined (Arn)
+  { "UserArn" :: Maybe (Arn)
   , "EnrollmentId" :: (EnrollmentId)
   }
 derive instance newtypeDeleteUserRequest :: Newtype DeleteUserRequest _
@@ -438,12 +437,12 @@ instance encodeDeleteUserRequest :: Encode DeleteUserRequest where encode = gene
 
 -- | Constructs DeleteUserRequest from required parameters
 newDeleteUserRequest :: EnrollmentId -> DeleteUserRequest
-newDeleteUserRequest _EnrollmentId = DeleteUserRequest { "EnrollmentId": _EnrollmentId, "UserArn": (NullOrUndefined Nothing) }
+newDeleteUserRequest _EnrollmentId = DeleteUserRequest { "EnrollmentId": _EnrollmentId, "UserArn": Nothing }
 
 -- | Constructs DeleteUserRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDeleteUserRequest' :: EnrollmentId -> ( { "UserArn" :: NullOrUndefined (Arn) , "EnrollmentId" :: (EnrollmentId) } -> {"UserArn" :: NullOrUndefined (Arn) , "EnrollmentId" :: (EnrollmentId) } ) -> DeleteUserRequest
-newDeleteUserRequest' _EnrollmentId customize = (DeleteUserRequest <<< customize) { "EnrollmentId": _EnrollmentId, "UserArn": (NullOrUndefined Nothing) }
+newDeleteUserRequest' :: EnrollmentId -> ( { "UserArn" :: Maybe (Arn) , "EnrollmentId" :: (EnrollmentId) } -> {"UserArn" :: Maybe (Arn) , "EnrollmentId" :: (EnrollmentId) } ) -> DeleteUserRequest
+newDeleteUserRequest' _EnrollmentId customize = (DeleteUserRequest <<< customize) { "EnrollmentId": _EnrollmentId, "UserArn": Nothing }
 
 
 
@@ -458,15 +457,15 @@ instance encodeDeleteUserResponse :: Encode DeleteUserResponse where encode = ge
 
 -- | <p>A device with attributes.</p>
 newtype Device = Device 
-  { "DeviceArn" :: NullOrUndefined (Arn)
-  , "DeviceSerialNumber" :: NullOrUndefined (DeviceSerialNumber)
-  , "DeviceType" :: NullOrUndefined (DeviceType)
-  , "DeviceName" :: NullOrUndefined (DeviceName)
-  , "SoftwareVersion" :: NullOrUndefined (SoftwareVersion)
-  , "MacAddress" :: NullOrUndefined (MacAddress)
-  , "RoomArn" :: NullOrUndefined (Arn)
-  , "DeviceStatus" :: NullOrUndefined (DeviceStatus)
-  , "DeviceStatusInfo" :: NullOrUndefined (DeviceStatusInfo)
+  { "DeviceArn" :: Maybe (Arn)
+  , "DeviceSerialNumber" :: Maybe (DeviceSerialNumber)
+  , "DeviceType" :: Maybe (DeviceType)
+  , "DeviceName" :: Maybe (DeviceName)
+  , "SoftwareVersion" :: Maybe (SoftwareVersion)
+  , "MacAddress" :: Maybe (MacAddress)
+  , "RoomArn" :: Maybe (Arn)
+  , "DeviceStatus" :: Maybe (DeviceStatus)
+  , "DeviceStatusInfo" :: Maybe (DeviceStatusInfo)
   }
 derive instance newtypeDevice :: Newtype Device _
 derive instance repGenericDevice :: Generic Device _
@@ -476,27 +475,27 @@ instance encodeDevice :: Encode Device where encode = genericEncode options
 
 -- | Constructs Device from required parameters
 newDevice :: Device
-newDevice  = Device { "DeviceArn": (NullOrUndefined Nothing), "DeviceName": (NullOrUndefined Nothing), "DeviceSerialNumber": (NullOrUndefined Nothing), "DeviceStatus": (NullOrUndefined Nothing), "DeviceStatusInfo": (NullOrUndefined Nothing), "DeviceType": (NullOrUndefined Nothing), "MacAddress": (NullOrUndefined Nothing), "RoomArn": (NullOrUndefined Nothing), "SoftwareVersion": (NullOrUndefined Nothing) }
+newDevice  = Device { "DeviceArn": Nothing, "DeviceName": Nothing, "DeviceSerialNumber": Nothing, "DeviceStatus": Nothing, "DeviceStatusInfo": Nothing, "DeviceType": Nothing, "MacAddress": Nothing, "RoomArn": Nothing, "SoftwareVersion": Nothing }
 
 -- | Constructs Device's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDevice' :: ( { "DeviceArn" :: NullOrUndefined (Arn) , "DeviceSerialNumber" :: NullOrUndefined (DeviceSerialNumber) , "DeviceType" :: NullOrUndefined (DeviceType) , "DeviceName" :: NullOrUndefined (DeviceName) , "SoftwareVersion" :: NullOrUndefined (SoftwareVersion) , "MacAddress" :: NullOrUndefined (MacAddress) , "RoomArn" :: NullOrUndefined (Arn) , "DeviceStatus" :: NullOrUndefined (DeviceStatus) , "DeviceStatusInfo" :: NullOrUndefined (DeviceStatusInfo) } -> {"DeviceArn" :: NullOrUndefined (Arn) , "DeviceSerialNumber" :: NullOrUndefined (DeviceSerialNumber) , "DeviceType" :: NullOrUndefined (DeviceType) , "DeviceName" :: NullOrUndefined (DeviceName) , "SoftwareVersion" :: NullOrUndefined (SoftwareVersion) , "MacAddress" :: NullOrUndefined (MacAddress) , "RoomArn" :: NullOrUndefined (Arn) , "DeviceStatus" :: NullOrUndefined (DeviceStatus) , "DeviceStatusInfo" :: NullOrUndefined (DeviceStatusInfo) } ) -> Device
-newDevice'  customize = (Device <<< customize) { "DeviceArn": (NullOrUndefined Nothing), "DeviceName": (NullOrUndefined Nothing), "DeviceSerialNumber": (NullOrUndefined Nothing), "DeviceStatus": (NullOrUndefined Nothing), "DeviceStatusInfo": (NullOrUndefined Nothing), "DeviceType": (NullOrUndefined Nothing), "MacAddress": (NullOrUndefined Nothing), "RoomArn": (NullOrUndefined Nothing), "SoftwareVersion": (NullOrUndefined Nothing) }
+newDevice' :: ( { "DeviceArn" :: Maybe (Arn) , "DeviceSerialNumber" :: Maybe (DeviceSerialNumber) , "DeviceType" :: Maybe (DeviceType) , "DeviceName" :: Maybe (DeviceName) , "SoftwareVersion" :: Maybe (SoftwareVersion) , "MacAddress" :: Maybe (MacAddress) , "RoomArn" :: Maybe (Arn) , "DeviceStatus" :: Maybe (DeviceStatus) , "DeviceStatusInfo" :: Maybe (DeviceStatusInfo) } -> {"DeviceArn" :: Maybe (Arn) , "DeviceSerialNumber" :: Maybe (DeviceSerialNumber) , "DeviceType" :: Maybe (DeviceType) , "DeviceName" :: Maybe (DeviceName) , "SoftwareVersion" :: Maybe (SoftwareVersion) , "MacAddress" :: Maybe (MacAddress) , "RoomArn" :: Maybe (Arn) , "DeviceStatus" :: Maybe (DeviceStatus) , "DeviceStatusInfo" :: Maybe (DeviceStatusInfo) } ) -> Device
+newDevice'  customize = (Device <<< customize) { "DeviceArn": Nothing, "DeviceName": Nothing, "DeviceSerialNumber": Nothing, "DeviceStatus": Nothing, "DeviceStatusInfo": Nothing, "DeviceType": Nothing, "MacAddress": Nothing, "RoomArn": Nothing, "SoftwareVersion": Nothing }
 
 
 
 -- | <p>Device attributes.</p>
 newtype DeviceData = DeviceData 
-  { "DeviceArn" :: NullOrUndefined (Arn)
-  , "DeviceSerialNumber" :: NullOrUndefined (DeviceSerialNumber)
-  , "DeviceType" :: NullOrUndefined (DeviceType)
-  , "DeviceName" :: NullOrUndefined (DeviceName)
-  , "SoftwareVersion" :: NullOrUndefined (SoftwareVersion)
-  , "MacAddress" :: NullOrUndefined (MacAddress)
-  , "DeviceStatus" :: NullOrUndefined (DeviceStatus)
-  , "RoomArn" :: NullOrUndefined (Arn)
-  , "RoomName" :: NullOrUndefined (RoomName)
-  , "DeviceStatusInfo" :: NullOrUndefined (DeviceStatusInfo)
+  { "DeviceArn" :: Maybe (Arn)
+  , "DeviceSerialNumber" :: Maybe (DeviceSerialNumber)
+  , "DeviceType" :: Maybe (DeviceType)
+  , "DeviceName" :: Maybe (DeviceName)
+  , "SoftwareVersion" :: Maybe (SoftwareVersion)
+  , "MacAddress" :: Maybe (MacAddress)
+  , "DeviceStatus" :: Maybe (DeviceStatus)
+  , "RoomArn" :: Maybe (Arn)
+  , "RoomName" :: Maybe (RoomName)
+  , "DeviceStatusInfo" :: Maybe (DeviceStatusInfo)
   }
 derive instance newtypeDeviceData :: Newtype DeviceData _
 derive instance repGenericDeviceData :: Generic DeviceData _
@@ -506,12 +505,12 @@ instance encodeDeviceData :: Encode DeviceData where encode = genericEncode opti
 
 -- | Constructs DeviceData from required parameters
 newDeviceData :: DeviceData
-newDeviceData  = DeviceData { "DeviceArn": (NullOrUndefined Nothing), "DeviceName": (NullOrUndefined Nothing), "DeviceSerialNumber": (NullOrUndefined Nothing), "DeviceStatus": (NullOrUndefined Nothing), "DeviceStatusInfo": (NullOrUndefined Nothing), "DeviceType": (NullOrUndefined Nothing), "MacAddress": (NullOrUndefined Nothing), "RoomArn": (NullOrUndefined Nothing), "RoomName": (NullOrUndefined Nothing), "SoftwareVersion": (NullOrUndefined Nothing) }
+newDeviceData  = DeviceData { "DeviceArn": Nothing, "DeviceName": Nothing, "DeviceSerialNumber": Nothing, "DeviceStatus": Nothing, "DeviceStatusInfo": Nothing, "DeviceType": Nothing, "MacAddress": Nothing, "RoomArn": Nothing, "RoomName": Nothing, "SoftwareVersion": Nothing }
 
 -- | Constructs DeviceData's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDeviceData' :: ( { "DeviceArn" :: NullOrUndefined (Arn) , "DeviceSerialNumber" :: NullOrUndefined (DeviceSerialNumber) , "DeviceType" :: NullOrUndefined (DeviceType) , "DeviceName" :: NullOrUndefined (DeviceName) , "SoftwareVersion" :: NullOrUndefined (SoftwareVersion) , "MacAddress" :: NullOrUndefined (MacAddress) , "DeviceStatus" :: NullOrUndefined (DeviceStatus) , "RoomArn" :: NullOrUndefined (Arn) , "RoomName" :: NullOrUndefined (RoomName) , "DeviceStatusInfo" :: NullOrUndefined (DeviceStatusInfo) } -> {"DeviceArn" :: NullOrUndefined (Arn) , "DeviceSerialNumber" :: NullOrUndefined (DeviceSerialNumber) , "DeviceType" :: NullOrUndefined (DeviceType) , "DeviceName" :: NullOrUndefined (DeviceName) , "SoftwareVersion" :: NullOrUndefined (SoftwareVersion) , "MacAddress" :: NullOrUndefined (MacAddress) , "DeviceStatus" :: NullOrUndefined (DeviceStatus) , "RoomArn" :: NullOrUndefined (Arn) , "RoomName" :: NullOrUndefined (RoomName) , "DeviceStatusInfo" :: NullOrUndefined (DeviceStatusInfo) } ) -> DeviceData
-newDeviceData'  customize = (DeviceData <<< customize) { "DeviceArn": (NullOrUndefined Nothing), "DeviceName": (NullOrUndefined Nothing), "DeviceSerialNumber": (NullOrUndefined Nothing), "DeviceStatus": (NullOrUndefined Nothing), "DeviceStatusInfo": (NullOrUndefined Nothing), "DeviceType": (NullOrUndefined Nothing), "MacAddress": (NullOrUndefined Nothing), "RoomArn": (NullOrUndefined Nothing), "RoomName": (NullOrUndefined Nothing), "SoftwareVersion": (NullOrUndefined Nothing) }
+newDeviceData' :: ( { "DeviceArn" :: Maybe (Arn) , "DeviceSerialNumber" :: Maybe (DeviceSerialNumber) , "DeviceType" :: Maybe (DeviceType) , "DeviceName" :: Maybe (DeviceName) , "SoftwareVersion" :: Maybe (SoftwareVersion) , "MacAddress" :: Maybe (MacAddress) , "DeviceStatus" :: Maybe (DeviceStatus) , "RoomArn" :: Maybe (Arn) , "RoomName" :: Maybe (RoomName) , "DeviceStatusInfo" :: Maybe (DeviceStatusInfo) } -> {"DeviceArn" :: Maybe (Arn) , "DeviceSerialNumber" :: Maybe (DeviceSerialNumber) , "DeviceType" :: Maybe (DeviceType) , "DeviceName" :: Maybe (DeviceName) , "SoftwareVersion" :: Maybe (SoftwareVersion) , "MacAddress" :: Maybe (MacAddress) , "DeviceStatus" :: Maybe (DeviceStatus) , "RoomArn" :: Maybe (Arn) , "RoomName" :: Maybe (RoomName) , "DeviceStatusInfo" :: Maybe (DeviceStatusInfo) } ) -> DeviceData
+newDeviceData'  customize = (DeviceData <<< customize) { "DeviceArn": Nothing, "DeviceName": Nothing, "DeviceSerialNumber": Nothing, "DeviceStatus": Nothing, "DeviceStatusInfo": Nothing, "DeviceType": Nothing, "MacAddress": Nothing, "RoomArn": Nothing, "RoomName": Nothing, "SoftwareVersion": Nothing }
 
 
 
@@ -553,7 +552,7 @@ instance encodeDeviceStatus :: Encode DeviceStatus where encode = genericEncode 
 
 -- | <p>Details of a device’s status.</p>
 newtype DeviceStatusDetail = DeviceStatusDetail 
-  { "Code" :: NullOrUndefined (DeviceStatusDetailCode)
+  { "Code" :: Maybe (DeviceStatusDetailCode)
   }
 derive instance newtypeDeviceStatusDetail :: Newtype DeviceStatusDetail _
 derive instance repGenericDeviceStatusDetail :: Generic DeviceStatusDetail _
@@ -563,12 +562,12 @@ instance encodeDeviceStatusDetail :: Encode DeviceStatusDetail where encode = ge
 
 -- | Constructs DeviceStatusDetail from required parameters
 newDeviceStatusDetail :: DeviceStatusDetail
-newDeviceStatusDetail  = DeviceStatusDetail { "Code": (NullOrUndefined Nothing) }
+newDeviceStatusDetail  = DeviceStatusDetail { "Code": Nothing }
 
 -- | Constructs DeviceStatusDetail's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDeviceStatusDetail' :: ( { "Code" :: NullOrUndefined (DeviceStatusDetailCode) } -> {"Code" :: NullOrUndefined (DeviceStatusDetailCode) } ) -> DeviceStatusDetail
-newDeviceStatusDetail'  customize = (DeviceStatusDetail <<< customize) { "Code": (NullOrUndefined Nothing) }
+newDeviceStatusDetail' :: ( { "Code" :: Maybe (DeviceStatusDetailCode) } -> {"Code" :: Maybe (DeviceStatusDetailCode) } ) -> DeviceStatusDetail
+newDeviceStatusDetail'  customize = (DeviceStatusDetail <<< customize) { "Code": Nothing }
 
 
 
@@ -592,7 +591,7 @@ instance encodeDeviceStatusDetails :: Encode DeviceStatusDetails where encode = 
 
 -- | <p>Detailed information about a device's status.</p>
 newtype DeviceStatusInfo = DeviceStatusInfo 
-  { "DeviceStatusDetails" :: NullOrUndefined (DeviceStatusDetails)
+  { "DeviceStatusDetails" :: Maybe (DeviceStatusDetails)
   }
 derive instance newtypeDeviceStatusInfo :: Newtype DeviceStatusInfo _
 derive instance repGenericDeviceStatusInfo :: Generic DeviceStatusInfo _
@@ -602,12 +601,12 @@ instance encodeDeviceStatusInfo :: Encode DeviceStatusInfo where encode = generi
 
 -- | Constructs DeviceStatusInfo from required parameters
 newDeviceStatusInfo :: DeviceStatusInfo
-newDeviceStatusInfo  = DeviceStatusInfo { "DeviceStatusDetails": (NullOrUndefined Nothing) }
+newDeviceStatusInfo  = DeviceStatusInfo { "DeviceStatusDetails": Nothing }
 
 -- | Constructs DeviceStatusInfo's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDeviceStatusInfo' :: ( { "DeviceStatusDetails" :: NullOrUndefined (DeviceStatusDetails) } -> {"DeviceStatusDetails" :: NullOrUndefined (DeviceStatusDetails) } ) -> DeviceStatusInfo
-newDeviceStatusInfo'  customize = (DeviceStatusInfo <<< customize) { "DeviceStatusDetails": (NullOrUndefined Nothing) }
+newDeviceStatusInfo' :: ( { "DeviceStatusDetails" :: Maybe (DeviceStatusDetails) } -> {"DeviceStatusDetails" :: Maybe (DeviceStatusDetails) } ) -> DeviceStatusInfo
+newDeviceStatusInfo'  customize = (DeviceStatusInfo <<< customize) { "DeviceStatusDetails": Nothing }
 
 
 
@@ -621,7 +620,7 @@ instance encodeDeviceType :: Encode DeviceType where encode = genericEncode opti
 
 
 newtype DisassociateDeviceFromRoomRequest = DisassociateDeviceFromRoomRequest 
-  { "DeviceArn" :: NullOrUndefined (Arn)
+  { "DeviceArn" :: Maybe (Arn)
   }
 derive instance newtypeDisassociateDeviceFromRoomRequest :: Newtype DisassociateDeviceFromRoomRequest _
 derive instance repGenericDisassociateDeviceFromRoomRequest :: Generic DisassociateDeviceFromRoomRequest _
@@ -631,12 +630,12 @@ instance encodeDisassociateDeviceFromRoomRequest :: Encode DisassociateDeviceFro
 
 -- | Constructs DisassociateDeviceFromRoomRequest from required parameters
 newDisassociateDeviceFromRoomRequest :: DisassociateDeviceFromRoomRequest
-newDisassociateDeviceFromRoomRequest  = DisassociateDeviceFromRoomRequest { "DeviceArn": (NullOrUndefined Nothing) }
+newDisassociateDeviceFromRoomRequest  = DisassociateDeviceFromRoomRequest { "DeviceArn": Nothing }
 
 -- | Constructs DisassociateDeviceFromRoomRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDisassociateDeviceFromRoomRequest' :: ( { "DeviceArn" :: NullOrUndefined (Arn) } -> {"DeviceArn" :: NullOrUndefined (Arn) } ) -> DisassociateDeviceFromRoomRequest
-newDisassociateDeviceFromRoomRequest'  customize = (DisassociateDeviceFromRoomRequest <<< customize) { "DeviceArn": (NullOrUndefined Nothing) }
+newDisassociateDeviceFromRoomRequest' :: ( { "DeviceArn" :: Maybe (Arn) } -> {"DeviceArn" :: Maybe (Arn) } ) -> DisassociateDeviceFromRoomRequest
+newDisassociateDeviceFromRoomRequest'  customize = (DisassociateDeviceFromRoomRequest <<< customize) { "DeviceArn": Nothing }
 
 
 
@@ -650,8 +649,8 @@ instance encodeDisassociateDeviceFromRoomResponse :: Encode DisassociateDeviceFr
 
 
 newtype DisassociateSkillGroupFromRoomRequest = DisassociateSkillGroupFromRoomRequest 
-  { "SkillGroupArn" :: NullOrUndefined (Arn)
-  , "RoomArn" :: NullOrUndefined (Arn)
+  { "SkillGroupArn" :: Maybe (Arn)
+  , "RoomArn" :: Maybe (Arn)
   }
 derive instance newtypeDisassociateSkillGroupFromRoomRequest :: Newtype DisassociateSkillGroupFromRoomRequest _
 derive instance repGenericDisassociateSkillGroupFromRoomRequest :: Generic DisassociateSkillGroupFromRoomRequest _
@@ -661,12 +660,12 @@ instance encodeDisassociateSkillGroupFromRoomRequest :: Encode DisassociateSkill
 
 -- | Constructs DisassociateSkillGroupFromRoomRequest from required parameters
 newDisassociateSkillGroupFromRoomRequest :: DisassociateSkillGroupFromRoomRequest
-newDisassociateSkillGroupFromRoomRequest  = DisassociateSkillGroupFromRoomRequest { "RoomArn": (NullOrUndefined Nothing), "SkillGroupArn": (NullOrUndefined Nothing) }
+newDisassociateSkillGroupFromRoomRequest  = DisassociateSkillGroupFromRoomRequest { "RoomArn": Nothing, "SkillGroupArn": Nothing }
 
 -- | Constructs DisassociateSkillGroupFromRoomRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newDisassociateSkillGroupFromRoomRequest' :: ( { "SkillGroupArn" :: NullOrUndefined (Arn) , "RoomArn" :: NullOrUndefined (Arn) } -> {"SkillGroupArn" :: NullOrUndefined (Arn) , "RoomArn" :: NullOrUndefined (Arn) } ) -> DisassociateSkillGroupFromRoomRequest
-newDisassociateSkillGroupFromRoomRequest'  customize = (DisassociateSkillGroupFromRoomRequest <<< customize) { "RoomArn": (NullOrUndefined Nothing), "SkillGroupArn": (NullOrUndefined Nothing) }
+newDisassociateSkillGroupFromRoomRequest' :: ( { "SkillGroupArn" :: Maybe (Arn) , "RoomArn" :: Maybe (Arn) } -> {"SkillGroupArn" :: Maybe (Arn) , "RoomArn" :: Maybe (Arn) } ) -> DisassociateSkillGroupFromRoomRequest
+newDisassociateSkillGroupFromRoomRequest'  customize = (DisassociateSkillGroupFromRoomRequest <<< customize) { "RoomArn": Nothing, "SkillGroupArn": Nothing }
 
 
 
@@ -801,7 +800,7 @@ instance encodeFilterValueList :: Encode FilterValueList where encode = genericE
 
 
 newtype GetDeviceRequest = GetDeviceRequest 
-  { "DeviceArn" :: NullOrUndefined (Arn)
+  { "DeviceArn" :: Maybe (Arn)
   }
 derive instance newtypeGetDeviceRequest :: Newtype GetDeviceRequest _
 derive instance repGenericGetDeviceRequest :: Generic GetDeviceRequest _
@@ -811,17 +810,17 @@ instance encodeGetDeviceRequest :: Encode GetDeviceRequest where encode = generi
 
 -- | Constructs GetDeviceRequest from required parameters
 newGetDeviceRequest :: GetDeviceRequest
-newGetDeviceRequest  = GetDeviceRequest { "DeviceArn": (NullOrUndefined Nothing) }
+newGetDeviceRequest  = GetDeviceRequest { "DeviceArn": Nothing }
 
 -- | Constructs GetDeviceRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetDeviceRequest' :: ( { "DeviceArn" :: NullOrUndefined (Arn) } -> {"DeviceArn" :: NullOrUndefined (Arn) } ) -> GetDeviceRequest
-newGetDeviceRequest'  customize = (GetDeviceRequest <<< customize) { "DeviceArn": (NullOrUndefined Nothing) }
+newGetDeviceRequest' :: ( { "DeviceArn" :: Maybe (Arn) } -> {"DeviceArn" :: Maybe (Arn) } ) -> GetDeviceRequest
+newGetDeviceRequest'  customize = (GetDeviceRequest <<< customize) { "DeviceArn": Nothing }
 
 
 
 newtype GetDeviceResponse = GetDeviceResponse 
-  { "Device" :: NullOrUndefined (Device)
+  { "Device" :: Maybe (Device)
   }
 derive instance newtypeGetDeviceResponse :: Newtype GetDeviceResponse _
 derive instance repGenericGetDeviceResponse :: Generic GetDeviceResponse _
@@ -831,17 +830,17 @@ instance encodeGetDeviceResponse :: Encode GetDeviceResponse where encode = gene
 
 -- | Constructs GetDeviceResponse from required parameters
 newGetDeviceResponse :: GetDeviceResponse
-newGetDeviceResponse  = GetDeviceResponse { "Device": (NullOrUndefined Nothing) }
+newGetDeviceResponse  = GetDeviceResponse { "Device": Nothing }
 
 -- | Constructs GetDeviceResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetDeviceResponse' :: ( { "Device" :: NullOrUndefined (Device) } -> {"Device" :: NullOrUndefined (Device) } ) -> GetDeviceResponse
-newGetDeviceResponse'  customize = (GetDeviceResponse <<< customize) { "Device": (NullOrUndefined Nothing) }
+newGetDeviceResponse' :: ( { "Device" :: Maybe (Device) } -> {"Device" :: Maybe (Device) } ) -> GetDeviceResponse
+newGetDeviceResponse'  customize = (GetDeviceResponse <<< customize) { "Device": Nothing }
 
 
 
 newtype GetProfileRequest = GetProfileRequest 
-  { "ProfileArn" :: NullOrUndefined (Arn)
+  { "ProfileArn" :: Maybe (Arn)
   }
 derive instance newtypeGetProfileRequest :: Newtype GetProfileRequest _
 derive instance repGenericGetProfileRequest :: Generic GetProfileRequest _
@@ -851,17 +850,17 @@ instance encodeGetProfileRequest :: Encode GetProfileRequest where encode = gene
 
 -- | Constructs GetProfileRequest from required parameters
 newGetProfileRequest :: GetProfileRequest
-newGetProfileRequest  = GetProfileRequest { "ProfileArn": (NullOrUndefined Nothing) }
+newGetProfileRequest  = GetProfileRequest { "ProfileArn": Nothing }
 
 -- | Constructs GetProfileRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetProfileRequest' :: ( { "ProfileArn" :: NullOrUndefined (Arn) } -> {"ProfileArn" :: NullOrUndefined (Arn) } ) -> GetProfileRequest
-newGetProfileRequest'  customize = (GetProfileRequest <<< customize) { "ProfileArn": (NullOrUndefined Nothing) }
+newGetProfileRequest' :: ( { "ProfileArn" :: Maybe (Arn) } -> {"ProfileArn" :: Maybe (Arn) } ) -> GetProfileRequest
+newGetProfileRequest'  customize = (GetProfileRequest <<< customize) { "ProfileArn": Nothing }
 
 
 
 newtype GetProfileResponse = GetProfileResponse 
-  { "Profile" :: NullOrUndefined (Profile)
+  { "Profile" :: Maybe (Profile)
   }
 derive instance newtypeGetProfileResponse :: Newtype GetProfileResponse _
 derive instance repGenericGetProfileResponse :: Generic GetProfileResponse _
@@ -871,17 +870,17 @@ instance encodeGetProfileResponse :: Encode GetProfileResponse where encode = ge
 
 -- | Constructs GetProfileResponse from required parameters
 newGetProfileResponse :: GetProfileResponse
-newGetProfileResponse  = GetProfileResponse { "Profile": (NullOrUndefined Nothing) }
+newGetProfileResponse  = GetProfileResponse { "Profile": Nothing }
 
 -- | Constructs GetProfileResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetProfileResponse' :: ( { "Profile" :: NullOrUndefined (Profile) } -> {"Profile" :: NullOrUndefined (Profile) } ) -> GetProfileResponse
-newGetProfileResponse'  customize = (GetProfileResponse <<< customize) { "Profile": (NullOrUndefined Nothing) }
+newGetProfileResponse' :: ( { "Profile" :: Maybe (Profile) } -> {"Profile" :: Maybe (Profile) } ) -> GetProfileResponse
+newGetProfileResponse'  customize = (GetProfileResponse <<< customize) { "Profile": Nothing }
 
 
 
 newtype GetRoomRequest = GetRoomRequest 
-  { "RoomArn" :: NullOrUndefined (Arn)
+  { "RoomArn" :: Maybe (Arn)
   }
 derive instance newtypeGetRoomRequest :: Newtype GetRoomRequest _
 derive instance repGenericGetRoomRequest :: Generic GetRoomRequest _
@@ -891,17 +890,17 @@ instance encodeGetRoomRequest :: Encode GetRoomRequest where encode = genericEnc
 
 -- | Constructs GetRoomRequest from required parameters
 newGetRoomRequest :: GetRoomRequest
-newGetRoomRequest  = GetRoomRequest { "RoomArn": (NullOrUndefined Nothing) }
+newGetRoomRequest  = GetRoomRequest { "RoomArn": Nothing }
 
 -- | Constructs GetRoomRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetRoomRequest' :: ( { "RoomArn" :: NullOrUndefined (Arn) } -> {"RoomArn" :: NullOrUndefined (Arn) } ) -> GetRoomRequest
-newGetRoomRequest'  customize = (GetRoomRequest <<< customize) { "RoomArn": (NullOrUndefined Nothing) }
+newGetRoomRequest' :: ( { "RoomArn" :: Maybe (Arn) } -> {"RoomArn" :: Maybe (Arn) } ) -> GetRoomRequest
+newGetRoomRequest'  customize = (GetRoomRequest <<< customize) { "RoomArn": Nothing }
 
 
 
 newtype GetRoomResponse = GetRoomResponse 
-  { "Room" :: NullOrUndefined (Room)
+  { "Room" :: Maybe (Room)
   }
 derive instance newtypeGetRoomResponse :: Newtype GetRoomResponse _
 derive instance repGenericGetRoomResponse :: Generic GetRoomResponse _
@@ -911,17 +910,17 @@ instance encodeGetRoomResponse :: Encode GetRoomResponse where encode = genericE
 
 -- | Constructs GetRoomResponse from required parameters
 newGetRoomResponse :: GetRoomResponse
-newGetRoomResponse  = GetRoomResponse { "Room": (NullOrUndefined Nothing) }
+newGetRoomResponse  = GetRoomResponse { "Room": Nothing }
 
 -- | Constructs GetRoomResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetRoomResponse' :: ( { "Room" :: NullOrUndefined (Room) } -> {"Room" :: NullOrUndefined (Room) } ) -> GetRoomResponse
-newGetRoomResponse'  customize = (GetRoomResponse <<< customize) { "Room": (NullOrUndefined Nothing) }
+newGetRoomResponse' :: ( { "Room" :: Maybe (Room) } -> {"Room" :: Maybe (Room) } ) -> GetRoomResponse
+newGetRoomResponse'  customize = (GetRoomResponse <<< customize) { "Room": Nothing }
 
 
 
 newtype GetRoomSkillParameterRequest = GetRoomSkillParameterRequest 
-  { "RoomArn" :: NullOrUndefined (Arn)
+  { "RoomArn" :: Maybe (Arn)
   , "SkillId" :: (SkillId)
   , "ParameterKey" :: (RoomSkillParameterKey)
   }
@@ -933,17 +932,17 @@ instance encodeGetRoomSkillParameterRequest :: Encode GetRoomSkillParameterReque
 
 -- | Constructs GetRoomSkillParameterRequest from required parameters
 newGetRoomSkillParameterRequest :: RoomSkillParameterKey -> SkillId -> GetRoomSkillParameterRequest
-newGetRoomSkillParameterRequest _ParameterKey _SkillId = GetRoomSkillParameterRequest { "ParameterKey": _ParameterKey, "SkillId": _SkillId, "RoomArn": (NullOrUndefined Nothing) }
+newGetRoomSkillParameterRequest _ParameterKey _SkillId = GetRoomSkillParameterRequest { "ParameterKey": _ParameterKey, "SkillId": _SkillId, "RoomArn": Nothing }
 
 -- | Constructs GetRoomSkillParameterRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetRoomSkillParameterRequest' :: RoomSkillParameterKey -> SkillId -> ( { "RoomArn" :: NullOrUndefined (Arn) , "SkillId" :: (SkillId) , "ParameterKey" :: (RoomSkillParameterKey) } -> {"RoomArn" :: NullOrUndefined (Arn) , "SkillId" :: (SkillId) , "ParameterKey" :: (RoomSkillParameterKey) } ) -> GetRoomSkillParameterRequest
-newGetRoomSkillParameterRequest' _ParameterKey _SkillId customize = (GetRoomSkillParameterRequest <<< customize) { "ParameterKey": _ParameterKey, "SkillId": _SkillId, "RoomArn": (NullOrUndefined Nothing) }
+newGetRoomSkillParameterRequest' :: RoomSkillParameterKey -> SkillId -> ( { "RoomArn" :: Maybe (Arn) , "SkillId" :: (SkillId) , "ParameterKey" :: (RoomSkillParameterKey) } -> {"RoomArn" :: Maybe (Arn) , "SkillId" :: (SkillId) , "ParameterKey" :: (RoomSkillParameterKey) } ) -> GetRoomSkillParameterRequest
+newGetRoomSkillParameterRequest' _ParameterKey _SkillId customize = (GetRoomSkillParameterRequest <<< customize) { "ParameterKey": _ParameterKey, "SkillId": _SkillId, "RoomArn": Nothing }
 
 
 
 newtype GetRoomSkillParameterResponse = GetRoomSkillParameterResponse 
-  { "RoomSkillParameter" :: NullOrUndefined (RoomSkillParameter)
+  { "RoomSkillParameter" :: Maybe (RoomSkillParameter)
   }
 derive instance newtypeGetRoomSkillParameterResponse :: Newtype GetRoomSkillParameterResponse _
 derive instance repGenericGetRoomSkillParameterResponse :: Generic GetRoomSkillParameterResponse _
@@ -953,17 +952,17 @@ instance encodeGetRoomSkillParameterResponse :: Encode GetRoomSkillParameterResp
 
 -- | Constructs GetRoomSkillParameterResponse from required parameters
 newGetRoomSkillParameterResponse :: GetRoomSkillParameterResponse
-newGetRoomSkillParameterResponse  = GetRoomSkillParameterResponse { "RoomSkillParameter": (NullOrUndefined Nothing) }
+newGetRoomSkillParameterResponse  = GetRoomSkillParameterResponse { "RoomSkillParameter": Nothing }
 
 -- | Constructs GetRoomSkillParameterResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetRoomSkillParameterResponse' :: ( { "RoomSkillParameter" :: NullOrUndefined (RoomSkillParameter) } -> {"RoomSkillParameter" :: NullOrUndefined (RoomSkillParameter) } ) -> GetRoomSkillParameterResponse
-newGetRoomSkillParameterResponse'  customize = (GetRoomSkillParameterResponse <<< customize) { "RoomSkillParameter": (NullOrUndefined Nothing) }
+newGetRoomSkillParameterResponse' :: ( { "RoomSkillParameter" :: Maybe (RoomSkillParameter) } -> {"RoomSkillParameter" :: Maybe (RoomSkillParameter) } ) -> GetRoomSkillParameterResponse
+newGetRoomSkillParameterResponse'  customize = (GetRoomSkillParameterResponse <<< customize) { "RoomSkillParameter": Nothing }
 
 
 
 newtype GetSkillGroupRequest = GetSkillGroupRequest 
-  { "SkillGroupArn" :: NullOrUndefined (Arn)
+  { "SkillGroupArn" :: Maybe (Arn)
   }
 derive instance newtypeGetSkillGroupRequest :: Newtype GetSkillGroupRequest _
 derive instance repGenericGetSkillGroupRequest :: Generic GetSkillGroupRequest _
@@ -973,17 +972,17 @@ instance encodeGetSkillGroupRequest :: Encode GetSkillGroupRequest where encode 
 
 -- | Constructs GetSkillGroupRequest from required parameters
 newGetSkillGroupRequest :: GetSkillGroupRequest
-newGetSkillGroupRequest  = GetSkillGroupRequest { "SkillGroupArn": (NullOrUndefined Nothing) }
+newGetSkillGroupRequest  = GetSkillGroupRequest { "SkillGroupArn": Nothing }
 
 -- | Constructs GetSkillGroupRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetSkillGroupRequest' :: ( { "SkillGroupArn" :: NullOrUndefined (Arn) } -> {"SkillGroupArn" :: NullOrUndefined (Arn) } ) -> GetSkillGroupRequest
-newGetSkillGroupRequest'  customize = (GetSkillGroupRequest <<< customize) { "SkillGroupArn": (NullOrUndefined Nothing) }
+newGetSkillGroupRequest' :: ( { "SkillGroupArn" :: Maybe (Arn) } -> {"SkillGroupArn" :: Maybe (Arn) } ) -> GetSkillGroupRequest
+newGetSkillGroupRequest'  customize = (GetSkillGroupRequest <<< customize) { "SkillGroupArn": Nothing }
 
 
 
 newtype GetSkillGroupResponse = GetSkillGroupResponse 
-  { "SkillGroup" :: NullOrUndefined (SkillGroup)
+  { "SkillGroup" :: Maybe (SkillGroup)
   }
 derive instance newtypeGetSkillGroupResponse :: Newtype GetSkillGroupResponse _
 derive instance repGenericGetSkillGroupResponse :: Generic GetSkillGroupResponse _
@@ -993,18 +992,18 @@ instance encodeGetSkillGroupResponse :: Encode GetSkillGroupResponse where encod
 
 -- | Constructs GetSkillGroupResponse from required parameters
 newGetSkillGroupResponse :: GetSkillGroupResponse
-newGetSkillGroupResponse  = GetSkillGroupResponse { "SkillGroup": (NullOrUndefined Nothing) }
+newGetSkillGroupResponse  = GetSkillGroupResponse { "SkillGroup": Nothing }
 
 -- | Constructs GetSkillGroupResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newGetSkillGroupResponse' :: ( { "SkillGroup" :: NullOrUndefined (SkillGroup) } -> {"SkillGroup" :: NullOrUndefined (SkillGroup) } ) -> GetSkillGroupResponse
-newGetSkillGroupResponse'  customize = (GetSkillGroupResponse <<< customize) { "SkillGroup": (NullOrUndefined Nothing) }
+newGetSkillGroupResponse' :: ( { "SkillGroup" :: Maybe (SkillGroup) } -> {"SkillGroup" :: Maybe (SkillGroup) } ) -> GetSkillGroupResponse
+newGetSkillGroupResponse'  customize = (GetSkillGroupResponse <<< customize) { "SkillGroup": Nothing }
 
 
 
 -- | <p>The attempt to update a user is invalid due to the user's current status. HTTP Status Code: 400</p>
 newtype InvalidUserStatusException = InvalidUserStatusException 
-  { "Message" :: NullOrUndefined (ErrorMessage)
+  { "Message" :: Maybe (ErrorMessage)
   }
 derive instance newtypeInvalidUserStatusException :: Newtype InvalidUserStatusException _
 derive instance repGenericInvalidUserStatusException :: Generic InvalidUserStatusException _
@@ -1014,18 +1013,18 @@ instance encodeInvalidUserStatusException :: Encode InvalidUserStatusException w
 
 -- | Constructs InvalidUserStatusException from required parameters
 newInvalidUserStatusException :: InvalidUserStatusException
-newInvalidUserStatusException  = InvalidUserStatusException { "Message": (NullOrUndefined Nothing) }
+newInvalidUserStatusException  = InvalidUserStatusException { "Message": Nothing }
 
 -- | Constructs InvalidUserStatusException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newInvalidUserStatusException' :: ( { "Message" :: NullOrUndefined (ErrorMessage) } -> {"Message" :: NullOrUndefined (ErrorMessage) } ) -> InvalidUserStatusException
-newInvalidUserStatusException'  customize = (InvalidUserStatusException <<< customize) { "Message": (NullOrUndefined Nothing) }
+newInvalidUserStatusException' :: ( { "Message" :: Maybe (ErrorMessage) } -> {"Message" :: Maybe (ErrorMessage) } ) -> InvalidUserStatusException
+newInvalidUserStatusException'  customize = (InvalidUserStatusException <<< customize) { "Message": Nothing }
 
 
 
 -- | <p>You are performing an action that would put you beyond your account's limits. HTTP Status Code: 400</p>
 newtype LimitExceededException = LimitExceededException 
-  { "Message" :: NullOrUndefined (ErrorMessage)
+  { "Message" :: Maybe (ErrorMessage)
   }
 derive instance newtypeLimitExceededException :: Newtype LimitExceededException _
 derive instance repGenericLimitExceededException :: Generic LimitExceededException _
@@ -1035,19 +1034,19 @@ instance encodeLimitExceededException :: Encode LimitExceededException where enc
 
 -- | Constructs LimitExceededException from required parameters
 newLimitExceededException :: LimitExceededException
-newLimitExceededException  = LimitExceededException { "Message": (NullOrUndefined Nothing) }
+newLimitExceededException  = LimitExceededException { "Message": Nothing }
 
 -- | Constructs LimitExceededException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newLimitExceededException' :: ( { "Message" :: NullOrUndefined (ErrorMessage) } -> {"Message" :: NullOrUndefined (ErrorMessage) } ) -> LimitExceededException
-newLimitExceededException'  customize = (LimitExceededException <<< customize) { "Message": (NullOrUndefined Nothing) }
+newLimitExceededException' :: ( { "Message" :: Maybe (ErrorMessage) } -> {"Message" :: Maybe (ErrorMessage) } ) -> LimitExceededException
+newLimitExceededException'  customize = (LimitExceededException <<< customize) { "Message": Nothing }
 
 
 
 newtype ListSkillsRequest = ListSkillsRequest 
-  { "SkillGroupArn" :: NullOrUndefined (Arn)
-  , "NextToken" :: NullOrUndefined (NextToken)
-  , "MaxResults" :: NullOrUndefined (SkillListMaxResults)
+  { "SkillGroupArn" :: Maybe (Arn)
+  , "NextToken" :: Maybe (NextToken)
+  , "MaxResults" :: Maybe (SkillListMaxResults)
   }
 derive instance newtypeListSkillsRequest :: Newtype ListSkillsRequest _
 derive instance repGenericListSkillsRequest :: Generic ListSkillsRequest _
@@ -1057,18 +1056,18 @@ instance encodeListSkillsRequest :: Encode ListSkillsRequest where encode = gene
 
 -- | Constructs ListSkillsRequest from required parameters
 newListSkillsRequest :: ListSkillsRequest
-newListSkillsRequest  = ListSkillsRequest { "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing), "SkillGroupArn": (NullOrUndefined Nothing) }
+newListSkillsRequest  = ListSkillsRequest { "MaxResults": Nothing, "NextToken": Nothing, "SkillGroupArn": Nothing }
 
 -- | Constructs ListSkillsRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListSkillsRequest' :: ( { "SkillGroupArn" :: NullOrUndefined (Arn) , "NextToken" :: NullOrUndefined (NextToken) , "MaxResults" :: NullOrUndefined (SkillListMaxResults) } -> {"SkillGroupArn" :: NullOrUndefined (Arn) , "NextToken" :: NullOrUndefined (NextToken) , "MaxResults" :: NullOrUndefined (SkillListMaxResults) } ) -> ListSkillsRequest
-newListSkillsRequest'  customize = (ListSkillsRequest <<< customize) { "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing), "SkillGroupArn": (NullOrUndefined Nothing) }
+newListSkillsRequest' :: ( { "SkillGroupArn" :: Maybe (Arn) , "NextToken" :: Maybe (NextToken) , "MaxResults" :: Maybe (SkillListMaxResults) } -> {"SkillGroupArn" :: Maybe (Arn) , "NextToken" :: Maybe (NextToken) , "MaxResults" :: Maybe (SkillListMaxResults) } ) -> ListSkillsRequest
+newListSkillsRequest'  customize = (ListSkillsRequest <<< customize) { "MaxResults": Nothing, "NextToken": Nothing, "SkillGroupArn": Nothing }
 
 
 
 newtype ListSkillsResponse = ListSkillsResponse 
-  { "SkillSummaries" :: NullOrUndefined (SkillSummaryList)
-  , "NextToken" :: NullOrUndefined (NextToken)
+  { "SkillSummaries" :: Maybe (SkillSummaryList)
+  , "NextToken" :: Maybe (NextToken)
   }
 derive instance newtypeListSkillsResponse :: Newtype ListSkillsResponse _
 derive instance repGenericListSkillsResponse :: Generic ListSkillsResponse _
@@ -1078,19 +1077,19 @@ instance encodeListSkillsResponse :: Encode ListSkillsResponse where encode = ge
 
 -- | Constructs ListSkillsResponse from required parameters
 newListSkillsResponse :: ListSkillsResponse
-newListSkillsResponse  = ListSkillsResponse { "NextToken": (NullOrUndefined Nothing), "SkillSummaries": (NullOrUndefined Nothing) }
+newListSkillsResponse  = ListSkillsResponse { "NextToken": Nothing, "SkillSummaries": Nothing }
 
 -- | Constructs ListSkillsResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListSkillsResponse' :: ( { "SkillSummaries" :: NullOrUndefined (SkillSummaryList) , "NextToken" :: NullOrUndefined (NextToken) } -> {"SkillSummaries" :: NullOrUndefined (SkillSummaryList) , "NextToken" :: NullOrUndefined (NextToken) } ) -> ListSkillsResponse
-newListSkillsResponse'  customize = (ListSkillsResponse <<< customize) { "NextToken": (NullOrUndefined Nothing), "SkillSummaries": (NullOrUndefined Nothing) }
+newListSkillsResponse' :: ( { "SkillSummaries" :: Maybe (SkillSummaryList) , "NextToken" :: Maybe (NextToken) } -> {"SkillSummaries" :: Maybe (SkillSummaryList) , "NextToken" :: Maybe (NextToken) } ) -> ListSkillsResponse
+newListSkillsResponse'  customize = (ListSkillsResponse <<< customize) { "NextToken": Nothing, "SkillSummaries": Nothing }
 
 
 
 newtype ListTagsRequest = ListTagsRequest 
   { "Arn" :: (Arn)
-  , "NextToken" :: NullOrUndefined (NextToken)
-  , "MaxResults" :: NullOrUndefined (MaxResults)
+  , "NextToken" :: Maybe (NextToken)
+  , "MaxResults" :: Maybe (MaxResults)
   }
 derive instance newtypeListTagsRequest :: Newtype ListTagsRequest _
 derive instance repGenericListTagsRequest :: Generic ListTagsRequest _
@@ -1100,18 +1099,18 @@ instance encodeListTagsRequest :: Encode ListTagsRequest where encode = genericE
 
 -- | Constructs ListTagsRequest from required parameters
 newListTagsRequest :: Arn -> ListTagsRequest
-newListTagsRequest _Arn = ListTagsRequest { "Arn": _Arn, "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListTagsRequest _Arn = ListTagsRequest { "Arn": _Arn, "MaxResults": Nothing, "NextToken": Nothing }
 
 -- | Constructs ListTagsRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListTagsRequest' :: Arn -> ( { "Arn" :: (Arn) , "NextToken" :: NullOrUndefined (NextToken) , "MaxResults" :: NullOrUndefined (MaxResults) } -> {"Arn" :: (Arn) , "NextToken" :: NullOrUndefined (NextToken) , "MaxResults" :: NullOrUndefined (MaxResults) } ) -> ListTagsRequest
-newListTagsRequest' _Arn customize = (ListTagsRequest <<< customize) { "Arn": _Arn, "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing) }
+newListTagsRequest' :: Arn -> ( { "Arn" :: (Arn) , "NextToken" :: Maybe (NextToken) , "MaxResults" :: Maybe (MaxResults) } -> {"Arn" :: (Arn) , "NextToken" :: Maybe (NextToken) , "MaxResults" :: Maybe (MaxResults) } ) -> ListTagsRequest
+newListTagsRequest' _Arn customize = (ListTagsRequest <<< customize) { "Arn": _Arn, "MaxResults": Nothing, "NextToken": Nothing }
 
 
 
 newtype ListTagsResponse = ListTagsResponse 
-  { "Tags" :: NullOrUndefined (TagList)
-  , "NextToken" :: NullOrUndefined (NextToken)
+  { "Tags" :: Maybe (TagList)
+  , "NextToken" :: Maybe (NextToken)
   }
 derive instance newtypeListTagsResponse :: Newtype ListTagsResponse _
 derive instance repGenericListTagsResponse :: Generic ListTagsResponse _
@@ -1121,12 +1120,12 @@ instance encodeListTagsResponse :: Encode ListTagsResponse where encode = generi
 
 -- | Constructs ListTagsResponse from required parameters
 newListTagsResponse :: ListTagsResponse
-newListTagsResponse  = ListTagsResponse { "NextToken": (NullOrUndefined Nothing), "Tags": (NullOrUndefined Nothing) }
+newListTagsResponse  = ListTagsResponse { "NextToken": Nothing, "Tags": Nothing }
 
 -- | Constructs ListTagsResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newListTagsResponse' :: ( { "Tags" :: NullOrUndefined (TagList) , "NextToken" :: NullOrUndefined (NextToken) } -> {"Tags" :: NullOrUndefined (TagList) , "NextToken" :: NullOrUndefined (NextToken) } ) -> ListTagsResponse
-newListTagsResponse'  customize = (ListTagsResponse <<< customize) { "NextToken": (NullOrUndefined Nothing), "Tags": (NullOrUndefined Nothing) }
+newListTagsResponse' :: ( { "Tags" :: Maybe (TagList) , "NextToken" :: Maybe (NextToken) } -> {"Tags" :: Maybe (TagList) , "NextToken" :: Maybe (NextToken) } ) -> ListTagsResponse
+newListTagsResponse'  customize = (ListTagsResponse <<< customize) { "NextToken": Nothing, "Tags": Nothing }
 
 
 
@@ -1159,7 +1158,7 @@ instance encodeMaxVolumeLimit :: Encode MaxVolumeLimit where encode = genericEnc
 
 -- | <p>The name sent in the request is already in use. HTTP Status Code: 400</p>
 newtype NameInUseException = NameInUseException 
-  { "Message" :: NullOrUndefined (ErrorMessage)
+  { "Message" :: Maybe (ErrorMessage)
   }
 derive instance newtypeNameInUseException :: Newtype NameInUseException _
 derive instance repGenericNameInUseException :: Generic NameInUseException _
@@ -1169,12 +1168,12 @@ instance encodeNameInUseException :: Encode NameInUseException where encode = ge
 
 -- | Constructs NameInUseException from required parameters
 newNameInUseException :: NameInUseException
-newNameInUseException  = NameInUseException { "Message": (NullOrUndefined Nothing) }
+newNameInUseException  = NameInUseException { "Message": Nothing }
 
 -- | Constructs NameInUseException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newNameInUseException' :: ( { "Message" :: NullOrUndefined (ErrorMessage) } -> {"Message" :: NullOrUndefined (ErrorMessage) } ) -> NameInUseException
-newNameInUseException'  customize = (NameInUseException <<< customize) { "Message": (NullOrUndefined Nothing) }
+newNameInUseException' :: ( { "Message" :: Maybe (ErrorMessage) } -> {"Message" :: Maybe (ErrorMessage) } ) -> NameInUseException
+newNameInUseException'  customize = (NameInUseException <<< customize) { "Message": Nothing }
 
 
 
@@ -1189,7 +1188,7 @@ instance encodeNextToken :: Encode NextToken where encode = genericEncode option
 
 -- | <p>The resource is not found. HTTP Status Code: 400</p>
 newtype NotFoundException = NotFoundException 
-  { "Message" :: NullOrUndefined (ErrorMessage)
+  { "Message" :: Maybe (ErrorMessage)
   }
 derive instance newtypeNotFoundException :: Newtype NotFoundException _
 derive instance repGenericNotFoundException :: Generic NotFoundException _
@@ -1199,27 +1198,27 @@ instance encodeNotFoundException :: Encode NotFoundException where encode = gene
 
 -- | Constructs NotFoundException from required parameters
 newNotFoundException :: NotFoundException
-newNotFoundException  = NotFoundException { "Message": (NullOrUndefined Nothing) }
+newNotFoundException  = NotFoundException { "Message": Nothing }
 
 -- | Constructs NotFoundException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newNotFoundException' :: ( { "Message" :: NullOrUndefined (ErrorMessage) } -> {"Message" :: NullOrUndefined (ErrorMessage) } ) -> NotFoundException
-newNotFoundException'  customize = (NotFoundException <<< customize) { "Message": (NullOrUndefined Nothing) }
+newNotFoundException' :: ( { "Message" :: Maybe (ErrorMessage) } -> {"Message" :: Maybe (ErrorMessage) } ) -> NotFoundException
+newNotFoundException'  customize = (NotFoundException <<< customize) { "Message": Nothing }
 
 
 
 -- | <p>A room profile with attributes.</p>
 newtype Profile = Profile 
-  { "ProfileArn" :: NullOrUndefined (Arn)
-  , "ProfileName" :: NullOrUndefined (ProfileName)
-  , "Address" :: NullOrUndefined (Address)
-  , "Timezone" :: NullOrUndefined (Timezone)
-  , "DistanceUnit" :: NullOrUndefined (DistanceUnit)
-  , "TemperatureUnit" :: NullOrUndefined (TemperatureUnit)
-  , "WakeWord" :: NullOrUndefined (WakeWord)
-  , "SetupModeDisabled" :: NullOrUndefined (Boolean)
-  , "MaxVolumeLimit" :: NullOrUndefined (MaxVolumeLimit)
-  , "PSTNEnabled" :: NullOrUndefined (Boolean)
+  { "ProfileArn" :: Maybe (Arn)
+  , "ProfileName" :: Maybe (ProfileName)
+  , "Address" :: Maybe (Address)
+  , "Timezone" :: Maybe (Timezone)
+  , "DistanceUnit" :: Maybe (DistanceUnit)
+  , "TemperatureUnit" :: Maybe (TemperatureUnit)
+  , "WakeWord" :: Maybe (WakeWord)
+  , "SetupModeDisabled" :: Maybe (Boolean)
+  , "MaxVolumeLimit" :: Maybe (MaxVolumeLimit)
+  , "PSTNEnabled" :: Maybe (Boolean)
   }
 derive instance newtypeProfile :: Newtype Profile _
 derive instance repGenericProfile :: Generic Profile _
@@ -1229,24 +1228,24 @@ instance encodeProfile :: Encode Profile where encode = genericEncode options
 
 -- | Constructs Profile from required parameters
 newProfile :: Profile
-newProfile  = Profile { "Address": (NullOrUndefined Nothing), "DistanceUnit": (NullOrUndefined Nothing), "MaxVolumeLimit": (NullOrUndefined Nothing), "PSTNEnabled": (NullOrUndefined Nothing), "ProfileArn": (NullOrUndefined Nothing), "ProfileName": (NullOrUndefined Nothing), "SetupModeDisabled": (NullOrUndefined Nothing), "TemperatureUnit": (NullOrUndefined Nothing), "Timezone": (NullOrUndefined Nothing), "WakeWord": (NullOrUndefined Nothing) }
+newProfile  = Profile { "Address": Nothing, "DistanceUnit": Nothing, "MaxVolumeLimit": Nothing, "PSTNEnabled": Nothing, "ProfileArn": Nothing, "ProfileName": Nothing, "SetupModeDisabled": Nothing, "TemperatureUnit": Nothing, "Timezone": Nothing, "WakeWord": Nothing }
 
 -- | Constructs Profile's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newProfile' :: ( { "ProfileArn" :: NullOrUndefined (Arn) , "ProfileName" :: NullOrUndefined (ProfileName) , "Address" :: NullOrUndefined (Address) , "Timezone" :: NullOrUndefined (Timezone) , "DistanceUnit" :: NullOrUndefined (DistanceUnit) , "TemperatureUnit" :: NullOrUndefined (TemperatureUnit) , "WakeWord" :: NullOrUndefined (WakeWord) , "SetupModeDisabled" :: NullOrUndefined (Boolean) , "MaxVolumeLimit" :: NullOrUndefined (MaxVolumeLimit) , "PSTNEnabled" :: NullOrUndefined (Boolean) } -> {"ProfileArn" :: NullOrUndefined (Arn) , "ProfileName" :: NullOrUndefined (ProfileName) , "Address" :: NullOrUndefined (Address) , "Timezone" :: NullOrUndefined (Timezone) , "DistanceUnit" :: NullOrUndefined (DistanceUnit) , "TemperatureUnit" :: NullOrUndefined (TemperatureUnit) , "WakeWord" :: NullOrUndefined (WakeWord) , "SetupModeDisabled" :: NullOrUndefined (Boolean) , "MaxVolumeLimit" :: NullOrUndefined (MaxVolumeLimit) , "PSTNEnabled" :: NullOrUndefined (Boolean) } ) -> Profile
-newProfile'  customize = (Profile <<< customize) { "Address": (NullOrUndefined Nothing), "DistanceUnit": (NullOrUndefined Nothing), "MaxVolumeLimit": (NullOrUndefined Nothing), "PSTNEnabled": (NullOrUndefined Nothing), "ProfileArn": (NullOrUndefined Nothing), "ProfileName": (NullOrUndefined Nothing), "SetupModeDisabled": (NullOrUndefined Nothing), "TemperatureUnit": (NullOrUndefined Nothing), "Timezone": (NullOrUndefined Nothing), "WakeWord": (NullOrUndefined Nothing) }
+newProfile' :: ( { "ProfileArn" :: Maybe (Arn) , "ProfileName" :: Maybe (ProfileName) , "Address" :: Maybe (Address) , "Timezone" :: Maybe (Timezone) , "DistanceUnit" :: Maybe (DistanceUnit) , "TemperatureUnit" :: Maybe (TemperatureUnit) , "WakeWord" :: Maybe (WakeWord) , "SetupModeDisabled" :: Maybe (Boolean) , "MaxVolumeLimit" :: Maybe (MaxVolumeLimit) , "PSTNEnabled" :: Maybe (Boolean) } -> {"ProfileArn" :: Maybe (Arn) , "ProfileName" :: Maybe (ProfileName) , "Address" :: Maybe (Address) , "Timezone" :: Maybe (Timezone) , "DistanceUnit" :: Maybe (DistanceUnit) , "TemperatureUnit" :: Maybe (TemperatureUnit) , "WakeWord" :: Maybe (WakeWord) , "SetupModeDisabled" :: Maybe (Boolean) , "MaxVolumeLimit" :: Maybe (MaxVolumeLimit) , "PSTNEnabled" :: Maybe (Boolean) } ) -> Profile
+newProfile'  customize = (Profile <<< customize) { "Address": Nothing, "DistanceUnit": Nothing, "MaxVolumeLimit": Nothing, "PSTNEnabled": Nothing, "ProfileArn": Nothing, "ProfileName": Nothing, "SetupModeDisabled": Nothing, "TemperatureUnit": Nothing, "Timezone": Nothing, "WakeWord": Nothing }
 
 
 
 -- | <p>The data of a room profile.</p>
 newtype ProfileData = ProfileData 
-  { "ProfileArn" :: NullOrUndefined (Arn)
-  , "ProfileName" :: NullOrUndefined (ProfileName)
-  , "Address" :: NullOrUndefined (Address)
-  , "Timezone" :: NullOrUndefined (Timezone)
-  , "DistanceUnit" :: NullOrUndefined (DistanceUnit)
-  , "TemperatureUnit" :: NullOrUndefined (TemperatureUnit)
-  , "WakeWord" :: NullOrUndefined (WakeWord)
+  { "ProfileArn" :: Maybe (Arn)
+  , "ProfileName" :: Maybe (ProfileName)
+  , "Address" :: Maybe (Address)
+  , "Timezone" :: Maybe (Timezone)
+  , "DistanceUnit" :: Maybe (DistanceUnit)
+  , "TemperatureUnit" :: Maybe (TemperatureUnit)
+  , "WakeWord" :: Maybe (WakeWord)
   }
 derive instance newtypeProfileData :: Newtype ProfileData _
 derive instance repGenericProfileData :: Generic ProfileData _
@@ -1256,12 +1255,12 @@ instance encodeProfileData :: Encode ProfileData where encode = genericEncode op
 
 -- | Constructs ProfileData from required parameters
 newProfileData :: ProfileData
-newProfileData  = ProfileData { "Address": (NullOrUndefined Nothing), "DistanceUnit": (NullOrUndefined Nothing), "ProfileArn": (NullOrUndefined Nothing), "ProfileName": (NullOrUndefined Nothing), "TemperatureUnit": (NullOrUndefined Nothing), "Timezone": (NullOrUndefined Nothing), "WakeWord": (NullOrUndefined Nothing) }
+newProfileData  = ProfileData { "Address": Nothing, "DistanceUnit": Nothing, "ProfileArn": Nothing, "ProfileName": Nothing, "TemperatureUnit": Nothing, "Timezone": Nothing, "WakeWord": Nothing }
 
 -- | Constructs ProfileData's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newProfileData' :: ( { "ProfileArn" :: NullOrUndefined (Arn) , "ProfileName" :: NullOrUndefined (ProfileName) , "Address" :: NullOrUndefined (Address) , "Timezone" :: NullOrUndefined (Timezone) , "DistanceUnit" :: NullOrUndefined (DistanceUnit) , "TemperatureUnit" :: NullOrUndefined (TemperatureUnit) , "WakeWord" :: NullOrUndefined (WakeWord) } -> {"ProfileArn" :: NullOrUndefined (Arn) , "ProfileName" :: NullOrUndefined (ProfileName) , "Address" :: NullOrUndefined (Address) , "Timezone" :: NullOrUndefined (Timezone) , "DistanceUnit" :: NullOrUndefined (DistanceUnit) , "TemperatureUnit" :: NullOrUndefined (TemperatureUnit) , "WakeWord" :: NullOrUndefined (WakeWord) } ) -> ProfileData
-newProfileData'  customize = (ProfileData <<< customize) { "Address": (NullOrUndefined Nothing), "DistanceUnit": (NullOrUndefined Nothing), "ProfileArn": (NullOrUndefined Nothing), "ProfileName": (NullOrUndefined Nothing), "TemperatureUnit": (NullOrUndefined Nothing), "Timezone": (NullOrUndefined Nothing), "WakeWord": (NullOrUndefined Nothing) }
+newProfileData' :: ( { "ProfileArn" :: Maybe (Arn) , "ProfileName" :: Maybe (ProfileName) , "Address" :: Maybe (Address) , "Timezone" :: Maybe (Timezone) , "DistanceUnit" :: Maybe (DistanceUnit) , "TemperatureUnit" :: Maybe (TemperatureUnit) , "WakeWord" :: Maybe (WakeWord) } -> {"ProfileArn" :: Maybe (Arn) , "ProfileName" :: Maybe (ProfileName) , "Address" :: Maybe (Address) , "Timezone" :: Maybe (Timezone) , "DistanceUnit" :: Maybe (DistanceUnit) , "TemperatureUnit" :: Maybe (TemperatureUnit) , "WakeWord" :: Maybe (WakeWord) } ) -> ProfileData
+newProfileData'  customize = (ProfileData <<< customize) { "Address": Nothing, "DistanceUnit": Nothing, "ProfileArn": Nothing, "ProfileName": Nothing, "TemperatureUnit": Nothing, "Timezone": Nothing, "WakeWord": Nothing }
 
 
 
@@ -1293,7 +1292,7 @@ instance encodeProviderCalendarId :: Encode ProviderCalendarId where encode = ge
 
 
 newtype PutRoomSkillParameterRequest = PutRoomSkillParameterRequest 
-  { "RoomArn" :: NullOrUndefined (Arn)
+  { "RoomArn" :: Maybe (Arn)
   , "SkillId" :: (SkillId)
   , "RoomSkillParameter" :: (RoomSkillParameter)
   }
@@ -1305,12 +1304,12 @@ instance encodePutRoomSkillParameterRequest :: Encode PutRoomSkillParameterReque
 
 -- | Constructs PutRoomSkillParameterRequest from required parameters
 newPutRoomSkillParameterRequest :: RoomSkillParameter -> SkillId -> PutRoomSkillParameterRequest
-newPutRoomSkillParameterRequest _RoomSkillParameter _SkillId = PutRoomSkillParameterRequest { "RoomSkillParameter": _RoomSkillParameter, "SkillId": _SkillId, "RoomArn": (NullOrUndefined Nothing) }
+newPutRoomSkillParameterRequest _RoomSkillParameter _SkillId = PutRoomSkillParameterRequest { "RoomSkillParameter": _RoomSkillParameter, "SkillId": _SkillId, "RoomArn": Nothing }
 
 -- | Constructs PutRoomSkillParameterRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newPutRoomSkillParameterRequest' :: RoomSkillParameter -> SkillId -> ( { "RoomArn" :: NullOrUndefined (Arn) , "SkillId" :: (SkillId) , "RoomSkillParameter" :: (RoomSkillParameter) } -> {"RoomArn" :: NullOrUndefined (Arn) , "SkillId" :: (SkillId) , "RoomSkillParameter" :: (RoomSkillParameter) } ) -> PutRoomSkillParameterRequest
-newPutRoomSkillParameterRequest' _RoomSkillParameter _SkillId customize = (PutRoomSkillParameterRequest <<< customize) { "RoomSkillParameter": _RoomSkillParameter, "SkillId": _SkillId, "RoomArn": (NullOrUndefined Nothing) }
+newPutRoomSkillParameterRequest' :: RoomSkillParameter -> SkillId -> ( { "RoomArn" :: Maybe (Arn) , "SkillId" :: (SkillId) , "RoomSkillParameter" :: (RoomSkillParameter) } -> {"RoomArn" :: Maybe (Arn) , "SkillId" :: (SkillId) , "RoomSkillParameter" :: (RoomSkillParameter) } ) -> PutRoomSkillParameterRequest
+newPutRoomSkillParameterRequest' _RoomSkillParameter _SkillId customize = (PutRoomSkillParameterRequest <<< customize) { "RoomSkillParameter": _RoomSkillParameter, "SkillId": _SkillId, "RoomArn": Nothing }
 
 
 
@@ -1345,9 +1344,9 @@ newResolveRoomRequest' _SkillId _UserId customize = (ResolveRoomRequest <<< cust
 
 
 newtype ResolveRoomResponse = ResolveRoomResponse 
-  { "RoomArn" :: NullOrUndefined (Arn)
-  , "RoomName" :: NullOrUndefined (RoomName)
-  , "RoomSkillParameters" :: NullOrUndefined (RoomSkillParameters)
+  { "RoomArn" :: Maybe (Arn)
+  , "RoomName" :: Maybe (RoomName)
+  , "RoomSkillParameters" :: Maybe (RoomSkillParameters)
   }
 derive instance newtypeResolveRoomResponse :: Newtype ResolveRoomResponse _
 derive instance repGenericResolveRoomResponse :: Generic ResolveRoomResponse _
@@ -1357,19 +1356,19 @@ instance encodeResolveRoomResponse :: Encode ResolveRoomResponse where encode = 
 
 -- | Constructs ResolveRoomResponse from required parameters
 newResolveRoomResponse :: ResolveRoomResponse
-newResolveRoomResponse  = ResolveRoomResponse { "RoomArn": (NullOrUndefined Nothing), "RoomName": (NullOrUndefined Nothing), "RoomSkillParameters": (NullOrUndefined Nothing) }
+newResolveRoomResponse  = ResolveRoomResponse { "RoomArn": Nothing, "RoomName": Nothing, "RoomSkillParameters": Nothing }
 
 -- | Constructs ResolveRoomResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newResolveRoomResponse' :: ( { "RoomArn" :: NullOrUndefined (Arn) , "RoomName" :: NullOrUndefined (RoomName) , "RoomSkillParameters" :: NullOrUndefined (RoomSkillParameters) } -> {"RoomArn" :: NullOrUndefined (Arn) , "RoomName" :: NullOrUndefined (RoomName) , "RoomSkillParameters" :: NullOrUndefined (RoomSkillParameters) } ) -> ResolveRoomResponse
-newResolveRoomResponse'  customize = (ResolveRoomResponse <<< customize) { "RoomArn": (NullOrUndefined Nothing), "RoomName": (NullOrUndefined Nothing), "RoomSkillParameters": (NullOrUndefined Nothing) }
+newResolveRoomResponse' :: ( { "RoomArn" :: Maybe (Arn) , "RoomName" :: Maybe (RoomName) , "RoomSkillParameters" :: Maybe (RoomSkillParameters) } -> {"RoomArn" :: Maybe (Arn) , "RoomName" :: Maybe (RoomName) , "RoomSkillParameters" :: Maybe (RoomSkillParameters) } ) -> ResolveRoomResponse
+newResolveRoomResponse'  customize = (ResolveRoomResponse <<< customize) { "RoomArn": Nothing, "RoomName": Nothing, "RoomSkillParameters": Nothing }
 
 
 
 -- | <p>The resource in the request is already in use. HTTP Status Code: 400</p>
 newtype ResourceInUseException = ResourceInUseException 
-  { "Message" :: NullOrUndefined (ErrorMessage)
-  , "ClientRequestToken" :: NullOrUndefined (ClientRequestToken)
+  { "Message" :: Maybe (ErrorMessage)
+  , "ClientRequestToken" :: Maybe (ClientRequestToken)
   }
 derive instance newtypeResourceInUseException :: Newtype ResourceInUseException _
 derive instance repGenericResourceInUseException :: Generic ResourceInUseException _
@@ -1379,18 +1378,18 @@ instance encodeResourceInUseException :: Encode ResourceInUseException where enc
 
 -- | Constructs ResourceInUseException from required parameters
 newResourceInUseException :: ResourceInUseException
-newResourceInUseException  = ResourceInUseException { "ClientRequestToken": (NullOrUndefined Nothing), "Message": (NullOrUndefined Nothing) }
+newResourceInUseException  = ResourceInUseException { "ClientRequestToken": Nothing, "Message": Nothing }
 
 -- | Constructs ResourceInUseException's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newResourceInUseException' :: ( { "Message" :: NullOrUndefined (ErrorMessage) , "ClientRequestToken" :: NullOrUndefined (ClientRequestToken) } -> {"Message" :: NullOrUndefined (ErrorMessage) , "ClientRequestToken" :: NullOrUndefined (ClientRequestToken) } ) -> ResourceInUseException
-newResourceInUseException'  customize = (ResourceInUseException <<< customize) { "ClientRequestToken": (NullOrUndefined Nothing), "Message": (NullOrUndefined Nothing) }
+newResourceInUseException' :: ( { "Message" :: Maybe (ErrorMessage) , "ClientRequestToken" :: Maybe (ClientRequestToken) } -> {"Message" :: Maybe (ErrorMessage) , "ClientRequestToken" :: Maybe (ClientRequestToken) } ) -> ResourceInUseException
+newResourceInUseException'  customize = (ResourceInUseException <<< customize) { "ClientRequestToken": Nothing, "Message": Nothing }
 
 
 
 newtype RevokeInvitationRequest = RevokeInvitationRequest 
-  { "UserArn" :: NullOrUndefined (Arn)
-  , "EnrollmentId" :: NullOrUndefined (EnrollmentId)
+  { "UserArn" :: Maybe (Arn)
+  , "EnrollmentId" :: Maybe (EnrollmentId)
   }
 derive instance newtypeRevokeInvitationRequest :: Newtype RevokeInvitationRequest _
 derive instance repGenericRevokeInvitationRequest :: Generic RevokeInvitationRequest _
@@ -1400,12 +1399,12 @@ instance encodeRevokeInvitationRequest :: Encode RevokeInvitationRequest where e
 
 -- | Constructs RevokeInvitationRequest from required parameters
 newRevokeInvitationRequest :: RevokeInvitationRequest
-newRevokeInvitationRequest  = RevokeInvitationRequest { "EnrollmentId": (NullOrUndefined Nothing), "UserArn": (NullOrUndefined Nothing) }
+newRevokeInvitationRequest  = RevokeInvitationRequest { "EnrollmentId": Nothing, "UserArn": Nothing }
 
 -- | Constructs RevokeInvitationRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newRevokeInvitationRequest' :: ( { "UserArn" :: NullOrUndefined (Arn) , "EnrollmentId" :: NullOrUndefined (EnrollmentId) } -> {"UserArn" :: NullOrUndefined (Arn) , "EnrollmentId" :: NullOrUndefined (EnrollmentId) } ) -> RevokeInvitationRequest
-newRevokeInvitationRequest'  customize = (RevokeInvitationRequest <<< customize) { "EnrollmentId": (NullOrUndefined Nothing), "UserArn": (NullOrUndefined Nothing) }
+newRevokeInvitationRequest' :: ( { "UserArn" :: Maybe (Arn) , "EnrollmentId" :: Maybe (EnrollmentId) } -> {"UserArn" :: Maybe (Arn) , "EnrollmentId" :: Maybe (EnrollmentId) } ) -> RevokeInvitationRequest
+newRevokeInvitationRequest'  customize = (RevokeInvitationRequest <<< customize) { "EnrollmentId": Nothing, "UserArn": Nothing }
 
 
 
@@ -1420,11 +1419,11 @@ instance encodeRevokeInvitationResponse :: Encode RevokeInvitationResponse where
 
 -- | <p>A room with attributes.</p>
 newtype Room = Room 
-  { "RoomArn" :: NullOrUndefined (Arn)
-  , "RoomName" :: NullOrUndefined (RoomName)
-  , "Description" :: NullOrUndefined (RoomDescription)
-  , "ProviderCalendarId" :: NullOrUndefined (ProviderCalendarId)
-  , "ProfileArn" :: NullOrUndefined (Arn)
+  { "RoomArn" :: Maybe (Arn)
+  , "RoomName" :: Maybe (RoomName)
+  , "Description" :: Maybe (RoomDescription)
+  , "ProviderCalendarId" :: Maybe (ProviderCalendarId)
+  , "ProfileArn" :: Maybe (Arn)
   }
 derive instance newtypeRoom :: Newtype Room _
 derive instance repGenericRoom :: Generic Room _
@@ -1434,23 +1433,23 @@ instance encodeRoom :: Encode Room where encode = genericEncode options
 
 -- | Constructs Room from required parameters
 newRoom :: Room
-newRoom  = Room { "Description": (NullOrUndefined Nothing), "ProfileArn": (NullOrUndefined Nothing), "ProviderCalendarId": (NullOrUndefined Nothing), "RoomArn": (NullOrUndefined Nothing), "RoomName": (NullOrUndefined Nothing) }
+newRoom  = Room { "Description": Nothing, "ProfileArn": Nothing, "ProviderCalendarId": Nothing, "RoomArn": Nothing, "RoomName": Nothing }
 
 -- | Constructs Room's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newRoom' :: ( { "RoomArn" :: NullOrUndefined (Arn) , "RoomName" :: NullOrUndefined (RoomName) , "Description" :: NullOrUndefined (RoomDescription) , "ProviderCalendarId" :: NullOrUndefined (ProviderCalendarId) , "ProfileArn" :: NullOrUndefined (Arn) } -> {"RoomArn" :: NullOrUndefined (Arn) , "RoomName" :: NullOrUndefined (RoomName) , "Description" :: NullOrUndefined (RoomDescription) , "ProviderCalendarId" :: NullOrUndefined (ProviderCalendarId) , "ProfileArn" :: NullOrUndefined (Arn) } ) -> Room
-newRoom'  customize = (Room <<< customize) { "Description": (NullOrUndefined Nothing), "ProfileArn": (NullOrUndefined Nothing), "ProviderCalendarId": (NullOrUndefined Nothing), "RoomArn": (NullOrUndefined Nothing), "RoomName": (NullOrUndefined Nothing) }
+newRoom' :: ( { "RoomArn" :: Maybe (Arn) , "RoomName" :: Maybe (RoomName) , "Description" :: Maybe (RoomDescription) , "ProviderCalendarId" :: Maybe (ProviderCalendarId) , "ProfileArn" :: Maybe (Arn) } -> {"RoomArn" :: Maybe (Arn) , "RoomName" :: Maybe (RoomName) , "Description" :: Maybe (RoomDescription) , "ProviderCalendarId" :: Maybe (ProviderCalendarId) , "ProfileArn" :: Maybe (Arn) } ) -> Room
+newRoom'  customize = (Room <<< customize) { "Description": Nothing, "ProfileArn": Nothing, "ProviderCalendarId": Nothing, "RoomArn": Nothing, "RoomName": Nothing }
 
 
 
 -- | <p>The data of a room.</p>
 newtype RoomData = RoomData 
-  { "RoomArn" :: NullOrUndefined (Arn)
-  , "RoomName" :: NullOrUndefined (RoomName)
-  , "Description" :: NullOrUndefined (RoomDescription)
-  , "ProviderCalendarId" :: NullOrUndefined (ProviderCalendarId)
-  , "ProfileArn" :: NullOrUndefined (Arn)
-  , "ProfileName" :: NullOrUndefined (ProfileName)
+  { "RoomArn" :: Maybe (Arn)
+  , "RoomName" :: Maybe (RoomName)
+  , "Description" :: Maybe (RoomDescription)
+  , "ProviderCalendarId" :: Maybe (ProviderCalendarId)
+  , "ProfileArn" :: Maybe (Arn)
+  , "ProfileName" :: Maybe (ProfileName)
   }
 derive instance newtypeRoomData :: Newtype RoomData _
 derive instance repGenericRoomData :: Generic RoomData _
@@ -1460,12 +1459,12 @@ instance encodeRoomData :: Encode RoomData where encode = genericEncode options
 
 -- | Constructs RoomData from required parameters
 newRoomData :: RoomData
-newRoomData  = RoomData { "Description": (NullOrUndefined Nothing), "ProfileArn": (NullOrUndefined Nothing), "ProfileName": (NullOrUndefined Nothing), "ProviderCalendarId": (NullOrUndefined Nothing), "RoomArn": (NullOrUndefined Nothing), "RoomName": (NullOrUndefined Nothing) }
+newRoomData  = RoomData { "Description": Nothing, "ProfileArn": Nothing, "ProfileName": Nothing, "ProviderCalendarId": Nothing, "RoomArn": Nothing, "RoomName": Nothing }
 
 -- | Constructs RoomData's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newRoomData' :: ( { "RoomArn" :: NullOrUndefined (Arn) , "RoomName" :: NullOrUndefined (RoomName) , "Description" :: NullOrUndefined (RoomDescription) , "ProviderCalendarId" :: NullOrUndefined (ProviderCalendarId) , "ProfileArn" :: NullOrUndefined (Arn) , "ProfileName" :: NullOrUndefined (ProfileName) } -> {"RoomArn" :: NullOrUndefined (Arn) , "RoomName" :: NullOrUndefined (RoomName) , "Description" :: NullOrUndefined (RoomDescription) , "ProviderCalendarId" :: NullOrUndefined (ProviderCalendarId) , "ProfileArn" :: NullOrUndefined (Arn) , "ProfileName" :: NullOrUndefined (ProfileName) } ) -> RoomData
-newRoomData'  customize = (RoomData <<< customize) { "Description": (NullOrUndefined Nothing), "ProfileArn": (NullOrUndefined Nothing), "ProfileName": (NullOrUndefined Nothing), "ProviderCalendarId": (NullOrUndefined Nothing), "RoomArn": (NullOrUndefined Nothing), "RoomName": (NullOrUndefined Nothing) }
+newRoomData' :: ( { "RoomArn" :: Maybe (Arn) , "RoomName" :: Maybe (RoomName) , "Description" :: Maybe (RoomDescription) , "ProviderCalendarId" :: Maybe (ProviderCalendarId) , "ProfileArn" :: Maybe (Arn) , "ProfileName" :: Maybe (ProfileName) } -> {"RoomArn" :: Maybe (Arn) , "RoomName" :: Maybe (RoomName) , "Description" :: Maybe (RoomDescription) , "ProviderCalendarId" :: Maybe (ProviderCalendarId) , "ProfileArn" :: Maybe (Arn) , "ProfileName" :: Maybe (ProfileName) } ) -> RoomData
+newRoomData'  customize = (RoomData <<< customize) { "Description": Nothing, "ProfileArn": Nothing, "ProfileName": Nothing, "ProviderCalendarId": Nothing, "RoomArn": Nothing, "RoomName": Nothing }
 
 
 
@@ -1546,10 +1545,10 @@ instance encodeRoomSkillParameters :: Encode RoomSkillParameters where encode = 
 
 
 newtype SearchDevicesRequest = SearchDevicesRequest 
-  { "NextToken" :: NullOrUndefined (NextToken)
-  , "MaxResults" :: NullOrUndefined (MaxResults)
-  , "Filters" :: NullOrUndefined (FilterList)
-  , "SortCriteria" :: NullOrUndefined (SortList)
+  { "NextToken" :: Maybe (NextToken)
+  , "MaxResults" :: Maybe (MaxResults)
+  , "Filters" :: Maybe (FilterList)
+  , "SortCriteria" :: Maybe (SortList)
   }
 derive instance newtypeSearchDevicesRequest :: Newtype SearchDevicesRequest _
 derive instance repGenericSearchDevicesRequest :: Generic SearchDevicesRequest _
@@ -1559,19 +1558,19 @@ instance encodeSearchDevicesRequest :: Encode SearchDevicesRequest where encode 
 
 -- | Constructs SearchDevicesRequest from required parameters
 newSearchDevicesRequest :: SearchDevicesRequest
-newSearchDevicesRequest  = SearchDevicesRequest { "Filters": (NullOrUndefined Nothing), "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing), "SortCriteria": (NullOrUndefined Nothing) }
+newSearchDevicesRequest  = SearchDevicesRequest { "Filters": Nothing, "MaxResults": Nothing, "NextToken": Nothing, "SortCriteria": Nothing }
 
 -- | Constructs SearchDevicesRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSearchDevicesRequest' :: ( { "NextToken" :: NullOrUndefined (NextToken) , "MaxResults" :: NullOrUndefined (MaxResults) , "Filters" :: NullOrUndefined (FilterList) , "SortCriteria" :: NullOrUndefined (SortList) } -> {"NextToken" :: NullOrUndefined (NextToken) , "MaxResults" :: NullOrUndefined (MaxResults) , "Filters" :: NullOrUndefined (FilterList) , "SortCriteria" :: NullOrUndefined (SortList) } ) -> SearchDevicesRequest
-newSearchDevicesRequest'  customize = (SearchDevicesRequest <<< customize) { "Filters": (NullOrUndefined Nothing), "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing), "SortCriteria": (NullOrUndefined Nothing) }
+newSearchDevicesRequest' :: ( { "NextToken" :: Maybe (NextToken) , "MaxResults" :: Maybe (MaxResults) , "Filters" :: Maybe (FilterList) , "SortCriteria" :: Maybe (SortList) } -> {"NextToken" :: Maybe (NextToken) , "MaxResults" :: Maybe (MaxResults) , "Filters" :: Maybe (FilterList) , "SortCriteria" :: Maybe (SortList) } ) -> SearchDevicesRequest
+newSearchDevicesRequest'  customize = (SearchDevicesRequest <<< customize) { "Filters": Nothing, "MaxResults": Nothing, "NextToken": Nothing, "SortCriteria": Nothing }
 
 
 
 newtype SearchDevicesResponse = SearchDevicesResponse 
-  { "Devices" :: NullOrUndefined (DeviceDataList)
-  , "NextToken" :: NullOrUndefined (NextToken)
-  , "TotalCount" :: NullOrUndefined (TotalCount)
+  { "Devices" :: Maybe (DeviceDataList)
+  , "NextToken" :: Maybe (NextToken)
+  , "TotalCount" :: Maybe (TotalCount)
   }
 derive instance newtypeSearchDevicesResponse :: Newtype SearchDevicesResponse _
 derive instance repGenericSearchDevicesResponse :: Generic SearchDevicesResponse _
@@ -1581,20 +1580,20 @@ instance encodeSearchDevicesResponse :: Encode SearchDevicesResponse where encod
 
 -- | Constructs SearchDevicesResponse from required parameters
 newSearchDevicesResponse :: SearchDevicesResponse
-newSearchDevicesResponse  = SearchDevicesResponse { "Devices": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing), "TotalCount": (NullOrUndefined Nothing) }
+newSearchDevicesResponse  = SearchDevicesResponse { "Devices": Nothing, "NextToken": Nothing, "TotalCount": Nothing }
 
 -- | Constructs SearchDevicesResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSearchDevicesResponse' :: ( { "Devices" :: NullOrUndefined (DeviceDataList) , "NextToken" :: NullOrUndefined (NextToken) , "TotalCount" :: NullOrUndefined (TotalCount) } -> {"Devices" :: NullOrUndefined (DeviceDataList) , "NextToken" :: NullOrUndefined (NextToken) , "TotalCount" :: NullOrUndefined (TotalCount) } ) -> SearchDevicesResponse
-newSearchDevicesResponse'  customize = (SearchDevicesResponse <<< customize) { "Devices": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing), "TotalCount": (NullOrUndefined Nothing) }
+newSearchDevicesResponse' :: ( { "Devices" :: Maybe (DeviceDataList) , "NextToken" :: Maybe (NextToken) , "TotalCount" :: Maybe (TotalCount) } -> {"Devices" :: Maybe (DeviceDataList) , "NextToken" :: Maybe (NextToken) , "TotalCount" :: Maybe (TotalCount) } ) -> SearchDevicesResponse
+newSearchDevicesResponse'  customize = (SearchDevicesResponse <<< customize) { "Devices": Nothing, "NextToken": Nothing, "TotalCount": Nothing }
 
 
 
 newtype SearchProfilesRequest = SearchProfilesRequest 
-  { "NextToken" :: NullOrUndefined (NextToken)
-  , "MaxResults" :: NullOrUndefined (MaxResults)
-  , "Filters" :: NullOrUndefined (FilterList)
-  , "SortCriteria" :: NullOrUndefined (SortList)
+  { "NextToken" :: Maybe (NextToken)
+  , "MaxResults" :: Maybe (MaxResults)
+  , "Filters" :: Maybe (FilterList)
+  , "SortCriteria" :: Maybe (SortList)
   }
 derive instance newtypeSearchProfilesRequest :: Newtype SearchProfilesRequest _
 derive instance repGenericSearchProfilesRequest :: Generic SearchProfilesRequest _
@@ -1604,19 +1603,19 @@ instance encodeSearchProfilesRequest :: Encode SearchProfilesRequest where encod
 
 -- | Constructs SearchProfilesRequest from required parameters
 newSearchProfilesRequest :: SearchProfilesRequest
-newSearchProfilesRequest  = SearchProfilesRequest { "Filters": (NullOrUndefined Nothing), "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing), "SortCriteria": (NullOrUndefined Nothing) }
+newSearchProfilesRequest  = SearchProfilesRequest { "Filters": Nothing, "MaxResults": Nothing, "NextToken": Nothing, "SortCriteria": Nothing }
 
 -- | Constructs SearchProfilesRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSearchProfilesRequest' :: ( { "NextToken" :: NullOrUndefined (NextToken) , "MaxResults" :: NullOrUndefined (MaxResults) , "Filters" :: NullOrUndefined (FilterList) , "SortCriteria" :: NullOrUndefined (SortList) } -> {"NextToken" :: NullOrUndefined (NextToken) , "MaxResults" :: NullOrUndefined (MaxResults) , "Filters" :: NullOrUndefined (FilterList) , "SortCriteria" :: NullOrUndefined (SortList) } ) -> SearchProfilesRequest
-newSearchProfilesRequest'  customize = (SearchProfilesRequest <<< customize) { "Filters": (NullOrUndefined Nothing), "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing), "SortCriteria": (NullOrUndefined Nothing) }
+newSearchProfilesRequest' :: ( { "NextToken" :: Maybe (NextToken) , "MaxResults" :: Maybe (MaxResults) , "Filters" :: Maybe (FilterList) , "SortCriteria" :: Maybe (SortList) } -> {"NextToken" :: Maybe (NextToken) , "MaxResults" :: Maybe (MaxResults) , "Filters" :: Maybe (FilterList) , "SortCriteria" :: Maybe (SortList) } ) -> SearchProfilesRequest
+newSearchProfilesRequest'  customize = (SearchProfilesRequest <<< customize) { "Filters": Nothing, "MaxResults": Nothing, "NextToken": Nothing, "SortCriteria": Nothing }
 
 
 
 newtype SearchProfilesResponse = SearchProfilesResponse 
-  { "Profiles" :: NullOrUndefined (ProfileDataList)
-  , "NextToken" :: NullOrUndefined (NextToken)
-  , "TotalCount" :: NullOrUndefined (TotalCount)
+  { "Profiles" :: Maybe (ProfileDataList)
+  , "NextToken" :: Maybe (NextToken)
+  , "TotalCount" :: Maybe (TotalCount)
   }
 derive instance newtypeSearchProfilesResponse :: Newtype SearchProfilesResponse _
 derive instance repGenericSearchProfilesResponse :: Generic SearchProfilesResponse _
@@ -1626,20 +1625,20 @@ instance encodeSearchProfilesResponse :: Encode SearchProfilesResponse where enc
 
 -- | Constructs SearchProfilesResponse from required parameters
 newSearchProfilesResponse :: SearchProfilesResponse
-newSearchProfilesResponse  = SearchProfilesResponse { "NextToken": (NullOrUndefined Nothing), "Profiles": (NullOrUndefined Nothing), "TotalCount": (NullOrUndefined Nothing) }
+newSearchProfilesResponse  = SearchProfilesResponse { "NextToken": Nothing, "Profiles": Nothing, "TotalCount": Nothing }
 
 -- | Constructs SearchProfilesResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSearchProfilesResponse' :: ( { "Profiles" :: NullOrUndefined (ProfileDataList) , "NextToken" :: NullOrUndefined (NextToken) , "TotalCount" :: NullOrUndefined (TotalCount) } -> {"Profiles" :: NullOrUndefined (ProfileDataList) , "NextToken" :: NullOrUndefined (NextToken) , "TotalCount" :: NullOrUndefined (TotalCount) } ) -> SearchProfilesResponse
-newSearchProfilesResponse'  customize = (SearchProfilesResponse <<< customize) { "NextToken": (NullOrUndefined Nothing), "Profiles": (NullOrUndefined Nothing), "TotalCount": (NullOrUndefined Nothing) }
+newSearchProfilesResponse' :: ( { "Profiles" :: Maybe (ProfileDataList) , "NextToken" :: Maybe (NextToken) , "TotalCount" :: Maybe (TotalCount) } -> {"Profiles" :: Maybe (ProfileDataList) , "NextToken" :: Maybe (NextToken) , "TotalCount" :: Maybe (TotalCount) } ) -> SearchProfilesResponse
+newSearchProfilesResponse'  customize = (SearchProfilesResponse <<< customize) { "NextToken": Nothing, "Profiles": Nothing, "TotalCount": Nothing }
 
 
 
 newtype SearchRoomsRequest = SearchRoomsRequest 
-  { "NextToken" :: NullOrUndefined (NextToken)
-  , "MaxResults" :: NullOrUndefined (MaxResults)
-  , "Filters" :: NullOrUndefined (FilterList)
-  , "SortCriteria" :: NullOrUndefined (SortList)
+  { "NextToken" :: Maybe (NextToken)
+  , "MaxResults" :: Maybe (MaxResults)
+  , "Filters" :: Maybe (FilterList)
+  , "SortCriteria" :: Maybe (SortList)
   }
 derive instance newtypeSearchRoomsRequest :: Newtype SearchRoomsRequest _
 derive instance repGenericSearchRoomsRequest :: Generic SearchRoomsRequest _
@@ -1649,19 +1648,19 @@ instance encodeSearchRoomsRequest :: Encode SearchRoomsRequest where encode = ge
 
 -- | Constructs SearchRoomsRequest from required parameters
 newSearchRoomsRequest :: SearchRoomsRequest
-newSearchRoomsRequest  = SearchRoomsRequest { "Filters": (NullOrUndefined Nothing), "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing), "SortCriteria": (NullOrUndefined Nothing) }
+newSearchRoomsRequest  = SearchRoomsRequest { "Filters": Nothing, "MaxResults": Nothing, "NextToken": Nothing, "SortCriteria": Nothing }
 
 -- | Constructs SearchRoomsRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSearchRoomsRequest' :: ( { "NextToken" :: NullOrUndefined (NextToken) , "MaxResults" :: NullOrUndefined (MaxResults) , "Filters" :: NullOrUndefined (FilterList) , "SortCriteria" :: NullOrUndefined (SortList) } -> {"NextToken" :: NullOrUndefined (NextToken) , "MaxResults" :: NullOrUndefined (MaxResults) , "Filters" :: NullOrUndefined (FilterList) , "SortCriteria" :: NullOrUndefined (SortList) } ) -> SearchRoomsRequest
-newSearchRoomsRequest'  customize = (SearchRoomsRequest <<< customize) { "Filters": (NullOrUndefined Nothing), "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing), "SortCriteria": (NullOrUndefined Nothing) }
+newSearchRoomsRequest' :: ( { "NextToken" :: Maybe (NextToken) , "MaxResults" :: Maybe (MaxResults) , "Filters" :: Maybe (FilterList) , "SortCriteria" :: Maybe (SortList) } -> {"NextToken" :: Maybe (NextToken) , "MaxResults" :: Maybe (MaxResults) , "Filters" :: Maybe (FilterList) , "SortCriteria" :: Maybe (SortList) } ) -> SearchRoomsRequest
+newSearchRoomsRequest'  customize = (SearchRoomsRequest <<< customize) { "Filters": Nothing, "MaxResults": Nothing, "NextToken": Nothing, "SortCriteria": Nothing }
 
 
 
 newtype SearchRoomsResponse = SearchRoomsResponse 
-  { "Rooms" :: NullOrUndefined (RoomDataList)
-  , "NextToken" :: NullOrUndefined (NextToken)
-  , "TotalCount" :: NullOrUndefined (TotalCount)
+  { "Rooms" :: Maybe (RoomDataList)
+  , "NextToken" :: Maybe (NextToken)
+  , "TotalCount" :: Maybe (TotalCount)
   }
 derive instance newtypeSearchRoomsResponse :: Newtype SearchRoomsResponse _
 derive instance repGenericSearchRoomsResponse :: Generic SearchRoomsResponse _
@@ -1671,20 +1670,20 @@ instance encodeSearchRoomsResponse :: Encode SearchRoomsResponse where encode = 
 
 -- | Constructs SearchRoomsResponse from required parameters
 newSearchRoomsResponse :: SearchRoomsResponse
-newSearchRoomsResponse  = SearchRoomsResponse { "NextToken": (NullOrUndefined Nothing), "Rooms": (NullOrUndefined Nothing), "TotalCount": (NullOrUndefined Nothing) }
+newSearchRoomsResponse  = SearchRoomsResponse { "NextToken": Nothing, "Rooms": Nothing, "TotalCount": Nothing }
 
 -- | Constructs SearchRoomsResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSearchRoomsResponse' :: ( { "Rooms" :: NullOrUndefined (RoomDataList) , "NextToken" :: NullOrUndefined (NextToken) , "TotalCount" :: NullOrUndefined (TotalCount) } -> {"Rooms" :: NullOrUndefined (RoomDataList) , "NextToken" :: NullOrUndefined (NextToken) , "TotalCount" :: NullOrUndefined (TotalCount) } ) -> SearchRoomsResponse
-newSearchRoomsResponse'  customize = (SearchRoomsResponse <<< customize) { "NextToken": (NullOrUndefined Nothing), "Rooms": (NullOrUndefined Nothing), "TotalCount": (NullOrUndefined Nothing) }
+newSearchRoomsResponse' :: ( { "Rooms" :: Maybe (RoomDataList) , "NextToken" :: Maybe (NextToken) , "TotalCount" :: Maybe (TotalCount) } -> {"Rooms" :: Maybe (RoomDataList) , "NextToken" :: Maybe (NextToken) , "TotalCount" :: Maybe (TotalCount) } ) -> SearchRoomsResponse
+newSearchRoomsResponse'  customize = (SearchRoomsResponse <<< customize) { "NextToken": Nothing, "Rooms": Nothing, "TotalCount": Nothing }
 
 
 
 newtype SearchSkillGroupsRequest = SearchSkillGroupsRequest 
-  { "NextToken" :: NullOrUndefined (NextToken)
-  , "MaxResults" :: NullOrUndefined (MaxResults)
-  , "Filters" :: NullOrUndefined (FilterList)
-  , "SortCriteria" :: NullOrUndefined (SortList)
+  { "NextToken" :: Maybe (NextToken)
+  , "MaxResults" :: Maybe (MaxResults)
+  , "Filters" :: Maybe (FilterList)
+  , "SortCriteria" :: Maybe (SortList)
   }
 derive instance newtypeSearchSkillGroupsRequest :: Newtype SearchSkillGroupsRequest _
 derive instance repGenericSearchSkillGroupsRequest :: Generic SearchSkillGroupsRequest _
@@ -1694,19 +1693,19 @@ instance encodeSearchSkillGroupsRequest :: Encode SearchSkillGroupsRequest where
 
 -- | Constructs SearchSkillGroupsRequest from required parameters
 newSearchSkillGroupsRequest :: SearchSkillGroupsRequest
-newSearchSkillGroupsRequest  = SearchSkillGroupsRequest { "Filters": (NullOrUndefined Nothing), "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing), "SortCriteria": (NullOrUndefined Nothing) }
+newSearchSkillGroupsRequest  = SearchSkillGroupsRequest { "Filters": Nothing, "MaxResults": Nothing, "NextToken": Nothing, "SortCriteria": Nothing }
 
 -- | Constructs SearchSkillGroupsRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSearchSkillGroupsRequest' :: ( { "NextToken" :: NullOrUndefined (NextToken) , "MaxResults" :: NullOrUndefined (MaxResults) , "Filters" :: NullOrUndefined (FilterList) , "SortCriteria" :: NullOrUndefined (SortList) } -> {"NextToken" :: NullOrUndefined (NextToken) , "MaxResults" :: NullOrUndefined (MaxResults) , "Filters" :: NullOrUndefined (FilterList) , "SortCriteria" :: NullOrUndefined (SortList) } ) -> SearchSkillGroupsRequest
-newSearchSkillGroupsRequest'  customize = (SearchSkillGroupsRequest <<< customize) { "Filters": (NullOrUndefined Nothing), "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing), "SortCriteria": (NullOrUndefined Nothing) }
+newSearchSkillGroupsRequest' :: ( { "NextToken" :: Maybe (NextToken) , "MaxResults" :: Maybe (MaxResults) , "Filters" :: Maybe (FilterList) , "SortCriteria" :: Maybe (SortList) } -> {"NextToken" :: Maybe (NextToken) , "MaxResults" :: Maybe (MaxResults) , "Filters" :: Maybe (FilterList) , "SortCriteria" :: Maybe (SortList) } ) -> SearchSkillGroupsRequest
+newSearchSkillGroupsRequest'  customize = (SearchSkillGroupsRequest <<< customize) { "Filters": Nothing, "MaxResults": Nothing, "NextToken": Nothing, "SortCriteria": Nothing }
 
 
 
 newtype SearchSkillGroupsResponse = SearchSkillGroupsResponse 
-  { "SkillGroups" :: NullOrUndefined (SkillGroupDataList)
-  , "NextToken" :: NullOrUndefined (NextToken)
-  , "TotalCount" :: NullOrUndefined (TotalCount)
+  { "SkillGroups" :: Maybe (SkillGroupDataList)
+  , "NextToken" :: Maybe (NextToken)
+  , "TotalCount" :: Maybe (TotalCount)
   }
 derive instance newtypeSearchSkillGroupsResponse :: Newtype SearchSkillGroupsResponse _
 derive instance repGenericSearchSkillGroupsResponse :: Generic SearchSkillGroupsResponse _
@@ -1716,20 +1715,20 @@ instance encodeSearchSkillGroupsResponse :: Encode SearchSkillGroupsResponse whe
 
 -- | Constructs SearchSkillGroupsResponse from required parameters
 newSearchSkillGroupsResponse :: SearchSkillGroupsResponse
-newSearchSkillGroupsResponse  = SearchSkillGroupsResponse { "NextToken": (NullOrUndefined Nothing), "SkillGroups": (NullOrUndefined Nothing), "TotalCount": (NullOrUndefined Nothing) }
+newSearchSkillGroupsResponse  = SearchSkillGroupsResponse { "NextToken": Nothing, "SkillGroups": Nothing, "TotalCount": Nothing }
 
 -- | Constructs SearchSkillGroupsResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSearchSkillGroupsResponse' :: ( { "SkillGroups" :: NullOrUndefined (SkillGroupDataList) , "NextToken" :: NullOrUndefined (NextToken) , "TotalCount" :: NullOrUndefined (TotalCount) } -> {"SkillGroups" :: NullOrUndefined (SkillGroupDataList) , "NextToken" :: NullOrUndefined (NextToken) , "TotalCount" :: NullOrUndefined (TotalCount) } ) -> SearchSkillGroupsResponse
-newSearchSkillGroupsResponse'  customize = (SearchSkillGroupsResponse <<< customize) { "NextToken": (NullOrUndefined Nothing), "SkillGroups": (NullOrUndefined Nothing), "TotalCount": (NullOrUndefined Nothing) }
+newSearchSkillGroupsResponse' :: ( { "SkillGroups" :: Maybe (SkillGroupDataList) , "NextToken" :: Maybe (NextToken) , "TotalCount" :: Maybe (TotalCount) } -> {"SkillGroups" :: Maybe (SkillGroupDataList) , "NextToken" :: Maybe (NextToken) , "TotalCount" :: Maybe (TotalCount) } ) -> SearchSkillGroupsResponse
+newSearchSkillGroupsResponse'  customize = (SearchSkillGroupsResponse <<< customize) { "NextToken": Nothing, "SkillGroups": Nothing, "TotalCount": Nothing }
 
 
 
 newtype SearchUsersRequest = SearchUsersRequest 
-  { "NextToken" :: NullOrUndefined (NextToken)
-  , "MaxResults" :: NullOrUndefined (MaxResults)
-  , "Filters" :: NullOrUndefined (FilterList)
-  , "SortCriteria" :: NullOrUndefined (SortList)
+  { "NextToken" :: Maybe (NextToken)
+  , "MaxResults" :: Maybe (MaxResults)
+  , "Filters" :: Maybe (FilterList)
+  , "SortCriteria" :: Maybe (SortList)
   }
 derive instance newtypeSearchUsersRequest :: Newtype SearchUsersRequest _
 derive instance repGenericSearchUsersRequest :: Generic SearchUsersRequest _
@@ -1739,19 +1738,19 @@ instance encodeSearchUsersRequest :: Encode SearchUsersRequest where encode = ge
 
 -- | Constructs SearchUsersRequest from required parameters
 newSearchUsersRequest :: SearchUsersRequest
-newSearchUsersRequest  = SearchUsersRequest { "Filters": (NullOrUndefined Nothing), "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing), "SortCriteria": (NullOrUndefined Nothing) }
+newSearchUsersRequest  = SearchUsersRequest { "Filters": Nothing, "MaxResults": Nothing, "NextToken": Nothing, "SortCriteria": Nothing }
 
 -- | Constructs SearchUsersRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSearchUsersRequest' :: ( { "NextToken" :: NullOrUndefined (NextToken) , "MaxResults" :: NullOrUndefined (MaxResults) , "Filters" :: NullOrUndefined (FilterList) , "SortCriteria" :: NullOrUndefined (SortList) } -> {"NextToken" :: NullOrUndefined (NextToken) , "MaxResults" :: NullOrUndefined (MaxResults) , "Filters" :: NullOrUndefined (FilterList) , "SortCriteria" :: NullOrUndefined (SortList) } ) -> SearchUsersRequest
-newSearchUsersRequest'  customize = (SearchUsersRequest <<< customize) { "Filters": (NullOrUndefined Nothing), "MaxResults": (NullOrUndefined Nothing), "NextToken": (NullOrUndefined Nothing), "SortCriteria": (NullOrUndefined Nothing) }
+newSearchUsersRequest' :: ( { "NextToken" :: Maybe (NextToken) , "MaxResults" :: Maybe (MaxResults) , "Filters" :: Maybe (FilterList) , "SortCriteria" :: Maybe (SortList) } -> {"NextToken" :: Maybe (NextToken) , "MaxResults" :: Maybe (MaxResults) , "Filters" :: Maybe (FilterList) , "SortCriteria" :: Maybe (SortList) } ) -> SearchUsersRequest
+newSearchUsersRequest'  customize = (SearchUsersRequest <<< customize) { "Filters": Nothing, "MaxResults": Nothing, "NextToken": Nothing, "SortCriteria": Nothing }
 
 
 
 newtype SearchUsersResponse = SearchUsersResponse 
-  { "Users" :: NullOrUndefined (UserDataList)
-  , "NextToken" :: NullOrUndefined (NextToken)
-  , "TotalCount" :: NullOrUndefined (TotalCount)
+  { "Users" :: Maybe (UserDataList)
+  , "NextToken" :: Maybe (NextToken)
+  , "TotalCount" :: Maybe (TotalCount)
   }
 derive instance newtypeSearchUsersResponse :: Newtype SearchUsersResponse _
 derive instance repGenericSearchUsersResponse :: Generic SearchUsersResponse _
@@ -1761,17 +1760,17 @@ instance encodeSearchUsersResponse :: Encode SearchUsersResponse where encode = 
 
 -- | Constructs SearchUsersResponse from required parameters
 newSearchUsersResponse :: SearchUsersResponse
-newSearchUsersResponse  = SearchUsersResponse { "NextToken": (NullOrUndefined Nothing), "TotalCount": (NullOrUndefined Nothing), "Users": (NullOrUndefined Nothing) }
+newSearchUsersResponse  = SearchUsersResponse { "NextToken": Nothing, "TotalCount": Nothing, "Users": Nothing }
 
 -- | Constructs SearchUsersResponse's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSearchUsersResponse' :: ( { "Users" :: NullOrUndefined (UserDataList) , "NextToken" :: NullOrUndefined (NextToken) , "TotalCount" :: NullOrUndefined (TotalCount) } -> {"Users" :: NullOrUndefined (UserDataList) , "NextToken" :: NullOrUndefined (NextToken) , "TotalCount" :: NullOrUndefined (TotalCount) } ) -> SearchUsersResponse
-newSearchUsersResponse'  customize = (SearchUsersResponse <<< customize) { "NextToken": (NullOrUndefined Nothing), "TotalCount": (NullOrUndefined Nothing), "Users": (NullOrUndefined Nothing) }
+newSearchUsersResponse' :: ( { "Users" :: Maybe (UserDataList) , "NextToken" :: Maybe (NextToken) , "TotalCount" :: Maybe (TotalCount) } -> {"Users" :: Maybe (UserDataList) , "NextToken" :: Maybe (NextToken) , "TotalCount" :: Maybe (TotalCount) } ) -> SearchUsersResponse
+newSearchUsersResponse'  customize = (SearchUsersResponse <<< customize) { "NextToken": Nothing, "TotalCount": Nothing, "Users": Nothing }
 
 
 
 newtype SendInvitationRequest = SendInvitationRequest 
-  { "UserArn" :: NullOrUndefined (Arn)
+  { "UserArn" :: Maybe (Arn)
   }
 derive instance newtypeSendInvitationRequest :: Newtype SendInvitationRequest _
 derive instance repGenericSendInvitationRequest :: Generic SendInvitationRequest _
@@ -1781,12 +1780,12 @@ instance encodeSendInvitationRequest :: Encode SendInvitationRequest where encod
 
 -- | Constructs SendInvitationRequest from required parameters
 newSendInvitationRequest :: SendInvitationRequest
-newSendInvitationRequest  = SendInvitationRequest { "UserArn": (NullOrUndefined Nothing) }
+newSendInvitationRequest  = SendInvitationRequest { "UserArn": Nothing }
 
 -- | Constructs SendInvitationRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSendInvitationRequest' :: ( { "UserArn" :: NullOrUndefined (Arn) } -> {"UserArn" :: NullOrUndefined (Arn) } ) -> SendInvitationRequest
-newSendInvitationRequest'  customize = (SendInvitationRequest <<< customize) { "UserArn": (NullOrUndefined Nothing) }
+newSendInvitationRequest' :: ( { "UserArn" :: Maybe (Arn) } -> {"UserArn" :: Maybe (Arn) } ) -> SendInvitationRequest
+newSendInvitationRequest'  customize = (SendInvitationRequest <<< customize) { "UserArn": Nothing }
 
 
 
@@ -1801,9 +1800,9 @@ instance encodeSendInvitationResponse :: Encode SendInvitationResponse where enc
 
 -- | <p>A skill group with attributes.</p>
 newtype SkillGroup = SkillGroup 
-  { "SkillGroupArn" :: NullOrUndefined (Arn)
-  , "SkillGroupName" :: NullOrUndefined (SkillGroupName)
-  , "Description" :: NullOrUndefined (SkillGroupDescription)
+  { "SkillGroupArn" :: Maybe (Arn)
+  , "SkillGroupName" :: Maybe (SkillGroupName)
+  , "Description" :: Maybe (SkillGroupDescription)
   }
 derive instance newtypeSkillGroup :: Newtype SkillGroup _
 derive instance repGenericSkillGroup :: Generic SkillGroup _
@@ -1813,20 +1812,20 @@ instance encodeSkillGroup :: Encode SkillGroup where encode = genericEncode opti
 
 -- | Constructs SkillGroup from required parameters
 newSkillGroup :: SkillGroup
-newSkillGroup  = SkillGroup { "Description": (NullOrUndefined Nothing), "SkillGroupArn": (NullOrUndefined Nothing), "SkillGroupName": (NullOrUndefined Nothing) }
+newSkillGroup  = SkillGroup { "Description": Nothing, "SkillGroupArn": Nothing, "SkillGroupName": Nothing }
 
 -- | Constructs SkillGroup's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSkillGroup' :: ( { "SkillGroupArn" :: NullOrUndefined (Arn) , "SkillGroupName" :: NullOrUndefined (SkillGroupName) , "Description" :: NullOrUndefined (SkillGroupDescription) } -> {"SkillGroupArn" :: NullOrUndefined (Arn) , "SkillGroupName" :: NullOrUndefined (SkillGroupName) , "Description" :: NullOrUndefined (SkillGroupDescription) } ) -> SkillGroup
-newSkillGroup'  customize = (SkillGroup <<< customize) { "Description": (NullOrUndefined Nothing), "SkillGroupArn": (NullOrUndefined Nothing), "SkillGroupName": (NullOrUndefined Nothing) }
+newSkillGroup' :: ( { "SkillGroupArn" :: Maybe (Arn) , "SkillGroupName" :: Maybe (SkillGroupName) , "Description" :: Maybe (SkillGroupDescription) } -> {"SkillGroupArn" :: Maybe (Arn) , "SkillGroupName" :: Maybe (SkillGroupName) , "Description" :: Maybe (SkillGroupDescription) } ) -> SkillGroup
+newSkillGroup'  customize = (SkillGroup <<< customize) { "Description": Nothing, "SkillGroupArn": Nothing, "SkillGroupName": Nothing }
 
 
 
 -- | <p>The attributes of a skill group.</p>
 newtype SkillGroupData = SkillGroupData 
-  { "SkillGroupArn" :: NullOrUndefined (Arn)
-  , "SkillGroupName" :: NullOrUndefined (SkillGroupName)
-  , "Description" :: NullOrUndefined (SkillGroupDescription)
+  { "SkillGroupArn" :: Maybe (Arn)
+  , "SkillGroupName" :: Maybe (SkillGroupName)
+  , "Description" :: Maybe (SkillGroupDescription)
   }
 derive instance newtypeSkillGroupData :: Newtype SkillGroupData _
 derive instance repGenericSkillGroupData :: Generic SkillGroupData _
@@ -1836,12 +1835,12 @@ instance encodeSkillGroupData :: Encode SkillGroupData where encode = genericEnc
 
 -- | Constructs SkillGroupData from required parameters
 newSkillGroupData :: SkillGroupData
-newSkillGroupData  = SkillGroupData { "Description": (NullOrUndefined Nothing), "SkillGroupArn": (NullOrUndefined Nothing), "SkillGroupName": (NullOrUndefined Nothing) }
+newSkillGroupData  = SkillGroupData { "Description": Nothing, "SkillGroupArn": Nothing, "SkillGroupName": Nothing }
 
 -- | Constructs SkillGroupData's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSkillGroupData' :: ( { "SkillGroupArn" :: NullOrUndefined (Arn) , "SkillGroupName" :: NullOrUndefined (SkillGroupName) , "Description" :: NullOrUndefined (SkillGroupDescription) } -> {"SkillGroupArn" :: NullOrUndefined (Arn) , "SkillGroupName" :: NullOrUndefined (SkillGroupName) , "Description" :: NullOrUndefined (SkillGroupDescription) } ) -> SkillGroupData
-newSkillGroupData'  customize = (SkillGroupData <<< customize) { "Description": (NullOrUndefined Nothing), "SkillGroupArn": (NullOrUndefined Nothing), "SkillGroupName": (NullOrUndefined Nothing) }
+newSkillGroupData' :: ( { "SkillGroupArn" :: Maybe (Arn) , "SkillGroupName" :: Maybe (SkillGroupName) , "Description" :: Maybe (SkillGroupDescription) } -> {"SkillGroupArn" :: Maybe (Arn) , "SkillGroupName" :: Maybe (SkillGroupName) , "Description" :: Maybe (SkillGroupDescription) } ) -> SkillGroupData
+newSkillGroupData'  customize = (SkillGroupData <<< customize) { "Description": Nothing, "SkillGroupArn": Nothing, "SkillGroupName": Nothing }
 
 
 
@@ -1901,9 +1900,9 @@ instance encodeSkillName :: Encode SkillName where encode = genericEncode option
 
 -- | <p>The summary of skills.</p>
 newtype SkillSummary = SkillSummary 
-  { "SkillId" :: NullOrUndefined (SkillId)
-  , "SkillName" :: NullOrUndefined (SkillName)
-  , "SupportsLinking" :: NullOrUndefined (Boolean)
+  { "SkillId" :: Maybe (SkillId)
+  , "SkillName" :: Maybe (SkillName)
+  , "SupportsLinking" :: Maybe (Boolean)
   }
 derive instance newtypeSkillSummary :: Newtype SkillSummary _
 derive instance repGenericSkillSummary :: Generic SkillSummary _
@@ -1913,12 +1912,12 @@ instance encodeSkillSummary :: Encode SkillSummary where encode = genericEncode 
 
 -- | Constructs SkillSummary from required parameters
 newSkillSummary :: SkillSummary
-newSkillSummary  = SkillSummary { "SkillId": (NullOrUndefined Nothing), "SkillName": (NullOrUndefined Nothing), "SupportsLinking": (NullOrUndefined Nothing) }
+newSkillSummary  = SkillSummary { "SkillId": Nothing, "SkillName": Nothing, "SupportsLinking": Nothing }
 
 -- | Constructs SkillSummary's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newSkillSummary' :: ( { "SkillId" :: NullOrUndefined (SkillId) , "SkillName" :: NullOrUndefined (SkillName) , "SupportsLinking" :: NullOrUndefined (Boolean) } -> {"SkillId" :: NullOrUndefined (SkillId) , "SkillName" :: NullOrUndefined (SkillName) , "SupportsLinking" :: NullOrUndefined (Boolean) } ) -> SkillSummary
-newSkillSummary'  customize = (SkillSummary <<< customize) { "SkillId": (NullOrUndefined Nothing), "SkillName": (NullOrUndefined Nothing), "SupportsLinking": (NullOrUndefined Nothing) }
+newSkillSummary' :: ( { "SkillId" :: Maybe (SkillId) , "SkillName" :: Maybe (SkillName) , "SupportsLinking" :: Maybe (Boolean) } -> {"SkillId" :: Maybe (SkillId) , "SkillName" :: Maybe (SkillName) , "SupportsLinking" :: Maybe (Boolean) } ) -> SkillSummary
+newSkillSummary'  customize = (SkillSummary <<< customize) { "SkillId": Nothing, "SkillName": Nothing, "SupportsLinking": Nothing }
 
 
 
@@ -1990,8 +1989,8 @@ instance encodeSortValue :: Encode SortValue where encode = genericEncode option
 
 
 newtype StartDeviceSyncRequest = StartDeviceSyncRequest 
-  { "RoomArn" :: NullOrUndefined (Arn)
-  , "DeviceArn" :: NullOrUndefined (Arn)
+  { "RoomArn" :: Maybe (Arn)
+  , "DeviceArn" :: Maybe (Arn)
   , "Features" :: (Features)
   }
 derive instance newtypeStartDeviceSyncRequest :: Newtype StartDeviceSyncRequest _
@@ -2002,12 +2001,12 @@ instance encodeStartDeviceSyncRequest :: Encode StartDeviceSyncRequest where enc
 
 -- | Constructs StartDeviceSyncRequest from required parameters
 newStartDeviceSyncRequest :: Features -> StartDeviceSyncRequest
-newStartDeviceSyncRequest _Features = StartDeviceSyncRequest { "Features": _Features, "DeviceArn": (NullOrUndefined Nothing), "RoomArn": (NullOrUndefined Nothing) }
+newStartDeviceSyncRequest _Features = StartDeviceSyncRequest { "Features": _Features, "DeviceArn": Nothing, "RoomArn": Nothing }
 
 -- | Constructs StartDeviceSyncRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newStartDeviceSyncRequest' :: Features -> ( { "RoomArn" :: NullOrUndefined (Arn) , "DeviceArn" :: NullOrUndefined (Arn) , "Features" :: (Features) } -> {"RoomArn" :: NullOrUndefined (Arn) , "DeviceArn" :: NullOrUndefined (Arn) , "Features" :: (Features) } ) -> StartDeviceSyncRequest
-newStartDeviceSyncRequest' _Features customize = (StartDeviceSyncRequest <<< customize) { "Features": _Features, "DeviceArn": (NullOrUndefined Nothing), "RoomArn": (NullOrUndefined Nothing) }
+newStartDeviceSyncRequest' :: Features -> ( { "RoomArn" :: Maybe (Arn) , "DeviceArn" :: Maybe (Arn) , "Features" :: (Features) } -> {"RoomArn" :: Maybe (Arn) , "DeviceArn" :: Maybe (Arn) , "Features" :: (Features) } ) -> StartDeviceSyncRequest
+newStartDeviceSyncRequest' _Features customize = (StartDeviceSyncRequest <<< customize) { "Features": _Features, "DeviceArn": Nothing, "RoomArn": Nothing }
 
 
 
@@ -2022,8 +2021,8 @@ instance encodeStartDeviceSyncResponse :: Encode StartDeviceSyncResponse where e
 
 -- | <p>A key-value pair that can be associated with a resource. </p>
 newtype Tag = Tag 
-  { "Key" :: NullOrUndefined (TagKey)
-  , "Value" :: NullOrUndefined (TagValue)
+  { "Key" :: Maybe (TagKey)
+  , "Value" :: Maybe (TagValue)
   }
 derive instance newtypeTag :: Newtype Tag _
 derive instance repGenericTag :: Generic Tag _
@@ -2033,12 +2032,12 @@ instance encodeTag :: Encode Tag where encode = genericEncode options
 
 -- | Constructs Tag from required parameters
 newTag :: Tag
-newTag  = Tag { "Key": (NullOrUndefined Nothing), "Value": (NullOrUndefined Nothing) }
+newTag  = Tag { "Key": Nothing, "Value": Nothing }
 
 -- | Constructs Tag's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newTag' :: ( { "Key" :: NullOrUndefined (TagKey) , "Value" :: NullOrUndefined (TagValue) } -> {"Key" :: NullOrUndefined (TagKey) , "Value" :: NullOrUndefined (TagValue) } ) -> Tag
-newTag'  customize = (Tag <<< customize) { "Key": (NullOrUndefined Nothing), "Value": (NullOrUndefined Nothing) }
+newTag' :: ( { "Key" :: Maybe (TagKey) , "Value" :: Maybe (TagValue) } -> {"Key" :: Maybe (TagKey) , "Value" :: Maybe (TagValue) } ) -> Tag
+newTag'  customize = (Tag <<< customize) { "Key": Nothing, "Value": Nothing }
 
 
 
@@ -2166,8 +2165,8 @@ instance encodeUntagResourceResponse :: Encode UntagResourceResponse where encod
 
 
 newtype UpdateDeviceRequest = UpdateDeviceRequest 
-  { "DeviceArn" :: NullOrUndefined (Arn)
-  , "DeviceName" :: NullOrUndefined (DeviceName)
+  { "DeviceArn" :: Maybe (Arn)
+  , "DeviceName" :: Maybe (DeviceName)
   }
 derive instance newtypeUpdateDeviceRequest :: Newtype UpdateDeviceRequest _
 derive instance repGenericUpdateDeviceRequest :: Generic UpdateDeviceRequest _
@@ -2177,12 +2176,12 @@ instance encodeUpdateDeviceRequest :: Encode UpdateDeviceRequest where encode = 
 
 -- | Constructs UpdateDeviceRequest from required parameters
 newUpdateDeviceRequest :: UpdateDeviceRequest
-newUpdateDeviceRequest  = UpdateDeviceRequest { "DeviceArn": (NullOrUndefined Nothing), "DeviceName": (NullOrUndefined Nothing) }
+newUpdateDeviceRequest  = UpdateDeviceRequest { "DeviceArn": Nothing, "DeviceName": Nothing }
 
 -- | Constructs UpdateDeviceRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUpdateDeviceRequest' :: ( { "DeviceArn" :: NullOrUndefined (Arn) , "DeviceName" :: NullOrUndefined (DeviceName) } -> {"DeviceArn" :: NullOrUndefined (Arn) , "DeviceName" :: NullOrUndefined (DeviceName) } ) -> UpdateDeviceRequest
-newUpdateDeviceRequest'  customize = (UpdateDeviceRequest <<< customize) { "DeviceArn": (NullOrUndefined Nothing), "DeviceName": (NullOrUndefined Nothing) }
+newUpdateDeviceRequest' :: ( { "DeviceArn" :: Maybe (Arn) , "DeviceName" :: Maybe (DeviceName) } -> {"DeviceArn" :: Maybe (Arn) , "DeviceName" :: Maybe (DeviceName) } ) -> UpdateDeviceRequest
+newUpdateDeviceRequest'  customize = (UpdateDeviceRequest <<< customize) { "DeviceArn": Nothing, "DeviceName": Nothing }
 
 
 
@@ -2196,16 +2195,16 @@ instance encodeUpdateDeviceResponse :: Encode UpdateDeviceResponse where encode 
 
 
 newtype UpdateProfileRequest = UpdateProfileRequest 
-  { "ProfileArn" :: NullOrUndefined (Arn)
-  , "ProfileName" :: NullOrUndefined (ProfileName)
-  , "Timezone" :: NullOrUndefined (Timezone)
-  , "Address" :: NullOrUndefined (Address)
-  , "DistanceUnit" :: NullOrUndefined (DistanceUnit)
-  , "TemperatureUnit" :: NullOrUndefined (TemperatureUnit)
-  , "WakeWord" :: NullOrUndefined (WakeWord)
-  , "SetupModeDisabled" :: NullOrUndefined (Boolean)
-  , "MaxVolumeLimit" :: NullOrUndefined (MaxVolumeLimit)
-  , "PSTNEnabled" :: NullOrUndefined (Boolean)
+  { "ProfileArn" :: Maybe (Arn)
+  , "ProfileName" :: Maybe (ProfileName)
+  , "Timezone" :: Maybe (Timezone)
+  , "Address" :: Maybe (Address)
+  , "DistanceUnit" :: Maybe (DistanceUnit)
+  , "TemperatureUnit" :: Maybe (TemperatureUnit)
+  , "WakeWord" :: Maybe (WakeWord)
+  , "SetupModeDisabled" :: Maybe (Boolean)
+  , "MaxVolumeLimit" :: Maybe (MaxVolumeLimit)
+  , "PSTNEnabled" :: Maybe (Boolean)
   }
 derive instance newtypeUpdateProfileRequest :: Newtype UpdateProfileRequest _
 derive instance repGenericUpdateProfileRequest :: Generic UpdateProfileRequest _
@@ -2215,12 +2214,12 @@ instance encodeUpdateProfileRequest :: Encode UpdateProfileRequest where encode 
 
 -- | Constructs UpdateProfileRequest from required parameters
 newUpdateProfileRequest :: UpdateProfileRequest
-newUpdateProfileRequest  = UpdateProfileRequest { "Address": (NullOrUndefined Nothing), "DistanceUnit": (NullOrUndefined Nothing), "MaxVolumeLimit": (NullOrUndefined Nothing), "PSTNEnabled": (NullOrUndefined Nothing), "ProfileArn": (NullOrUndefined Nothing), "ProfileName": (NullOrUndefined Nothing), "SetupModeDisabled": (NullOrUndefined Nothing), "TemperatureUnit": (NullOrUndefined Nothing), "Timezone": (NullOrUndefined Nothing), "WakeWord": (NullOrUndefined Nothing) }
+newUpdateProfileRequest  = UpdateProfileRequest { "Address": Nothing, "DistanceUnit": Nothing, "MaxVolumeLimit": Nothing, "PSTNEnabled": Nothing, "ProfileArn": Nothing, "ProfileName": Nothing, "SetupModeDisabled": Nothing, "TemperatureUnit": Nothing, "Timezone": Nothing, "WakeWord": Nothing }
 
 -- | Constructs UpdateProfileRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUpdateProfileRequest' :: ( { "ProfileArn" :: NullOrUndefined (Arn) , "ProfileName" :: NullOrUndefined (ProfileName) , "Timezone" :: NullOrUndefined (Timezone) , "Address" :: NullOrUndefined (Address) , "DistanceUnit" :: NullOrUndefined (DistanceUnit) , "TemperatureUnit" :: NullOrUndefined (TemperatureUnit) , "WakeWord" :: NullOrUndefined (WakeWord) , "SetupModeDisabled" :: NullOrUndefined (Boolean) , "MaxVolumeLimit" :: NullOrUndefined (MaxVolumeLimit) , "PSTNEnabled" :: NullOrUndefined (Boolean) } -> {"ProfileArn" :: NullOrUndefined (Arn) , "ProfileName" :: NullOrUndefined (ProfileName) , "Timezone" :: NullOrUndefined (Timezone) , "Address" :: NullOrUndefined (Address) , "DistanceUnit" :: NullOrUndefined (DistanceUnit) , "TemperatureUnit" :: NullOrUndefined (TemperatureUnit) , "WakeWord" :: NullOrUndefined (WakeWord) , "SetupModeDisabled" :: NullOrUndefined (Boolean) , "MaxVolumeLimit" :: NullOrUndefined (MaxVolumeLimit) , "PSTNEnabled" :: NullOrUndefined (Boolean) } ) -> UpdateProfileRequest
-newUpdateProfileRequest'  customize = (UpdateProfileRequest <<< customize) { "Address": (NullOrUndefined Nothing), "DistanceUnit": (NullOrUndefined Nothing), "MaxVolumeLimit": (NullOrUndefined Nothing), "PSTNEnabled": (NullOrUndefined Nothing), "ProfileArn": (NullOrUndefined Nothing), "ProfileName": (NullOrUndefined Nothing), "SetupModeDisabled": (NullOrUndefined Nothing), "TemperatureUnit": (NullOrUndefined Nothing), "Timezone": (NullOrUndefined Nothing), "WakeWord": (NullOrUndefined Nothing) }
+newUpdateProfileRequest' :: ( { "ProfileArn" :: Maybe (Arn) , "ProfileName" :: Maybe (ProfileName) , "Timezone" :: Maybe (Timezone) , "Address" :: Maybe (Address) , "DistanceUnit" :: Maybe (DistanceUnit) , "TemperatureUnit" :: Maybe (TemperatureUnit) , "WakeWord" :: Maybe (WakeWord) , "SetupModeDisabled" :: Maybe (Boolean) , "MaxVolumeLimit" :: Maybe (MaxVolumeLimit) , "PSTNEnabled" :: Maybe (Boolean) } -> {"ProfileArn" :: Maybe (Arn) , "ProfileName" :: Maybe (ProfileName) , "Timezone" :: Maybe (Timezone) , "Address" :: Maybe (Address) , "DistanceUnit" :: Maybe (DistanceUnit) , "TemperatureUnit" :: Maybe (TemperatureUnit) , "WakeWord" :: Maybe (WakeWord) , "SetupModeDisabled" :: Maybe (Boolean) , "MaxVolumeLimit" :: Maybe (MaxVolumeLimit) , "PSTNEnabled" :: Maybe (Boolean) } ) -> UpdateProfileRequest
+newUpdateProfileRequest'  customize = (UpdateProfileRequest <<< customize) { "Address": Nothing, "DistanceUnit": Nothing, "MaxVolumeLimit": Nothing, "PSTNEnabled": Nothing, "ProfileArn": Nothing, "ProfileName": Nothing, "SetupModeDisabled": Nothing, "TemperatureUnit": Nothing, "Timezone": Nothing, "WakeWord": Nothing }
 
 
 
@@ -2234,11 +2233,11 @@ instance encodeUpdateProfileResponse :: Encode UpdateProfileResponse where encod
 
 
 newtype UpdateRoomRequest = UpdateRoomRequest 
-  { "RoomArn" :: NullOrUndefined (Arn)
-  , "RoomName" :: NullOrUndefined (RoomName)
-  , "Description" :: NullOrUndefined (RoomDescription)
-  , "ProviderCalendarId" :: NullOrUndefined (ProviderCalendarId)
-  , "ProfileArn" :: NullOrUndefined (Arn)
+  { "RoomArn" :: Maybe (Arn)
+  , "RoomName" :: Maybe (RoomName)
+  , "Description" :: Maybe (RoomDescription)
+  , "ProviderCalendarId" :: Maybe (ProviderCalendarId)
+  , "ProfileArn" :: Maybe (Arn)
   }
 derive instance newtypeUpdateRoomRequest :: Newtype UpdateRoomRequest _
 derive instance repGenericUpdateRoomRequest :: Generic UpdateRoomRequest _
@@ -2248,12 +2247,12 @@ instance encodeUpdateRoomRequest :: Encode UpdateRoomRequest where encode = gene
 
 -- | Constructs UpdateRoomRequest from required parameters
 newUpdateRoomRequest :: UpdateRoomRequest
-newUpdateRoomRequest  = UpdateRoomRequest { "Description": (NullOrUndefined Nothing), "ProfileArn": (NullOrUndefined Nothing), "ProviderCalendarId": (NullOrUndefined Nothing), "RoomArn": (NullOrUndefined Nothing), "RoomName": (NullOrUndefined Nothing) }
+newUpdateRoomRequest  = UpdateRoomRequest { "Description": Nothing, "ProfileArn": Nothing, "ProviderCalendarId": Nothing, "RoomArn": Nothing, "RoomName": Nothing }
 
 -- | Constructs UpdateRoomRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUpdateRoomRequest' :: ( { "RoomArn" :: NullOrUndefined (Arn) , "RoomName" :: NullOrUndefined (RoomName) , "Description" :: NullOrUndefined (RoomDescription) , "ProviderCalendarId" :: NullOrUndefined (ProviderCalendarId) , "ProfileArn" :: NullOrUndefined (Arn) } -> {"RoomArn" :: NullOrUndefined (Arn) , "RoomName" :: NullOrUndefined (RoomName) , "Description" :: NullOrUndefined (RoomDescription) , "ProviderCalendarId" :: NullOrUndefined (ProviderCalendarId) , "ProfileArn" :: NullOrUndefined (Arn) } ) -> UpdateRoomRequest
-newUpdateRoomRequest'  customize = (UpdateRoomRequest <<< customize) { "Description": (NullOrUndefined Nothing), "ProfileArn": (NullOrUndefined Nothing), "ProviderCalendarId": (NullOrUndefined Nothing), "RoomArn": (NullOrUndefined Nothing), "RoomName": (NullOrUndefined Nothing) }
+newUpdateRoomRequest' :: ( { "RoomArn" :: Maybe (Arn) , "RoomName" :: Maybe (RoomName) , "Description" :: Maybe (RoomDescription) , "ProviderCalendarId" :: Maybe (ProviderCalendarId) , "ProfileArn" :: Maybe (Arn) } -> {"RoomArn" :: Maybe (Arn) , "RoomName" :: Maybe (RoomName) , "Description" :: Maybe (RoomDescription) , "ProviderCalendarId" :: Maybe (ProviderCalendarId) , "ProfileArn" :: Maybe (Arn) } ) -> UpdateRoomRequest
+newUpdateRoomRequest'  customize = (UpdateRoomRequest <<< customize) { "Description": Nothing, "ProfileArn": Nothing, "ProviderCalendarId": Nothing, "RoomArn": Nothing, "RoomName": Nothing }
 
 
 
@@ -2267,9 +2266,9 @@ instance encodeUpdateRoomResponse :: Encode UpdateRoomResponse where encode = ge
 
 
 newtype UpdateSkillGroupRequest = UpdateSkillGroupRequest 
-  { "SkillGroupArn" :: NullOrUndefined (Arn)
-  , "SkillGroupName" :: NullOrUndefined (SkillGroupName)
-  , "Description" :: NullOrUndefined (SkillGroupDescription)
+  { "SkillGroupArn" :: Maybe (Arn)
+  , "SkillGroupName" :: Maybe (SkillGroupName)
+  , "Description" :: Maybe (SkillGroupDescription)
   }
 derive instance newtypeUpdateSkillGroupRequest :: Newtype UpdateSkillGroupRequest _
 derive instance repGenericUpdateSkillGroupRequest :: Generic UpdateSkillGroupRequest _
@@ -2279,12 +2278,12 @@ instance encodeUpdateSkillGroupRequest :: Encode UpdateSkillGroupRequest where e
 
 -- | Constructs UpdateSkillGroupRequest from required parameters
 newUpdateSkillGroupRequest :: UpdateSkillGroupRequest
-newUpdateSkillGroupRequest  = UpdateSkillGroupRequest { "Description": (NullOrUndefined Nothing), "SkillGroupArn": (NullOrUndefined Nothing), "SkillGroupName": (NullOrUndefined Nothing) }
+newUpdateSkillGroupRequest  = UpdateSkillGroupRequest { "Description": Nothing, "SkillGroupArn": Nothing, "SkillGroupName": Nothing }
 
 -- | Constructs UpdateSkillGroupRequest's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUpdateSkillGroupRequest' :: ( { "SkillGroupArn" :: NullOrUndefined (Arn) , "SkillGroupName" :: NullOrUndefined (SkillGroupName) , "Description" :: NullOrUndefined (SkillGroupDescription) } -> {"SkillGroupArn" :: NullOrUndefined (Arn) , "SkillGroupName" :: NullOrUndefined (SkillGroupName) , "Description" :: NullOrUndefined (SkillGroupDescription) } ) -> UpdateSkillGroupRequest
-newUpdateSkillGroupRequest'  customize = (UpdateSkillGroupRequest <<< customize) { "Description": (NullOrUndefined Nothing), "SkillGroupArn": (NullOrUndefined Nothing), "SkillGroupName": (NullOrUndefined Nothing) }
+newUpdateSkillGroupRequest' :: ( { "SkillGroupArn" :: Maybe (Arn) , "SkillGroupName" :: Maybe (SkillGroupName) , "Description" :: Maybe (SkillGroupDescription) } -> {"SkillGroupArn" :: Maybe (Arn) , "SkillGroupName" :: Maybe (SkillGroupName) , "Description" :: Maybe (SkillGroupDescription) } ) -> UpdateSkillGroupRequest
+newUpdateSkillGroupRequest'  customize = (UpdateSkillGroupRequest <<< customize) { "Description": Nothing, "SkillGroupArn": Nothing, "SkillGroupName": Nothing }
 
 
 
@@ -2299,12 +2298,12 @@ instance encodeUpdateSkillGroupResponse :: Encode UpdateSkillGroupResponse where
 
 -- | <p>Information related to a user.</p>
 newtype UserData = UserData 
-  { "UserArn" :: NullOrUndefined (Arn)
-  , "FirstName" :: NullOrUndefined (User_FirstName')
-  , "LastName" :: NullOrUndefined (User_LastName')
-  , "Email" :: NullOrUndefined (Email)
-  , "EnrollmentStatus" :: NullOrUndefined (EnrollmentStatus)
-  , "EnrollmentId" :: NullOrUndefined (EnrollmentId)
+  { "UserArn" :: Maybe (Arn)
+  , "FirstName" :: Maybe (User_FirstName')
+  , "LastName" :: Maybe (User_LastName')
+  , "Email" :: Maybe (Email)
+  , "EnrollmentStatus" :: Maybe (EnrollmentStatus)
+  , "EnrollmentId" :: Maybe (EnrollmentId)
   }
 derive instance newtypeUserData :: Newtype UserData _
 derive instance repGenericUserData :: Generic UserData _
@@ -2314,12 +2313,12 @@ instance encodeUserData :: Encode UserData where encode = genericEncode options
 
 -- | Constructs UserData from required parameters
 newUserData :: UserData
-newUserData  = UserData { "Email": (NullOrUndefined Nothing), "EnrollmentId": (NullOrUndefined Nothing), "EnrollmentStatus": (NullOrUndefined Nothing), "FirstName": (NullOrUndefined Nothing), "LastName": (NullOrUndefined Nothing), "UserArn": (NullOrUndefined Nothing) }
+newUserData  = UserData { "Email": Nothing, "EnrollmentId": Nothing, "EnrollmentStatus": Nothing, "FirstName": Nothing, "LastName": Nothing, "UserArn": Nothing }
 
 -- | Constructs UserData's fields from required parameters
 --   This may be useful if you need to immediately overwrite some of the optional values
-newUserData' :: ( { "UserArn" :: NullOrUndefined (Arn) , "FirstName" :: NullOrUndefined (User_FirstName') , "LastName" :: NullOrUndefined (User_LastName') , "Email" :: NullOrUndefined (Email) , "EnrollmentStatus" :: NullOrUndefined (EnrollmentStatus) , "EnrollmentId" :: NullOrUndefined (EnrollmentId) } -> {"UserArn" :: NullOrUndefined (Arn) , "FirstName" :: NullOrUndefined (User_FirstName') , "LastName" :: NullOrUndefined (User_LastName') , "Email" :: NullOrUndefined (Email) , "EnrollmentStatus" :: NullOrUndefined (EnrollmentStatus) , "EnrollmentId" :: NullOrUndefined (EnrollmentId) } ) -> UserData
-newUserData'  customize = (UserData <<< customize) { "Email": (NullOrUndefined Nothing), "EnrollmentId": (NullOrUndefined Nothing), "EnrollmentStatus": (NullOrUndefined Nothing), "FirstName": (NullOrUndefined Nothing), "LastName": (NullOrUndefined Nothing), "UserArn": (NullOrUndefined Nothing) }
+newUserData' :: ( { "UserArn" :: Maybe (Arn) , "FirstName" :: Maybe (User_FirstName') , "LastName" :: Maybe (User_LastName') , "Email" :: Maybe (Email) , "EnrollmentStatus" :: Maybe (EnrollmentStatus) , "EnrollmentId" :: Maybe (EnrollmentId) } -> {"UserArn" :: Maybe (Arn) , "FirstName" :: Maybe (User_FirstName') , "LastName" :: Maybe (User_LastName') , "Email" :: Maybe (Email) , "EnrollmentStatus" :: Maybe (EnrollmentStatus) , "EnrollmentId" :: Maybe (EnrollmentId) } ) -> UserData
+newUserData'  customize = (UserData <<< customize) { "Email": Nothing, "EnrollmentId": Nothing, "EnrollmentStatus": Nothing, "FirstName": Nothing, "LastName": Nothing, "UserArn": Nothing }
 
 
 

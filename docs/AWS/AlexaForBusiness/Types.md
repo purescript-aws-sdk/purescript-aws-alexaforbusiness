@@ -26,7 +26,7 @@ Encode Address
 
 ``` purescript
 newtype AlreadyExistsException
-  = AlreadyExistsException { "Message" :: NullOrUndefined (ErrorMessage) }
+  = AlreadyExistsException { "Message" :: Maybe (ErrorMessage) }
 ```
 
 <p>The resource being created already exists. HTTP Status Code: 400</p>
@@ -51,7 +51,7 @@ Constructs AlreadyExistsException from required parameters
 #### `newAlreadyExistsException'`
 
 ``` purescript
-newAlreadyExistsException' :: ({ "Message" :: NullOrUndefined (ErrorMessage) } -> { "Message" :: NullOrUndefined (ErrorMessage) }) -> AlreadyExistsException
+newAlreadyExistsException' :: ({ "Message" :: Maybe (ErrorMessage) } -> { "Message" :: Maybe (ErrorMessage) }) -> AlreadyExistsException
 ```
 
 Constructs AlreadyExistsException's fields from required parameters
@@ -76,7 +76,7 @@ Encode Arn
 
 ``` purescript
 newtype AssociateDeviceWithRoomRequest
-  = AssociateDeviceWithRoomRequest { "DeviceArn" :: NullOrUndefined (Arn), "RoomArn" :: NullOrUndefined (Arn) }
+  = AssociateDeviceWithRoomRequest { "DeviceArn" :: Maybe (Arn), "RoomArn" :: Maybe (Arn) }
 ```
 
 ##### Instances
@@ -99,7 +99,7 @@ Constructs AssociateDeviceWithRoomRequest from required parameters
 #### `newAssociateDeviceWithRoomRequest'`
 
 ``` purescript
-newAssociateDeviceWithRoomRequest' :: ({ "DeviceArn" :: NullOrUndefined (Arn), "RoomArn" :: NullOrUndefined (Arn) } -> { "DeviceArn" :: NullOrUndefined (Arn), "RoomArn" :: NullOrUndefined (Arn) }) -> AssociateDeviceWithRoomRequest
+newAssociateDeviceWithRoomRequest' :: ({ "DeviceArn" :: Maybe (Arn), "RoomArn" :: Maybe (Arn) } -> { "DeviceArn" :: Maybe (Arn), "RoomArn" :: Maybe (Arn) }) -> AssociateDeviceWithRoomRequest
 ```
 
 Constructs AssociateDeviceWithRoomRequest's fields from required parameters
@@ -124,7 +124,7 @@ Encode AssociateDeviceWithRoomResponse
 
 ``` purescript
 newtype AssociateSkillGroupWithRoomRequest
-  = AssociateSkillGroupWithRoomRequest { "SkillGroupArn" :: NullOrUndefined (Arn), "RoomArn" :: NullOrUndefined (Arn) }
+  = AssociateSkillGroupWithRoomRequest { "SkillGroupArn" :: Maybe (Arn), "RoomArn" :: Maybe (Arn) }
 ```
 
 ##### Instances
@@ -147,7 +147,7 @@ Constructs AssociateSkillGroupWithRoomRequest from required parameters
 #### `newAssociateSkillGroupWithRoomRequest'`
 
 ``` purescript
-newAssociateSkillGroupWithRoomRequest' :: ({ "SkillGroupArn" :: NullOrUndefined (Arn), "RoomArn" :: NullOrUndefined (Arn) } -> { "SkillGroupArn" :: NullOrUndefined (Arn), "RoomArn" :: NullOrUndefined (Arn) }) -> AssociateSkillGroupWithRoomRequest
+newAssociateSkillGroupWithRoomRequest' :: ({ "SkillGroupArn" :: Maybe (Arn), "RoomArn" :: Maybe (Arn) } -> { "SkillGroupArn" :: Maybe (Arn), "RoomArn" :: Maybe (Arn) }) -> AssociateSkillGroupWithRoomRequest
 ```
 
 Constructs AssociateSkillGroupWithRoomRequest's fields from required parameters
@@ -190,7 +190,7 @@ Encode ClientRequestToken
 
 ``` purescript
 newtype CreateProfileRequest
-  = CreateProfileRequest { "ProfileName" :: ProfileName, "Timezone" :: Timezone, "Address" :: Address, "DistanceUnit" :: DistanceUnit, "TemperatureUnit" :: TemperatureUnit, "WakeWord" :: WakeWord, "ClientRequestToken" :: NullOrUndefined (ClientRequestToken), "SetupModeDisabled" :: NullOrUndefined (Boolean), "MaxVolumeLimit" :: NullOrUndefined (MaxVolumeLimit), "PSTNEnabled" :: NullOrUndefined (Boolean) }
+  = CreateProfileRequest { "ProfileName" :: ProfileName, "Timezone" :: Timezone, "Address" :: Address, "DistanceUnit" :: DistanceUnit, "TemperatureUnit" :: TemperatureUnit, "WakeWord" :: WakeWord, "ClientRequestToken" :: Maybe (ClientRequestToken), "SetupModeDisabled" :: Maybe (Boolean), "MaxVolumeLimit" :: Maybe (MaxVolumeLimit), "PSTNEnabled" :: Maybe (Boolean) }
 ```
 
 ##### Instances
@@ -213,7 +213,7 @@ Constructs CreateProfileRequest from required parameters
 #### `newCreateProfileRequest'`
 
 ``` purescript
-newCreateProfileRequest' :: Address -> DistanceUnit -> ProfileName -> TemperatureUnit -> Timezone -> WakeWord -> ({ "ProfileName" :: ProfileName, "Timezone" :: Timezone, "Address" :: Address, "DistanceUnit" :: DistanceUnit, "TemperatureUnit" :: TemperatureUnit, "WakeWord" :: WakeWord, "ClientRequestToken" :: NullOrUndefined (ClientRequestToken), "SetupModeDisabled" :: NullOrUndefined (Boolean), "MaxVolumeLimit" :: NullOrUndefined (MaxVolumeLimit), "PSTNEnabled" :: NullOrUndefined (Boolean) } -> { "ProfileName" :: ProfileName, "Timezone" :: Timezone, "Address" :: Address, "DistanceUnit" :: DistanceUnit, "TemperatureUnit" :: TemperatureUnit, "WakeWord" :: WakeWord, "ClientRequestToken" :: NullOrUndefined (ClientRequestToken), "SetupModeDisabled" :: NullOrUndefined (Boolean), "MaxVolumeLimit" :: NullOrUndefined (MaxVolumeLimit), "PSTNEnabled" :: NullOrUndefined (Boolean) }) -> CreateProfileRequest
+newCreateProfileRequest' :: Address -> DistanceUnit -> ProfileName -> TemperatureUnit -> Timezone -> WakeWord -> ({ "ProfileName" :: ProfileName, "Timezone" :: Timezone, "Address" :: Address, "DistanceUnit" :: DistanceUnit, "TemperatureUnit" :: TemperatureUnit, "WakeWord" :: WakeWord, "ClientRequestToken" :: Maybe (ClientRequestToken), "SetupModeDisabled" :: Maybe (Boolean), "MaxVolumeLimit" :: Maybe (MaxVolumeLimit), "PSTNEnabled" :: Maybe (Boolean) } -> { "ProfileName" :: ProfileName, "Timezone" :: Timezone, "Address" :: Address, "DistanceUnit" :: DistanceUnit, "TemperatureUnit" :: TemperatureUnit, "WakeWord" :: WakeWord, "ClientRequestToken" :: Maybe (ClientRequestToken), "SetupModeDisabled" :: Maybe (Boolean), "MaxVolumeLimit" :: Maybe (MaxVolumeLimit), "PSTNEnabled" :: Maybe (Boolean) }) -> CreateProfileRequest
 ```
 
 Constructs CreateProfileRequest's fields from required parameters
@@ -222,7 +222,7 @@ Constructs CreateProfileRequest's fields from required parameters
 
 ``` purescript
 newtype CreateProfileResponse
-  = CreateProfileResponse { "ProfileArn" :: NullOrUndefined (Arn) }
+  = CreateProfileResponse { "ProfileArn" :: Maybe (Arn) }
 ```
 
 ##### Instances
@@ -245,7 +245,7 @@ Constructs CreateProfileResponse from required parameters
 #### `newCreateProfileResponse'`
 
 ``` purescript
-newCreateProfileResponse' :: ({ "ProfileArn" :: NullOrUndefined (Arn) } -> { "ProfileArn" :: NullOrUndefined (Arn) }) -> CreateProfileResponse
+newCreateProfileResponse' :: ({ "ProfileArn" :: Maybe (Arn) } -> { "ProfileArn" :: Maybe (Arn) }) -> CreateProfileResponse
 ```
 
 Constructs CreateProfileResponse's fields from required parameters
@@ -254,7 +254,7 @@ Constructs CreateProfileResponse's fields from required parameters
 
 ``` purescript
 newtype CreateRoomRequest
-  = CreateRoomRequest { "RoomName" :: RoomName, "Description" :: NullOrUndefined (RoomDescription), "ProfileArn" :: NullOrUndefined (Arn), "ProviderCalendarId" :: NullOrUndefined (ProviderCalendarId), "ClientRequestToken" :: NullOrUndefined (ClientRequestToken), "Tags" :: NullOrUndefined (TagList) }
+  = CreateRoomRequest { "RoomName" :: RoomName, "Description" :: Maybe (RoomDescription), "ProfileArn" :: Maybe (Arn), "ProviderCalendarId" :: Maybe (ProviderCalendarId), "ClientRequestToken" :: Maybe (ClientRequestToken), "Tags" :: Maybe (TagList) }
 ```
 
 ##### Instances
@@ -277,7 +277,7 @@ Constructs CreateRoomRequest from required parameters
 #### `newCreateRoomRequest'`
 
 ``` purescript
-newCreateRoomRequest' :: RoomName -> ({ "RoomName" :: RoomName, "Description" :: NullOrUndefined (RoomDescription), "ProfileArn" :: NullOrUndefined (Arn), "ProviderCalendarId" :: NullOrUndefined (ProviderCalendarId), "ClientRequestToken" :: NullOrUndefined (ClientRequestToken), "Tags" :: NullOrUndefined (TagList) } -> { "RoomName" :: RoomName, "Description" :: NullOrUndefined (RoomDescription), "ProfileArn" :: NullOrUndefined (Arn), "ProviderCalendarId" :: NullOrUndefined (ProviderCalendarId), "ClientRequestToken" :: NullOrUndefined (ClientRequestToken), "Tags" :: NullOrUndefined (TagList) }) -> CreateRoomRequest
+newCreateRoomRequest' :: RoomName -> ({ "RoomName" :: RoomName, "Description" :: Maybe (RoomDescription), "ProfileArn" :: Maybe (Arn), "ProviderCalendarId" :: Maybe (ProviderCalendarId), "ClientRequestToken" :: Maybe (ClientRequestToken), "Tags" :: Maybe (TagList) } -> { "RoomName" :: RoomName, "Description" :: Maybe (RoomDescription), "ProfileArn" :: Maybe (Arn), "ProviderCalendarId" :: Maybe (ProviderCalendarId), "ClientRequestToken" :: Maybe (ClientRequestToken), "Tags" :: Maybe (TagList) }) -> CreateRoomRequest
 ```
 
 Constructs CreateRoomRequest's fields from required parameters
@@ -286,7 +286,7 @@ Constructs CreateRoomRequest's fields from required parameters
 
 ``` purescript
 newtype CreateRoomResponse
-  = CreateRoomResponse { "RoomArn" :: NullOrUndefined (Arn) }
+  = CreateRoomResponse { "RoomArn" :: Maybe (Arn) }
 ```
 
 ##### Instances
@@ -309,7 +309,7 @@ Constructs CreateRoomResponse from required parameters
 #### `newCreateRoomResponse'`
 
 ``` purescript
-newCreateRoomResponse' :: ({ "RoomArn" :: NullOrUndefined (Arn) } -> { "RoomArn" :: NullOrUndefined (Arn) }) -> CreateRoomResponse
+newCreateRoomResponse' :: ({ "RoomArn" :: Maybe (Arn) } -> { "RoomArn" :: Maybe (Arn) }) -> CreateRoomResponse
 ```
 
 Constructs CreateRoomResponse's fields from required parameters
@@ -318,7 +318,7 @@ Constructs CreateRoomResponse's fields from required parameters
 
 ``` purescript
 newtype CreateSkillGroupRequest
-  = CreateSkillGroupRequest { "SkillGroupName" :: SkillGroupName, "Description" :: NullOrUndefined (SkillGroupDescription), "ClientRequestToken" :: NullOrUndefined (ClientRequestToken) }
+  = CreateSkillGroupRequest { "SkillGroupName" :: SkillGroupName, "Description" :: Maybe (SkillGroupDescription), "ClientRequestToken" :: Maybe (ClientRequestToken) }
 ```
 
 ##### Instances
@@ -341,7 +341,7 @@ Constructs CreateSkillGroupRequest from required parameters
 #### `newCreateSkillGroupRequest'`
 
 ``` purescript
-newCreateSkillGroupRequest' :: SkillGroupName -> ({ "SkillGroupName" :: SkillGroupName, "Description" :: NullOrUndefined (SkillGroupDescription), "ClientRequestToken" :: NullOrUndefined (ClientRequestToken) } -> { "SkillGroupName" :: SkillGroupName, "Description" :: NullOrUndefined (SkillGroupDescription), "ClientRequestToken" :: NullOrUndefined (ClientRequestToken) }) -> CreateSkillGroupRequest
+newCreateSkillGroupRequest' :: SkillGroupName -> ({ "SkillGroupName" :: SkillGroupName, "Description" :: Maybe (SkillGroupDescription), "ClientRequestToken" :: Maybe (ClientRequestToken) } -> { "SkillGroupName" :: SkillGroupName, "Description" :: Maybe (SkillGroupDescription), "ClientRequestToken" :: Maybe (ClientRequestToken) }) -> CreateSkillGroupRequest
 ```
 
 Constructs CreateSkillGroupRequest's fields from required parameters
@@ -350,7 +350,7 @@ Constructs CreateSkillGroupRequest's fields from required parameters
 
 ``` purescript
 newtype CreateSkillGroupResponse
-  = CreateSkillGroupResponse { "SkillGroupArn" :: NullOrUndefined (Arn) }
+  = CreateSkillGroupResponse { "SkillGroupArn" :: Maybe (Arn) }
 ```
 
 ##### Instances
@@ -373,7 +373,7 @@ Constructs CreateSkillGroupResponse from required parameters
 #### `newCreateSkillGroupResponse'`
 
 ``` purescript
-newCreateSkillGroupResponse' :: ({ "SkillGroupArn" :: NullOrUndefined (Arn) } -> { "SkillGroupArn" :: NullOrUndefined (Arn) }) -> CreateSkillGroupResponse
+newCreateSkillGroupResponse' :: ({ "SkillGroupArn" :: Maybe (Arn) } -> { "SkillGroupArn" :: Maybe (Arn) }) -> CreateSkillGroupResponse
 ```
 
 Constructs CreateSkillGroupResponse's fields from required parameters
@@ -382,7 +382,7 @@ Constructs CreateSkillGroupResponse's fields from required parameters
 
 ``` purescript
 newtype CreateUserRequest
-  = CreateUserRequest { "UserId" :: User_UserId', "FirstName" :: NullOrUndefined (User_FirstName'), "LastName" :: NullOrUndefined (User_LastName'), "Email" :: NullOrUndefined (Email), "ClientRequestToken" :: NullOrUndefined (ClientRequestToken), "Tags" :: NullOrUndefined (TagList) }
+  = CreateUserRequest { "UserId" :: User_UserId', "FirstName" :: Maybe (User_FirstName'), "LastName" :: Maybe (User_LastName'), "Email" :: Maybe (Email), "ClientRequestToken" :: Maybe (ClientRequestToken), "Tags" :: Maybe (TagList) }
 ```
 
 ##### Instances
@@ -405,7 +405,7 @@ Constructs CreateUserRequest from required parameters
 #### `newCreateUserRequest'`
 
 ``` purescript
-newCreateUserRequest' :: User_UserId' -> ({ "UserId" :: User_UserId', "FirstName" :: NullOrUndefined (User_FirstName'), "LastName" :: NullOrUndefined (User_LastName'), "Email" :: NullOrUndefined (Email), "ClientRequestToken" :: NullOrUndefined (ClientRequestToken), "Tags" :: NullOrUndefined (TagList) } -> { "UserId" :: User_UserId', "FirstName" :: NullOrUndefined (User_FirstName'), "LastName" :: NullOrUndefined (User_LastName'), "Email" :: NullOrUndefined (Email), "ClientRequestToken" :: NullOrUndefined (ClientRequestToken), "Tags" :: NullOrUndefined (TagList) }) -> CreateUserRequest
+newCreateUserRequest' :: User_UserId' -> ({ "UserId" :: User_UserId', "FirstName" :: Maybe (User_FirstName'), "LastName" :: Maybe (User_LastName'), "Email" :: Maybe (Email), "ClientRequestToken" :: Maybe (ClientRequestToken), "Tags" :: Maybe (TagList) } -> { "UserId" :: User_UserId', "FirstName" :: Maybe (User_FirstName'), "LastName" :: Maybe (User_LastName'), "Email" :: Maybe (Email), "ClientRequestToken" :: Maybe (ClientRequestToken), "Tags" :: Maybe (TagList) }) -> CreateUserRequest
 ```
 
 Constructs CreateUserRequest's fields from required parameters
@@ -414,7 +414,7 @@ Constructs CreateUserRequest's fields from required parameters
 
 ``` purescript
 newtype CreateUserResponse
-  = CreateUserResponse { "UserArn" :: NullOrUndefined (Arn) }
+  = CreateUserResponse { "UserArn" :: Maybe (Arn) }
 ```
 
 ##### Instances
@@ -437,7 +437,7 @@ Constructs CreateUserResponse from required parameters
 #### `newCreateUserResponse'`
 
 ``` purescript
-newCreateUserResponse' :: ({ "UserArn" :: NullOrUndefined (Arn) } -> { "UserArn" :: NullOrUndefined (Arn) }) -> CreateUserResponse
+newCreateUserResponse' :: ({ "UserArn" :: Maybe (Arn) } -> { "UserArn" :: Maybe (Arn) }) -> CreateUserResponse
 ```
 
 Constructs CreateUserResponse's fields from required parameters
@@ -446,7 +446,7 @@ Constructs CreateUserResponse's fields from required parameters
 
 ``` purescript
 newtype DeleteProfileRequest
-  = DeleteProfileRequest { "ProfileArn" :: NullOrUndefined (Arn) }
+  = DeleteProfileRequest { "ProfileArn" :: Maybe (Arn) }
 ```
 
 ##### Instances
@@ -469,7 +469,7 @@ Constructs DeleteProfileRequest from required parameters
 #### `newDeleteProfileRequest'`
 
 ``` purescript
-newDeleteProfileRequest' :: ({ "ProfileArn" :: NullOrUndefined (Arn) } -> { "ProfileArn" :: NullOrUndefined (Arn) }) -> DeleteProfileRequest
+newDeleteProfileRequest' :: ({ "ProfileArn" :: Maybe (Arn) } -> { "ProfileArn" :: Maybe (Arn) }) -> DeleteProfileRequest
 ```
 
 Constructs DeleteProfileRequest's fields from required parameters
@@ -494,7 +494,7 @@ Encode DeleteProfileResponse
 
 ``` purescript
 newtype DeleteRoomRequest
-  = DeleteRoomRequest { "RoomArn" :: NullOrUndefined (Arn) }
+  = DeleteRoomRequest { "RoomArn" :: Maybe (Arn) }
 ```
 
 ##### Instances
@@ -517,7 +517,7 @@ Constructs DeleteRoomRequest from required parameters
 #### `newDeleteRoomRequest'`
 
 ``` purescript
-newDeleteRoomRequest' :: ({ "RoomArn" :: NullOrUndefined (Arn) } -> { "RoomArn" :: NullOrUndefined (Arn) }) -> DeleteRoomRequest
+newDeleteRoomRequest' :: ({ "RoomArn" :: Maybe (Arn) } -> { "RoomArn" :: Maybe (Arn) }) -> DeleteRoomRequest
 ```
 
 Constructs DeleteRoomRequest's fields from required parameters
@@ -542,7 +542,7 @@ Encode DeleteRoomResponse
 
 ``` purescript
 newtype DeleteRoomSkillParameterRequest
-  = DeleteRoomSkillParameterRequest { "RoomArn" :: NullOrUndefined (Arn), "SkillId" :: SkillId, "ParameterKey" :: RoomSkillParameterKey }
+  = DeleteRoomSkillParameterRequest { "RoomArn" :: Maybe (Arn), "SkillId" :: SkillId, "ParameterKey" :: RoomSkillParameterKey }
 ```
 
 ##### Instances
@@ -565,7 +565,7 @@ Constructs DeleteRoomSkillParameterRequest from required parameters
 #### `newDeleteRoomSkillParameterRequest'`
 
 ``` purescript
-newDeleteRoomSkillParameterRequest' :: RoomSkillParameterKey -> SkillId -> ({ "RoomArn" :: NullOrUndefined (Arn), "SkillId" :: SkillId, "ParameterKey" :: RoomSkillParameterKey } -> { "RoomArn" :: NullOrUndefined (Arn), "SkillId" :: SkillId, "ParameterKey" :: RoomSkillParameterKey }) -> DeleteRoomSkillParameterRequest
+newDeleteRoomSkillParameterRequest' :: RoomSkillParameterKey -> SkillId -> ({ "RoomArn" :: Maybe (Arn), "SkillId" :: SkillId, "ParameterKey" :: RoomSkillParameterKey } -> { "RoomArn" :: Maybe (Arn), "SkillId" :: SkillId, "ParameterKey" :: RoomSkillParameterKey }) -> DeleteRoomSkillParameterRequest
 ```
 
 Constructs DeleteRoomSkillParameterRequest's fields from required parameters
@@ -590,7 +590,7 @@ Encode DeleteRoomSkillParameterResponse
 
 ``` purescript
 newtype DeleteSkillGroupRequest
-  = DeleteSkillGroupRequest { "SkillGroupArn" :: NullOrUndefined (Arn) }
+  = DeleteSkillGroupRequest { "SkillGroupArn" :: Maybe (Arn) }
 ```
 
 ##### Instances
@@ -613,7 +613,7 @@ Constructs DeleteSkillGroupRequest from required parameters
 #### `newDeleteSkillGroupRequest'`
 
 ``` purescript
-newDeleteSkillGroupRequest' :: ({ "SkillGroupArn" :: NullOrUndefined (Arn) } -> { "SkillGroupArn" :: NullOrUndefined (Arn) }) -> DeleteSkillGroupRequest
+newDeleteSkillGroupRequest' :: ({ "SkillGroupArn" :: Maybe (Arn) } -> { "SkillGroupArn" :: Maybe (Arn) }) -> DeleteSkillGroupRequest
 ```
 
 Constructs DeleteSkillGroupRequest's fields from required parameters
@@ -638,7 +638,7 @@ Encode DeleteSkillGroupResponse
 
 ``` purescript
 newtype DeleteUserRequest
-  = DeleteUserRequest { "UserArn" :: NullOrUndefined (Arn), "EnrollmentId" :: EnrollmentId }
+  = DeleteUserRequest { "UserArn" :: Maybe (Arn), "EnrollmentId" :: EnrollmentId }
 ```
 
 ##### Instances
@@ -661,7 +661,7 @@ Constructs DeleteUserRequest from required parameters
 #### `newDeleteUserRequest'`
 
 ``` purescript
-newDeleteUserRequest' :: EnrollmentId -> ({ "UserArn" :: NullOrUndefined (Arn), "EnrollmentId" :: EnrollmentId } -> { "UserArn" :: NullOrUndefined (Arn), "EnrollmentId" :: EnrollmentId }) -> DeleteUserRequest
+newDeleteUserRequest' :: EnrollmentId -> ({ "UserArn" :: Maybe (Arn), "EnrollmentId" :: EnrollmentId } -> { "UserArn" :: Maybe (Arn), "EnrollmentId" :: EnrollmentId }) -> DeleteUserRequest
 ```
 
 Constructs DeleteUserRequest's fields from required parameters
@@ -686,7 +686,7 @@ Encode DeleteUserResponse
 
 ``` purescript
 newtype Device
-  = Device { "DeviceArn" :: NullOrUndefined (Arn), "DeviceSerialNumber" :: NullOrUndefined (DeviceSerialNumber), "DeviceType" :: NullOrUndefined (DeviceType), "DeviceName" :: NullOrUndefined (DeviceName), "SoftwareVersion" :: NullOrUndefined (SoftwareVersion), "MacAddress" :: NullOrUndefined (MacAddress), "RoomArn" :: NullOrUndefined (Arn), "DeviceStatus" :: NullOrUndefined (DeviceStatus), "DeviceStatusInfo" :: NullOrUndefined (DeviceStatusInfo) }
+  = Device { "DeviceArn" :: Maybe (Arn), "DeviceSerialNumber" :: Maybe (DeviceSerialNumber), "DeviceType" :: Maybe (DeviceType), "DeviceName" :: Maybe (DeviceName), "SoftwareVersion" :: Maybe (SoftwareVersion), "MacAddress" :: Maybe (MacAddress), "RoomArn" :: Maybe (Arn), "DeviceStatus" :: Maybe (DeviceStatus), "DeviceStatusInfo" :: Maybe (DeviceStatusInfo) }
 ```
 
 <p>A device with attributes.</p>
@@ -711,7 +711,7 @@ Constructs Device from required parameters
 #### `newDevice'`
 
 ``` purescript
-newDevice' :: ({ "DeviceArn" :: NullOrUndefined (Arn), "DeviceSerialNumber" :: NullOrUndefined (DeviceSerialNumber), "DeviceType" :: NullOrUndefined (DeviceType), "DeviceName" :: NullOrUndefined (DeviceName), "SoftwareVersion" :: NullOrUndefined (SoftwareVersion), "MacAddress" :: NullOrUndefined (MacAddress), "RoomArn" :: NullOrUndefined (Arn), "DeviceStatus" :: NullOrUndefined (DeviceStatus), "DeviceStatusInfo" :: NullOrUndefined (DeviceStatusInfo) } -> { "DeviceArn" :: NullOrUndefined (Arn), "DeviceSerialNumber" :: NullOrUndefined (DeviceSerialNumber), "DeviceType" :: NullOrUndefined (DeviceType), "DeviceName" :: NullOrUndefined (DeviceName), "SoftwareVersion" :: NullOrUndefined (SoftwareVersion), "MacAddress" :: NullOrUndefined (MacAddress), "RoomArn" :: NullOrUndefined (Arn), "DeviceStatus" :: NullOrUndefined (DeviceStatus), "DeviceStatusInfo" :: NullOrUndefined (DeviceStatusInfo) }) -> Device
+newDevice' :: ({ "DeviceArn" :: Maybe (Arn), "DeviceSerialNumber" :: Maybe (DeviceSerialNumber), "DeviceType" :: Maybe (DeviceType), "DeviceName" :: Maybe (DeviceName), "SoftwareVersion" :: Maybe (SoftwareVersion), "MacAddress" :: Maybe (MacAddress), "RoomArn" :: Maybe (Arn), "DeviceStatus" :: Maybe (DeviceStatus), "DeviceStatusInfo" :: Maybe (DeviceStatusInfo) } -> { "DeviceArn" :: Maybe (Arn), "DeviceSerialNumber" :: Maybe (DeviceSerialNumber), "DeviceType" :: Maybe (DeviceType), "DeviceName" :: Maybe (DeviceName), "SoftwareVersion" :: Maybe (SoftwareVersion), "MacAddress" :: Maybe (MacAddress), "RoomArn" :: Maybe (Arn), "DeviceStatus" :: Maybe (DeviceStatus), "DeviceStatusInfo" :: Maybe (DeviceStatusInfo) }) -> Device
 ```
 
 Constructs Device's fields from required parameters
@@ -720,7 +720,7 @@ Constructs Device's fields from required parameters
 
 ``` purescript
 newtype DeviceData
-  = DeviceData { "DeviceArn" :: NullOrUndefined (Arn), "DeviceSerialNumber" :: NullOrUndefined (DeviceSerialNumber), "DeviceType" :: NullOrUndefined (DeviceType), "DeviceName" :: NullOrUndefined (DeviceName), "SoftwareVersion" :: NullOrUndefined (SoftwareVersion), "MacAddress" :: NullOrUndefined (MacAddress), "DeviceStatus" :: NullOrUndefined (DeviceStatus), "RoomArn" :: NullOrUndefined (Arn), "RoomName" :: NullOrUndefined (RoomName), "DeviceStatusInfo" :: NullOrUndefined (DeviceStatusInfo) }
+  = DeviceData { "DeviceArn" :: Maybe (Arn), "DeviceSerialNumber" :: Maybe (DeviceSerialNumber), "DeviceType" :: Maybe (DeviceType), "DeviceName" :: Maybe (DeviceName), "SoftwareVersion" :: Maybe (SoftwareVersion), "MacAddress" :: Maybe (MacAddress), "DeviceStatus" :: Maybe (DeviceStatus), "RoomArn" :: Maybe (Arn), "RoomName" :: Maybe (RoomName), "DeviceStatusInfo" :: Maybe (DeviceStatusInfo) }
 ```
 
 <p>Device attributes.</p>
@@ -745,7 +745,7 @@ Constructs DeviceData from required parameters
 #### `newDeviceData'`
 
 ``` purescript
-newDeviceData' :: ({ "DeviceArn" :: NullOrUndefined (Arn), "DeviceSerialNumber" :: NullOrUndefined (DeviceSerialNumber), "DeviceType" :: NullOrUndefined (DeviceType), "DeviceName" :: NullOrUndefined (DeviceName), "SoftwareVersion" :: NullOrUndefined (SoftwareVersion), "MacAddress" :: NullOrUndefined (MacAddress), "DeviceStatus" :: NullOrUndefined (DeviceStatus), "RoomArn" :: NullOrUndefined (Arn), "RoomName" :: NullOrUndefined (RoomName), "DeviceStatusInfo" :: NullOrUndefined (DeviceStatusInfo) } -> { "DeviceArn" :: NullOrUndefined (Arn), "DeviceSerialNumber" :: NullOrUndefined (DeviceSerialNumber), "DeviceType" :: NullOrUndefined (DeviceType), "DeviceName" :: NullOrUndefined (DeviceName), "SoftwareVersion" :: NullOrUndefined (SoftwareVersion), "MacAddress" :: NullOrUndefined (MacAddress), "DeviceStatus" :: NullOrUndefined (DeviceStatus), "RoomArn" :: NullOrUndefined (Arn), "RoomName" :: NullOrUndefined (RoomName), "DeviceStatusInfo" :: NullOrUndefined (DeviceStatusInfo) }) -> DeviceData
+newDeviceData' :: ({ "DeviceArn" :: Maybe (Arn), "DeviceSerialNumber" :: Maybe (DeviceSerialNumber), "DeviceType" :: Maybe (DeviceType), "DeviceName" :: Maybe (DeviceName), "SoftwareVersion" :: Maybe (SoftwareVersion), "MacAddress" :: Maybe (MacAddress), "DeviceStatus" :: Maybe (DeviceStatus), "RoomArn" :: Maybe (Arn), "RoomName" :: Maybe (RoomName), "DeviceStatusInfo" :: Maybe (DeviceStatusInfo) } -> { "DeviceArn" :: Maybe (Arn), "DeviceSerialNumber" :: Maybe (DeviceSerialNumber), "DeviceType" :: Maybe (DeviceType), "DeviceName" :: Maybe (DeviceName), "SoftwareVersion" :: Maybe (SoftwareVersion), "MacAddress" :: Maybe (MacAddress), "DeviceStatus" :: Maybe (DeviceStatus), "RoomArn" :: Maybe (Arn), "RoomName" :: Maybe (RoomName), "DeviceStatusInfo" :: Maybe (DeviceStatusInfo) }) -> DeviceData
 ```
 
 Constructs DeviceData's fields from required parameters
@@ -818,7 +818,7 @@ Encode DeviceStatus
 
 ``` purescript
 newtype DeviceStatusDetail
-  = DeviceStatusDetail { "Code" :: NullOrUndefined (DeviceStatusDetailCode) }
+  = DeviceStatusDetail { "Code" :: Maybe (DeviceStatusDetailCode) }
 ```
 
 <p>Details of a device’s status.</p>
@@ -843,7 +843,7 @@ Constructs DeviceStatusDetail from required parameters
 #### `newDeviceStatusDetail'`
 
 ``` purescript
-newDeviceStatusDetail' :: ({ "Code" :: NullOrUndefined (DeviceStatusDetailCode) } -> { "Code" :: NullOrUndefined (DeviceStatusDetailCode) }) -> DeviceStatusDetail
+newDeviceStatusDetail' :: ({ "Code" :: Maybe (DeviceStatusDetailCode) } -> { "Code" :: Maybe (DeviceStatusDetailCode) }) -> DeviceStatusDetail
 ```
 
 Constructs DeviceStatusDetail's fields from required parameters
@@ -884,7 +884,7 @@ Encode DeviceStatusDetails
 
 ``` purescript
 newtype DeviceStatusInfo
-  = DeviceStatusInfo { "DeviceStatusDetails" :: NullOrUndefined (DeviceStatusDetails) }
+  = DeviceStatusInfo { "DeviceStatusDetails" :: Maybe (DeviceStatusDetails) }
 ```
 
 <p>Detailed information about a device's status.</p>
@@ -909,7 +909,7 @@ Constructs DeviceStatusInfo from required parameters
 #### `newDeviceStatusInfo'`
 
 ``` purescript
-newDeviceStatusInfo' :: ({ "DeviceStatusDetails" :: NullOrUndefined (DeviceStatusDetails) } -> { "DeviceStatusDetails" :: NullOrUndefined (DeviceStatusDetails) }) -> DeviceStatusInfo
+newDeviceStatusInfo' :: ({ "DeviceStatusDetails" :: Maybe (DeviceStatusDetails) } -> { "DeviceStatusDetails" :: Maybe (DeviceStatusDetails) }) -> DeviceStatusInfo
 ```
 
 Constructs DeviceStatusInfo's fields from required parameters
@@ -934,7 +934,7 @@ Encode DeviceType
 
 ``` purescript
 newtype DisassociateDeviceFromRoomRequest
-  = DisassociateDeviceFromRoomRequest { "DeviceArn" :: NullOrUndefined (Arn) }
+  = DisassociateDeviceFromRoomRequest { "DeviceArn" :: Maybe (Arn) }
 ```
 
 ##### Instances
@@ -957,7 +957,7 @@ Constructs DisassociateDeviceFromRoomRequest from required parameters
 #### `newDisassociateDeviceFromRoomRequest'`
 
 ``` purescript
-newDisassociateDeviceFromRoomRequest' :: ({ "DeviceArn" :: NullOrUndefined (Arn) } -> { "DeviceArn" :: NullOrUndefined (Arn) }) -> DisassociateDeviceFromRoomRequest
+newDisassociateDeviceFromRoomRequest' :: ({ "DeviceArn" :: Maybe (Arn) } -> { "DeviceArn" :: Maybe (Arn) }) -> DisassociateDeviceFromRoomRequest
 ```
 
 Constructs DisassociateDeviceFromRoomRequest's fields from required parameters
@@ -982,7 +982,7 @@ Encode DisassociateDeviceFromRoomResponse
 
 ``` purescript
 newtype DisassociateSkillGroupFromRoomRequest
-  = DisassociateSkillGroupFromRoomRequest { "SkillGroupArn" :: NullOrUndefined (Arn), "RoomArn" :: NullOrUndefined (Arn) }
+  = DisassociateSkillGroupFromRoomRequest { "SkillGroupArn" :: Maybe (Arn), "RoomArn" :: Maybe (Arn) }
 ```
 
 ##### Instances
@@ -1005,7 +1005,7 @@ Constructs DisassociateSkillGroupFromRoomRequest from required parameters
 #### `newDisassociateSkillGroupFromRoomRequest'`
 
 ``` purescript
-newDisassociateSkillGroupFromRoomRequest' :: ({ "SkillGroupArn" :: NullOrUndefined (Arn), "RoomArn" :: NullOrUndefined (Arn) } -> { "SkillGroupArn" :: NullOrUndefined (Arn), "RoomArn" :: NullOrUndefined (Arn) }) -> DisassociateSkillGroupFromRoomRequest
+newDisassociateSkillGroupFromRoomRequest' :: ({ "SkillGroupArn" :: Maybe (Arn), "RoomArn" :: Maybe (Arn) } -> { "SkillGroupArn" :: Maybe (Arn), "RoomArn" :: Maybe (Arn) }) -> DisassociateSkillGroupFromRoomRequest
 ```
 
 Constructs DisassociateSkillGroupFromRoomRequest's fields from required parameters
@@ -1240,7 +1240,7 @@ Encode FilterValueList
 
 ``` purescript
 newtype GetDeviceRequest
-  = GetDeviceRequest { "DeviceArn" :: NullOrUndefined (Arn) }
+  = GetDeviceRequest { "DeviceArn" :: Maybe (Arn) }
 ```
 
 ##### Instances
@@ -1263,7 +1263,7 @@ Constructs GetDeviceRequest from required parameters
 #### `newGetDeviceRequest'`
 
 ``` purescript
-newGetDeviceRequest' :: ({ "DeviceArn" :: NullOrUndefined (Arn) } -> { "DeviceArn" :: NullOrUndefined (Arn) }) -> GetDeviceRequest
+newGetDeviceRequest' :: ({ "DeviceArn" :: Maybe (Arn) } -> { "DeviceArn" :: Maybe (Arn) }) -> GetDeviceRequest
 ```
 
 Constructs GetDeviceRequest's fields from required parameters
@@ -1272,7 +1272,7 @@ Constructs GetDeviceRequest's fields from required parameters
 
 ``` purescript
 newtype GetDeviceResponse
-  = GetDeviceResponse { "Device" :: NullOrUndefined (Device) }
+  = GetDeviceResponse { "Device" :: Maybe (Device) }
 ```
 
 ##### Instances
@@ -1295,7 +1295,7 @@ Constructs GetDeviceResponse from required parameters
 #### `newGetDeviceResponse'`
 
 ``` purescript
-newGetDeviceResponse' :: ({ "Device" :: NullOrUndefined (Device) } -> { "Device" :: NullOrUndefined (Device) }) -> GetDeviceResponse
+newGetDeviceResponse' :: ({ "Device" :: Maybe (Device) } -> { "Device" :: Maybe (Device) }) -> GetDeviceResponse
 ```
 
 Constructs GetDeviceResponse's fields from required parameters
@@ -1304,7 +1304,7 @@ Constructs GetDeviceResponse's fields from required parameters
 
 ``` purescript
 newtype GetProfileRequest
-  = GetProfileRequest { "ProfileArn" :: NullOrUndefined (Arn) }
+  = GetProfileRequest { "ProfileArn" :: Maybe (Arn) }
 ```
 
 ##### Instances
@@ -1327,7 +1327,7 @@ Constructs GetProfileRequest from required parameters
 #### `newGetProfileRequest'`
 
 ``` purescript
-newGetProfileRequest' :: ({ "ProfileArn" :: NullOrUndefined (Arn) } -> { "ProfileArn" :: NullOrUndefined (Arn) }) -> GetProfileRequest
+newGetProfileRequest' :: ({ "ProfileArn" :: Maybe (Arn) } -> { "ProfileArn" :: Maybe (Arn) }) -> GetProfileRequest
 ```
 
 Constructs GetProfileRequest's fields from required parameters
@@ -1336,7 +1336,7 @@ Constructs GetProfileRequest's fields from required parameters
 
 ``` purescript
 newtype GetProfileResponse
-  = GetProfileResponse { "Profile" :: NullOrUndefined (Profile) }
+  = GetProfileResponse { "Profile" :: Maybe (Profile) }
 ```
 
 ##### Instances
@@ -1359,7 +1359,7 @@ Constructs GetProfileResponse from required parameters
 #### `newGetProfileResponse'`
 
 ``` purescript
-newGetProfileResponse' :: ({ "Profile" :: NullOrUndefined (Profile) } -> { "Profile" :: NullOrUndefined (Profile) }) -> GetProfileResponse
+newGetProfileResponse' :: ({ "Profile" :: Maybe (Profile) } -> { "Profile" :: Maybe (Profile) }) -> GetProfileResponse
 ```
 
 Constructs GetProfileResponse's fields from required parameters
@@ -1368,7 +1368,7 @@ Constructs GetProfileResponse's fields from required parameters
 
 ``` purescript
 newtype GetRoomRequest
-  = GetRoomRequest { "RoomArn" :: NullOrUndefined (Arn) }
+  = GetRoomRequest { "RoomArn" :: Maybe (Arn) }
 ```
 
 ##### Instances
@@ -1391,7 +1391,7 @@ Constructs GetRoomRequest from required parameters
 #### `newGetRoomRequest'`
 
 ``` purescript
-newGetRoomRequest' :: ({ "RoomArn" :: NullOrUndefined (Arn) } -> { "RoomArn" :: NullOrUndefined (Arn) }) -> GetRoomRequest
+newGetRoomRequest' :: ({ "RoomArn" :: Maybe (Arn) } -> { "RoomArn" :: Maybe (Arn) }) -> GetRoomRequest
 ```
 
 Constructs GetRoomRequest's fields from required parameters
@@ -1400,7 +1400,7 @@ Constructs GetRoomRequest's fields from required parameters
 
 ``` purescript
 newtype GetRoomResponse
-  = GetRoomResponse { "Room" :: NullOrUndefined (Room) }
+  = GetRoomResponse { "Room" :: Maybe (Room) }
 ```
 
 ##### Instances
@@ -1423,7 +1423,7 @@ Constructs GetRoomResponse from required parameters
 #### `newGetRoomResponse'`
 
 ``` purescript
-newGetRoomResponse' :: ({ "Room" :: NullOrUndefined (Room) } -> { "Room" :: NullOrUndefined (Room) }) -> GetRoomResponse
+newGetRoomResponse' :: ({ "Room" :: Maybe (Room) } -> { "Room" :: Maybe (Room) }) -> GetRoomResponse
 ```
 
 Constructs GetRoomResponse's fields from required parameters
@@ -1432,7 +1432,7 @@ Constructs GetRoomResponse's fields from required parameters
 
 ``` purescript
 newtype GetRoomSkillParameterRequest
-  = GetRoomSkillParameterRequest { "RoomArn" :: NullOrUndefined (Arn), "SkillId" :: SkillId, "ParameterKey" :: RoomSkillParameterKey }
+  = GetRoomSkillParameterRequest { "RoomArn" :: Maybe (Arn), "SkillId" :: SkillId, "ParameterKey" :: RoomSkillParameterKey }
 ```
 
 ##### Instances
@@ -1455,7 +1455,7 @@ Constructs GetRoomSkillParameterRequest from required parameters
 #### `newGetRoomSkillParameterRequest'`
 
 ``` purescript
-newGetRoomSkillParameterRequest' :: RoomSkillParameterKey -> SkillId -> ({ "RoomArn" :: NullOrUndefined (Arn), "SkillId" :: SkillId, "ParameterKey" :: RoomSkillParameterKey } -> { "RoomArn" :: NullOrUndefined (Arn), "SkillId" :: SkillId, "ParameterKey" :: RoomSkillParameterKey }) -> GetRoomSkillParameterRequest
+newGetRoomSkillParameterRequest' :: RoomSkillParameterKey -> SkillId -> ({ "RoomArn" :: Maybe (Arn), "SkillId" :: SkillId, "ParameterKey" :: RoomSkillParameterKey } -> { "RoomArn" :: Maybe (Arn), "SkillId" :: SkillId, "ParameterKey" :: RoomSkillParameterKey }) -> GetRoomSkillParameterRequest
 ```
 
 Constructs GetRoomSkillParameterRequest's fields from required parameters
@@ -1464,7 +1464,7 @@ Constructs GetRoomSkillParameterRequest's fields from required parameters
 
 ``` purescript
 newtype GetRoomSkillParameterResponse
-  = GetRoomSkillParameterResponse { "RoomSkillParameter" :: NullOrUndefined (RoomSkillParameter) }
+  = GetRoomSkillParameterResponse { "RoomSkillParameter" :: Maybe (RoomSkillParameter) }
 ```
 
 ##### Instances
@@ -1487,7 +1487,7 @@ Constructs GetRoomSkillParameterResponse from required parameters
 #### `newGetRoomSkillParameterResponse'`
 
 ``` purescript
-newGetRoomSkillParameterResponse' :: ({ "RoomSkillParameter" :: NullOrUndefined (RoomSkillParameter) } -> { "RoomSkillParameter" :: NullOrUndefined (RoomSkillParameter) }) -> GetRoomSkillParameterResponse
+newGetRoomSkillParameterResponse' :: ({ "RoomSkillParameter" :: Maybe (RoomSkillParameter) } -> { "RoomSkillParameter" :: Maybe (RoomSkillParameter) }) -> GetRoomSkillParameterResponse
 ```
 
 Constructs GetRoomSkillParameterResponse's fields from required parameters
@@ -1496,7 +1496,7 @@ Constructs GetRoomSkillParameterResponse's fields from required parameters
 
 ``` purescript
 newtype GetSkillGroupRequest
-  = GetSkillGroupRequest { "SkillGroupArn" :: NullOrUndefined (Arn) }
+  = GetSkillGroupRequest { "SkillGroupArn" :: Maybe (Arn) }
 ```
 
 ##### Instances
@@ -1519,7 +1519,7 @@ Constructs GetSkillGroupRequest from required parameters
 #### `newGetSkillGroupRequest'`
 
 ``` purescript
-newGetSkillGroupRequest' :: ({ "SkillGroupArn" :: NullOrUndefined (Arn) } -> { "SkillGroupArn" :: NullOrUndefined (Arn) }) -> GetSkillGroupRequest
+newGetSkillGroupRequest' :: ({ "SkillGroupArn" :: Maybe (Arn) } -> { "SkillGroupArn" :: Maybe (Arn) }) -> GetSkillGroupRequest
 ```
 
 Constructs GetSkillGroupRequest's fields from required parameters
@@ -1528,7 +1528,7 @@ Constructs GetSkillGroupRequest's fields from required parameters
 
 ``` purescript
 newtype GetSkillGroupResponse
-  = GetSkillGroupResponse { "SkillGroup" :: NullOrUndefined (SkillGroup) }
+  = GetSkillGroupResponse { "SkillGroup" :: Maybe (SkillGroup) }
 ```
 
 ##### Instances
@@ -1551,7 +1551,7 @@ Constructs GetSkillGroupResponse from required parameters
 #### `newGetSkillGroupResponse'`
 
 ``` purescript
-newGetSkillGroupResponse' :: ({ "SkillGroup" :: NullOrUndefined (SkillGroup) } -> { "SkillGroup" :: NullOrUndefined (SkillGroup) }) -> GetSkillGroupResponse
+newGetSkillGroupResponse' :: ({ "SkillGroup" :: Maybe (SkillGroup) } -> { "SkillGroup" :: Maybe (SkillGroup) }) -> GetSkillGroupResponse
 ```
 
 Constructs GetSkillGroupResponse's fields from required parameters
@@ -1560,7 +1560,7 @@ Constructs GetSkillGroupResponse's fields from required parameters
 
 ``` purescript
 newtype InvalidUserStatusException
-  = InvalidUserStatusException { "Message" :: NullOrUndefined (ErrorMessage) }
+  = InvalidUserStatusException { "Message" :: Maybe (ErrorMessage) }
 ```
 
 <p>The attempt to update a user is invalid due to the user's current status. HTTP Status Code: 400</p>
@@ -1585,7 +1585,7 @@ Constructs InvalidUserStatusException from required parameters
 #### `newInvalidUserStatusException'`
 
 ``` purescript
-newInvalidUserStatusException' :: ({ "Message" :: NullOrUndefined (ErrorMessage) } -> { "Message" :: NullOrUndefined (ErrorMessage) }) -> InvalidUserStatusException
+newInvalidUserStatusException' :: ({ "Message" :: Maybe (ErrorMessage) } -> { "Message" :: Maybe (ErrorMessage) }) -> InvalidUserStatusException
 ```
 
 Constructs InvalidUserStatusException's fields from required parameters
@@ -1594,7 +1594,7 @@ Constructs InvalidUserStatusException's fields from required parameters
 
 ``` purescript
 newtype LimitExceededException
-  = LimitExceededException { "Message" :: NullOrUndefined (ErrorMessage) }
+  = LimitExceededException { "Message" :: Maybe (ErrorMessage) }
 ```
 
 <p>You are performing an action that would put you beyond your account's limits. HTTP Status Code: 400</p>
@@ -1619,7 +1619,7 @@ Constructs LimitExceededException from required parameters
 #### `newLimitExceededException'`
 
 ``` purescript
-newLimitExceededException' :: ({ "Message" :: NullOrUndefined (ErrorMessage) } -> { "Message" :: NullOrUndefined (ErrorMessage) }) -> LimitExceededException
+newLimitExceededException' :: ({ "Message" :: Maybe (ErrorMessage) } -> { "Message" :: Maybe (ErrorMessage) }) -> LimitExceededException
 ```
 
 Constructs LimitExceededException's fields from required parameters
@@ -1628,7 +1628,7 @@ Constructs LimitExceededException's fields from required parameters
 
 ``` purescript
 newtype ListSkillsRequest
-  = ListSkillsRequest { "SkillGroupArn" :: NullOrUndefined (Arn), "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (SkillListMaxResults) }
+  = ListSkillsRequest { "SkillGroupArn" :: Maybe (Arn), "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (SkillListMaxResults) }
 ```
 
 ##### Instances
@@ -1651,7 +1651,7 @@ Constructs ListSkillsRequest from required parameters
 #### `newListSkillsRequest'`
 
 ``` purescript
-newListSkillsRequest' :: ({ "SkillGroupArn" :: NullOrUndefined (Arn), "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (SkillListMaxResults) } -> { "SkillGroupArn" :: NullOrUndefined (Arn), "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (SkillListMaxResults) }) -> ListSkillsRequest
+newListSkillsRequest' :: ({ "SkillGroupArn" :: Maybe (Arn), "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (SkillListMaxResults) } -> { "SkillGroupArn" :: Maybe (Arn), "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (SkillListMaxResults) }) -> ListSkillsRequest
 ```
 
 Constructs ListSkillsRequest's fields from required parameters
@@ -1660,7 +1660,7 @@ Constructs ListSkillsRequest's fields from required parameters
 
 ``` purescript
 newtype ListSkillsResponse
-  = ListSkillsResponse { "SkillSummaries" :: NullOrUndefined (SkillSummaryList), "NextToken" :: NullOrUndefined (NextToken) }
+  = ListSkillsResponse { "SkillSummaries" :: Maybe (SkillSummaryList), "NextToken" :: Maybe (NextToken) }
 ```
 
 ##### Instances
@@ -1683,7 +1683,7 @@ Constructs ListSkillsResponse from required parameters
 #### `newListSkillsResponse'`
 
 ``` purescript
-newListSkillsResponse' :: ({ "SkillSummaries" :: NullOrUndefined (SkillSummaryList), "NextToken" :: NullOrUndefined (NextToken) } -> { "SkillSummaries" :: NullOrUndefined (SkillSummaryList), "NextToken" :: NullOrUndefined (NextToken) }) -> ListSkillsResponse
+newListSkillsResponse' :: ({ "SkillSummaries" :: Maybe (SkillSummaryList), "NextToken" :: Maybe (NextToken) } -> { "SkillSummaries" :: Maybe (SkillSummaryList), "NextToken" :: Maybe (NextToken) }) -> ListSkillsResponse
 ```
 
 Constructs ListSkillsResponse's fields from required parameters
@@ -1692,7 +1692,7 @@ Constructs ListSkillsResponse's fields from required parameters
 
 ``` purescript
 newtype ListTagsRequest
-  = ListTagsRequest { "Arn" :: Arn, "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults) }
+  = ListTagsRequest { "Arn" :: Arn, "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults) }
 ```
 
 ##### Instances
@@ -1715,7 +1715,7 @@ Constructs ListTagsRequest from required parameters
 #### `newListTagsRequest'`
 
 ``` purescript
-newListTagsRequest' :: Arn -> ({ "Arn" :: Arn, "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults) } -> { "Arn" :: Arn, "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults) }) -> ListTagsRequest
+newListTagsRequest' :: Arn -> ({ "Arn" :: Arn, "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults) } -> { "Arn" :: Arn, "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults) }) -> ListTagsRequest
 ```
 
 Constructs ListTagsRequest's fields from required parameters
@@ -1724,7 +1724,7 @@ Constructs ListTagsRequest's fields from required parameters
 
 ``` purescript
 newtype ListTagsResponse
-  = ListTagsResponse { "Tags" :: NullOrUndefined (TagList), "NextToken" :: NullOrUndefined (NextToken) }
+  = ListTagsResponse { "Tags" :: Maybe (TagList), "NextToken" :: Maybe (NextToken) }
 ```
 
 ##### Instances
@@ -1747,7 +1747,7 @@ Constructs ListTagsResponse from required parameters
 #### `newListTagsResponse'`
 
 ``` purescript
-newListTagsResponse' :: ({ "Tags" :: NullOrUndefined (TagList), "NextToken" :: NullOrUndefined (NextToken) } -> { "Tags" :: NullOrUndefined (TagList), "NextToken" :: NullOrUndefined (NextToken) }) -> ListTagsResponse
+newListTagsResponse' :: ({ "Tags" :: Maybe (TagList), "NextToken" :: Maybe (NextToken) } -> { "Tags" :: Maybe (TagList), "NextToken" :: Maybe (NextToken) }) -> ListTagsResponse
 ```
 
 Constructs ListTagsResponse's fields from required parameters
@@ -1804,7 +1804,7 @@ Encode MaxVolumeLimit
 
 ``` purescript
 newtype NameInUseException
-  = NameInUseException { "Message" :: NullOrUndefined (ErrorMessage) }
+  = NameInUseException { "Message" :: Maybe (ErrorMessage) }
 ```
 
 <p>The name sent in the request is already in use. HTTP Status Code: 400</p>
@@ -1829,7 +1829,7 @@ Constructs NameInUseException from required parameters
 #### `newNameInUseException'`
 
 ``` purescript
-newNameInUseException' :: ({ "Message" :: NullOrUndefined (ErrorMessage) } -> { "Message" :: NullOrUndefined (ErrorMessage) }) -> NameInUseException
+newNameInUseException' :: ({ "Message" :: Maybe (ErrorMessage) } -> { "Message" :: Maybe (ErrorMessage) }) -> NameInUseException
 ```
 
 Constructs NameInUseException's fields from required parameters
@@ -1854,7 +1854,7 @@ Encode NextToken
 
 ``` purescript
 newtype NotFoundException
-  = NotFoundException { "Message" :: NullOrUndefined (ErrorMessage) }
+  = NotFoundException { "Message" :: Maybe (ErrorMessage) }
 ```
 
 <p>The resource is not found. HTTP Status Code: 400</p>
@@ -1879,7 +1879,7 @@ Constructs NotFoundException from required parameters
 #### `newNotFoundException'`
 
 ``` purescript
-newNotFoundException' :: ({ "Message" :: NullOrUndefined (ErrorMessage) } -> { "Message" :: NullOrUndefined (ErrorMessage) }) -> NotFoundException
+newNotFoundException' :: ({ "Message" :: Maybe (ErrorMessage) } -> { "Message" :: Maybe (ErrorMessage) }) -> NotFoundException
 ```
 
 Constructs NotFoundException's fields from required parameters
@@ -1888,7 +1888,7 @@ Constructs NotFoundException's fields from required parameters
 
 ``` purescript
 newtype Profile
-  = Profile { "ProfileArn" :: NullOrUndefined (Arn), "ProfileName" :: NullOrUndefined (ProfileName), "Address" :: NullOrUndefined (Address), "Timezone" :: NullOrUndefined (Timezone), "DistanceUnit" :: NullOrUndefined (DistanceUnit), "TemperatureUnit" :: NullOrUndefined (TemperatureUnit), "WakeWord" :: NullOrUndefined (WakeWord), "SetupModeDisabled" :: NullOrUndefined (Boolean), "MaxVolumeLimit" :: NullOrUndefined (MaxVolumeLimit), "PSTNEnabled" :: NullOrUndefined (Boolean) }
+  = Profile { "ProfileArn" :: Maybe (Arn), "ProfileName" :: Maybe (ProfileName), "Address" :: Maybe (Address), "Timezone" :: Maybe (Timezone), "DistanceUnit" :: Maybe (DistanceUnit), "TemperatureUnit" :: Maybe (TemperatureUnit), "WakeWord" :: Maybe (WakeWord), "SetupModeDisabled" :: Maybe (Boolean), "MaxVolumeLimit" :: Maybe (MaxVolumeLimit), "PSTNEnabled" :: Maybe (Boolean) }
 ```
 
 <p>A room profile with attributes.</p>
@@ -1913,7 +1913,7 @@ Constructs Profile from required parameters
 #### `newProfile'`
 
 ``` purescript
-newProfile' :: ({ "ProfileArn" :: NullOrUndefined (Arn), "ProfileName" :: NullOrUndefined (ProfileName), "Address" :: NullOrUndefined (Address), "Timezone" :: NullOrUndefined (Timezone), "DistanceUnit" :: NullOrUndefined (DistanceUnit), "TemperatureUnit" :: NullOrUndefined (TemperatureUnit), "WakeWord" :: NullOrUndefined (WakeWord), "SetupModeDisabled" :: NullOrUndefined (Boolean), "MaxVolumeLimit" :: NullOrUndefined (MaxVolumeLimit), "PSTNEnabled" :: NullOrUndefined (Boolean) } -> { "ProfileArn" :: NullOrUndefined (Arn), "ProfileName" :: NullOrUndefined (ProfileName), "Address" :: NullOrUndefined (Address), "Timezone" :: NullOrUndefined (Timezone), "DistanceUnit" :: NullOrUndefined (DistanceUnit), "TemperatureUnit" :: NullOrUndefined (TemperatureUnit), "WakeWord" :: NullOrUndefined (WakeWord), "SetupModeDisabled" :: NullOrUndefined (Boolean), "MaxVolumeLimit" :: NullOrUndefined (MaxVolumeLimit), "PSTNEnabled" :: NullOrUndefined (Boolean) }) -> Profile
+newProfile' :: ({ "ProfileArn" :: Maybe (Arn), "ProfileName" :: Maybe (ProfileName), "Address" :: Maybe (Address), "Timezone" :: Maybe (Timezone), "DistanceUnit" :: Maybe (DistanceUnit), "TemperatureUnit" :: Maybe (TemperatureUnit), "WakeWord" :: Maybe (WakeWord), "SetupModeDisabled" :: Maybe (Boolean), "MaxVolumeLimit" :: Maybe (MaxVolumeLimit), "PSTNEnabled" :: Maybe (Boolean) } -> { "ProfileArn" :: Maybe (Arn), "ProfileName" :: Maybe (ProfileName), "Address" :: Maybe (Address), "Timezone" :: Maybe (Timezone), "DistanceUnit" :: Maybe (DistanceUnit), "TemperatureUnit" :: Maybe (TemperatureUnit), "WakeWord" :: Maybe (WakeWord), "SetupModeDisabled" :: Maybe (Boolean), "MaxVolumeLimit" :: Maybe (MaxVolumeLimit), "PSTNEnabled" :: Maybe (Boolean) }) -> Profile
 ```
 
 Constructs Profile's fields from required parameters
@@ -1922,7 +1922,7 @@ Constructs Profile's fields from required parameters
 
 ``` purescript
 newtype ProfileData
-  = ProfileData { "ProfileArn" :: NullOrUndefined (Arn), "ProfileName" :: NullOrUndefined (ProfileName), "Address" :: NullOrUndefined (Address), "Timezone" :: NullOrUndefined (Timezone), "DistanceUnit" :: NullOrUndefined (DistanceUnit), "TemperatureUnit" :: NullOrUndefined (TemperatureUnit), "WakeWord" :: NullOrUndefined (WakeWord) }
+  = ProfileData { "ProfileArn" :: Maybe (Arn), "ProfileName" :: Maybe (ProfileName), "Address" :: Maybe (Address), "Timezone" :: Maybe (Timezone), "DistanceUnit" :: Maybe (DistanceUnit), "TemperatureUnit" :: Maybe (TemperatureUnit), "WakeWord" :: Maybe (WakeWord) }
 ```
 
 <p>The data of a room profile.</p>
@@ -1947,7 +1947,7 @@ Constructs ProfileData from required parameters
 #### `newProfileData'`
 
 ``` purescript
-newProfileData' :: ({ "ProfileArn" :: NullOrUndefined (Arn), "ProfileName" :: NullOrUndefined (ProfileName), "Address" :: NullOrUndefined (Address), "Timezone" :: NullOrUndefined (Timezone), "DistanceUnit" :: NullOrUndefined (DistanceUnit), "TemperatureUnit" :: NullOrUndefined (TemperatureUnit), "WakeWord" :: NullOrUndefined (WakeWord) } -> { "ProfileArn" :: NullOrUndefined (Arn), "ProfileName" :: NullOrUndefined (ProfileName), "Address" :: NullOrUndefined (Address), "Timezone" :: NullOrUndefined (Timezone), "DistanceUnit" :: NullOrUndefined (DistanceUnit), "TemperatureUnit" :: NullOrUndefined (TemperatureUnit), "WakeWord" :: NullOrUndefined (WakeWord) }) -> ProfileData
+newProfileData' :: ({ "ProfileArn" :: Maybe (Arn), "ProfileName" :: Maybe (ProfileName), "Address" :: Maybe (Address), "Timezone" :: Maybe (Timezone), "DistanceUnit" :: Maybe (DistanceUnit), "TemperatureUnit" :: Maybe (TemperatureUnit), "WakeWord" :: Maybe (WakeWord) } -> { "ProfileArn" :: Maybe (Arn), "ProfileName" :: Maybe (ProfileName), "Address" :: Maybe (Address), "Timezone" :: Maybe (Timezone), "DistanceUnit" :: Maybe (DistanceUnit), "TemperatureUnit" :: Maybe (TemperatureUnit), "WakeWord" :: Maybe (WakeWord) }) -> ProfileData
 ```
 
 Constructs ProfileData's fields from required parameters
@@ -2004,7 +2004,7 @@ Encode ProviderCalendarId
 
 ``` purescript
 newtype PutRoomSkillParameterRequest
-  = PutRoomSkillParameterRequest { "RoomArn" :: NullOrUndefined (Arn), "SkillId" :: SkillId, "RoomSkillParameter" :: RoomSkillParameter }
+  = PutRoomSkillParameterRequest { "RoomArn" :: Maybe (Arn), "SkillId" :: SkillId, "RoomSkillParameter" :: RoomSkillParameter }
 ```
 
 ##### Instances
@@ -2027,7 +2027,7 @@ Constructs PutRoomSkillParameterRequest from required parameters
 #### `newPutRoomSkillParameterRequest'`
 
 ``` purescript
-newPutRoomSkillParameterRequest' :: RoomSkillParameter -> SkillId -> ({ "RoomArn" :: NullOrUndefined (Arn), "SkillId" :: SkillId, "RoomSkillParameter" :: RoomSkillParameter } -> { "RoomArn" :: NullOrUndefined (Arn), "SkillId" :: SkillId, "RoomSkillParameter" :: RoomSkillParameter }) -> PutRoomSkillParameterRequest
+newPutRoomSkillParameterRequest' :: RoomSkillParameter -> SkillId -> ({ "RoomArn" :: Maybe (Arn), "SkillId" :: SkillId, "RoomSkillParameter" :: RoomSkillParameter } -> { "RoomArn" :: Maybe (Arn), "SkillId" :: SkillId, "RoomSkillParameter" :: RoomSkillParameter }) -> PutRoomSkillParameterRequest
 ```
 
 Constructs PutRoomSkillParameterRequest's fields from required parameters
@@ -2084,7 +2084,7 @@ Constructs ResolveRoomRequest's fields from required parameters
 
 ``` purescript
 newtype ResolveRoomResponse
-  = ResolveRoomResponse { "RoomArn" :: NullOrUndefined (Arn), "RoomName" :: NullOrUndefined (RoomName), "RoomSkillParameters" :: NullOrUndefined (RoomSkillParameters) }
+  = ResolveRoomResponse { "RoomArn" :: Maybe (Arn), "RoomName" :: Maybe (RoomName), "RoomSkillParameters" :: Maybe (RoomSkillParameters) }
 ```
 
 ##### Instances
@@ -2107,7 +2107,7 @@ Constructs ResolveRoomResponse from required parameters
 #### `newResolveRoomResponse'`
 
 ``` purescript
-newResolveRoomResponse' :: ({ "RoomArn" :: NullOrUndefined (Arn), "RoomName" :: NullOrUndefined (RoomName), "RoomSkillParameters" :: NullOrUndefined (RoomSkillParameters) } -> { "RoomArn" :: NullOrUndefined (Arn), "RoomName" :: NullOrUndefined (RoomName), "RoomSkillParameters" :: NullOrUndefined (RoomSkillParameters) }) -> ResolveRoomResponse
+newResolveRoomResponse' :: ({ "RoomArn" :: Maybe (Arn), "RoomName" :: Maybe (RoomName), "RoomSkillParameters" :: Maybe (RoomSkillParameters) } -> { "RoomArn" :: Maybe (Arn), "RoomName" :: Maybe (RoomName), "RoomSkillParameters" :: Maybe (RoomSkillParameters) }) -> ResolveRoomResponse
 ```
 
 Constructs ResolveRoomResponse's fields from required parameters
@@ -2116,7 +2116,7 @@ Constructs ResolveRoomResponse's fields from required parameters
 
 ``` purescript
 newtype ResourceInUseException
-  = ResourceInUseException { "Message" :: NullOrUndefined (ErrorMessage), "ClientRequestToken" :: NullOrUndefined (ClientRequestToken) }
+  = ResourceInUseException { "Message" :: Maybe (ErrorMessage), "ClientRequestToken" :: Maybe (ClientRequestToken) }
 ```
 
 <p>The resource in the request is already in use. HTTP Status Code: 400</p>
@@ -2141,7 +2141,7 @@ Constructs ResourceInUseException from required parameters
 #### `newResourceInUseException'`
 
 ``` purescript
-newResourceInUseException' :: ({ "Message" :: NullOrUndefined (ErrorMessage), "ClientRequestToken" :: NullOrUndefined (ClientRequestToken) } -> { "Message" :: NullOrUndefined (ErrorMessage), "ClientRequestToken" :: NullOrUndefined (ClientRequestToken) }) -> ResourceInUseException
+newResourceInUseException' :: ({ "Message" :: Maybe (ErrorMessage), "ClientRequestToken" :: Maybe (ClientRequestToken) } -> { "Message" :: Maybe (ErrorMessage), "ClientRequestToken" :: Maybe (ClientRequestToken) }) -> ResourceInUseException
 ```
 
 Constructs ResourceInUseException's fields from required parameters
@@ -2150,7 +2150,7 @@ Constructs ResourceInUseException's fields from required parameters
 
 ``` purescript
 newtype RevokeInvitationRequest
-  = RevokeInvitationRequest { "UserArn" :: NullOrUndefined (Arn), "EnrollmentId" :: NullOrUndefined (EnrollmentId) }
+  = RevokeInvitationRequest { "UserArn" :: Maybe (Arn), "EnrollmentId" :: Maybe (EnrollmentId) }
 ```
 
 ##### Instances
@@ -2173,7 +2173,7 @@ Constructs RevokeInvitationRequest from required parameters
 #### `newRevokeInvitationRequest'`
 
 ``` purescript
-newRevokeInvitationRequest' :: ({ "UserArn" :: NullOrUndefined (Arn), "EnrollmentId" :: NullOrUndefined (EnrollmentId) } -> { "UserArn" :: NullOrUndefined (Arn), "EnrollmentId" :: NullOrUndefined (EnrollmentId) }) -> RevokeInvitationRequest
+newRevokeInvitationRequest' :: ({ "UserArn" :: Maybe (Arn), "EnrollmentId" :: Maybe (EnrollmentId) } -> { "UserArn" :: Maybe (Arn), "EnrollmentId" :: Maybe (EnrollmentId) }) -> RevokeInvitationRequest
 ```
 
 Constructs RevokeInvitationRequest's fields from required parameters
@@ -2198,7 +2198,7 @@ Encode RevokeInvitationResponse
 
 ``` purescript
 newtype Room
-  = Room { "RoomArn" :: NullOrUndefined (Arn), "RoomName" :: NullOrUndefined (RoomName), "Description" :: NullOrUndefined (RoomDescription), "ProviderCalendarId" :: NullOrUndefined (ProviderCalendarId), "ProfileArn" :: NullOrUndefined (Arn) }
+  = Room { "RoomArn" :: Maybe (Arn), "RoomName" :: Maybe (RoomName), "Description" :: Maybe (RoomDescription), "ProviderCalendarId" :: Maybe (ProviderCalendarId), "ProfileArn" :: Maybe (Arn) }
 ```
 
 <p>A room with attributes.</p>
@@ -2223,7 +2223,7 @@ Constructs Room from required parameters
 #### `newRoom'`
 
 ``` purescript
-newRoom' :: ({ "RoomArn" :: NullOrUndefined (Arn), "RoomName" :: NullOrUndefined (RoomName), "Description" :: NullOrUndefined (RoomDescription), "ProviderCalendarId" :: NullOrUndefined (ProviderCalendarId), "ProfileArn" :: NullOrUndefined (Arn) } -> { "RoomArn" :: NullOrUndefined (Arn), "RoomName" :: NullOrUndefined (RoomName), "Description" :: NullOrUndefined (RoomDescription), "ProviderCalendarId" :: NullOrUndefined (ProviderCalendarId), "ProfileArn" :: NullOrUndefined (Arn) }) -> Room
+newRoom' :: ({ "RoomArn" :: Maybe (Arn), "RoomName" :: Maybe (RoomName), "Description" :: Maybe (RoomDescription), "ProviderCalendarId" :: Maybe (ProviderCalendarId), "ProfileArn" :: Maybe (Arn) } -> { "RoomArn" :: Maybe (Arn), "RoomName" :: Maybe (RoomName), "Description" :: Maybe (RoomDescription), "ProviderCalendarId" :: Maybe (ProviderCalendarId), "ProfileArn" :: Maybe (Arn) }) -> Room
 ```
 
 Constructs Room's fields from required parameters
@@ -2232,7 +2232,7 @@ Constructs Room's fields from required parameters
 
 ``` purescript
 newtype RoomData
-  = RoomData { "RoomArn" :: NullOrUndefined (Arn), "RoomName" :: NullOrUndefined (RoomName), "Description" :: NullOrUndefined (RoomDescription), "ProviderCalendarId" :: NullOrUndefined (ProviderCalendarId), "ProfileArn" :: NullOrUndefined (Arn), "ProfileName" :: NullOrUndefined (ProfileName) }
+  = RoomData { "RoomArn" :: Maybe (Arn), "RoomName" :: Maybe (RoomName), "Description" :: Maybe (RoomDescription), "ProviderCalendarId" :: Maybe (ProviderCalendarId), "ProfileArn" :: Maybe (Arn), "ProfileName" :: Maybe (ProfileName) }
 ```
 
 <p>The data of a room.</p>
@@ -2257,7 +2257,7 @@ Constructs RoomData from required parameters
 #### `newRoomData'`
 
 ``` purescript
-newRoomData' :: ({ "RoomArn" :: NullOrUndefined (Arn), "RoomName" :: NullOrUndefined (RoomName), "Description" :: NullOrUndefined (RoomDescription), "ProviderCalendarId" :: NullOrUndefined (ProviderCalendarId), "ProfileArn" :: NullOrUndefined (Arn), "ProfileName" :: NullOrUndefined (ProfileName) } -> { "RoomArn" :: NullOrUndefined (Arn), "RoomName" :: NullOrUndefined (RoomName), "Description" :: NullOrUndefined (RoomDescription), "ProviderCalendarId" :: NullOrUndefined (ProviderCalendarId), "ProfileArn" :: NullOrUndefined (Arn), "ProfileName" :: NullOrUndefined (ProfileName) }) -> RoomData
+newRoomData' :: ({ "RoomArn" :: Maybe (Arn), "RoomName" :: Maybe (RoomName), "Description" :: Maybe (RoomDescription), "ProviderCalendarId" :: Maybe (ProviderCalendarId), "ProfileArn" :: Maybe (Arn), "ProfileName" :: Maybe (ProfileName) } -> { "RoomArn" :: Maybe (Arn), "RoomName" :: Maybe (RoomName), "Description" :: Maybe (RoomDescription), "ProviderCalendarId" :: Maybe (ProviderCalendarId), "ProfileArn" :: Maybe (Arn), "ProfileName" :: Maybe (ProfileName) }) -> RoomData
 ```
 
 Constructs RoomData's fields from required parameters
@@ -2396,7 +2396,7 @@ Encode RoomSkillParameters
 
 ``` purescript
 newtype SearchDevicesRequest
-  = SearchDevicesRequest { "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults), "Filters" :: NullOrUndefined (FilterList), "SortCriteria" :: NullOrUndefined (SortList) }
+  = SearchDevicesRequest { "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults), "Filters" :: Maybe (FilterList), "SortCriteria" :: Maybe (SortList) }
 ```
 
 ##### Instances
@@ -2419,7 +2419,7 @@ Constructs SearchDevicesRequest from required parameters
 #### `newSearchDevicesRequest'`
 
 ``` purescript
-newSearchDevicesRequest' :: ({ "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults), "Filters" :: NullOrUndefined (FilterList), "SortCriteria" :: NullOrUndefined (SortList) } -> { "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults), "Filters" :: NullOrUndefined (FilterList), "SortCriteria" :: NullOrUndefined (SortList) }) -> SearchDevicesRequest
+newSearchDevicesRequest' :: ({ "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults), "Filters" :: Maybe (FilterList), "SortCriteria" :: Maybe (SortList) } -> { "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults), "Filters" :: Maybe (FilterList), "SortCriteria" :: Maybe (SortList) }) -> SearchDevicesRequest
 ```
 
 Constructs SearchDevicesRequest's fields from required parameters
@@ -2428,7 +2428,7 @@ Constructs SearchDevicesRequest's fields from required parameters
 
 ``` purescript
 newtype SearchDevicesResponse
-  = SearchDevicesResponse { "Devices" :: NullOrUndefined (DeviceDataList), "NextToken" :: NullOrUndefined (NextToken), "TotalCount" :: NullOrUndefined (TotalCount) }
+  = SearchDevicesResponse { "Devices" :: Maybe (DeviceDataList), "NextToken" :: Maybe (NextToken), "TotalCount" :: Maybe (TotalCount) }
 ```
 
 ##### Instances
@@ -2451,7 +2451,7 @@ Constructs SearchDevicesResponse from required parameters
 #### `newSearchDevicesResponse'`
 
 ``` purescript
-newSearchDevicesResponse' :: ({ "Devices" :: NullOrUndefined (DeviceDataList), "NextToken" :: NullOrUndefined (NextToken), "TotalCount" :: NullOrUndefined (TotalCount) } -> { "Devices" :: NullOrUndefined (DeviceDataList), "NextToken" :: NullOrUndefined (NextToken), "TotalCount" :: NullOrUndefined (TotalCount) }) -> SearchDevicesResponse
+newSearchDevicesResponse' :: ({ "Devices" :: Maybe (DeviceDataList), "NextToken" :: Maybe (NextToken), "TotalCount" :: Maybe (TotalCount) } -> { "Devices" :: Maybe (DeviceDataList), "NextToken" :: Maybe (NextToken), "TotalCount" :: Maybe (TotalCount) }) -> SearchDevicesResponse
 ```
 
 Constructs SearchDevicesResponse's fields from required parameters
@@ -2460,7 +2460,7 @@ Constructs SearchDevicesResponse's fields from required parameters
 
 ``` purescript
 newtype SearchProfilesRequest
-  = SearchProfilesRequest { "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults), "Filters" :: NullOrUndefined (FilterList), "SortCriteria" :: NullOrUndefined (SortList) }
+  = SearchProfilesRequest { "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults), "Filters" :: Maybe (FilterList), "SortCriteria" :: Maybe (SortList) }
 ```
 
 ##### Instances
@@ -2483,7 +2483,7 @@ Constructs SearchProfilesRequest from required parameters
 #### `newSearchProfilesRequest'`
 
 ``` purescript
-newSearchProfilesRequest' :: ({ "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults), "Filters" :: NullOrUndefined (FilterList), "SortCriteria" :: NullOrUndefined (SortList) } -> { "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults), "Filters" :: NullOrUndefined (FilterList), "SortCriteria" :: NullOrUndefined (SortList) }) -> SearchProfilesRequest
+newSearchProfilesRequest' :: ({ "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults), "Filters" :: Maybe (FilterList), "SortCriteria" :: Maybe (SortList) } -> { "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults), "Filters" :: Maybe (FilterList), "SortCriteria" :: Maybe (SortList) }) -> SearchProfilesRequest
 ```
 
 Constructs SearchProfilesRequest's fields from required parameters
@@ -2492,7 +2492,7 @@ Constructs SearchProfilesRequest's fields from required parameters
 
 ``` purescript
 newtype SearchProfilesResponse
-  = SearchProfilesResponse { "Profiles" :: NullOrUndefined (ProfileDataList), "NextToken" :: NullOrUndefined (NextToken), "TotalCount" :: NullOrUndefined (TotalCount) }
+  = SearchProfilesResponse { "Profiles" :: Maybe (ProfileDataList), "NextToken" :: Maybe (NextToken), "TotalCount" :: Maybe (TotalCount) }
 ```
 
 ##### Instances
@@ -2515,7 +2515,7 @@ Constructs SearchProfilesResponse from required parameters
 #### `newSearchProfilesResponse'`
 
 ``` purescript
-newSearchProfilesResponse' :: ({ "Profiles" :: NullOrUndefined (ProfileDataList), "NextToken" :: NullOrUndefined (NextToken), "TotalCount" :: NullOrUndefined (TotalCount) } -> { "Profiles" :: NullOrUndefined (ProfileDataList), "NextToken" :: NullOrUndefined (NextToken), "TotalCount" :: NullOrUndefined (TotalCount) }) -> SearchProfilesResponse
+newSearchProfilesResponse' :: ({ "Profiles" :: Maybe (ProfileDataList), "NextToken" :: Maybe (NextToken), "TotalCount" :: Maybe (TotalCount) } -> { "Profiles" :: Maybe (ProfileDataList), "NextToken" :: Maybe (NextToken), "TotalCount" :: Maybe (TotalCount) }) -> SearchProfilesResponse
 ```
 
 Constructs SearchProfilesResponse's fields from required parameters
@@ -2524,7 +2524,7 @@ Constructs SearchProfilesResponse's fields from required parameters
 
 ``` purescript
 newtype SearchRoomsRequest
-  = SearchRoomsRequest { "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults), "Filters" :: NullOrUndefined (FilterList), "SortCriteria" :: NullOrUndefined (SortList) }
+  = SearchRoomsRequest { "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults), "Filters" :: Maybe (FilterList), "SortCriteria" :: Maybe (SortList) }
 ```
 
 ##### Instances
@@ -2547,7 +2547,7 @@ Constructs SearchRoomsRequest from required parameters
 #### `newSearchRoomsRequest'`
 
 ``` purescript
-newSearchRoomsRequest' :: ({ "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults), "Filters" :: NullOrUndefined (FilterList), "SortCriteria" :: NullOrUndefined (SortList) } -> { "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults), "Filters" :: NullOrUndefined (FilterList), "SortCriteria" :: NullOrUndefined (SortList) }) -> SearchRoomsRequest
+newSearchRoomsRequest' :: ({ "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults), "Filters" :: Maybe (FilterList), "SortCriteria" :: Maybe (SortList) } -> { "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults), "Filters" :: Maybe (FilterList), "SortCriteria" :: Maybe (SortList) }) -> SearchRoomsRequest
 ```
 
 Constructs SearchRoomsRequest's fields from required parameters
@@ -2556,7 +2556,7 @@ Constructs SearchRoomsRequest's fields from required parameters
 
 ``` purescript
 newtype SearchRoomsResponse
-  = SearchRoomsResponse { "Rooms" :: NullOrUndefined (RoomDataList), "NextToken" :: NullOrUndefined (NextToken), "TotalCount" :: NullOrUndefined (TotalCount) }
+  = SearchRoomsResponse { "Rooms" :: Maybe (RoomDataList), "NextToken" :: Maybe (NextToken), "TotalCount" :: Maybe (TotalCount) }
 ```
 
 ##### Instances
@@ -2579,7 +2579,7 @@ Constructs SearchRoomsResponse from required parameters
 #### `newSearchRoomsResponse'`
 
 ``` purescript
-newSearchRoomsResponse' :: ({ "Rooms" :: NullOrUndefined (RoomDataList), "NextToken" :: NullOrUndefined (NextToken), "TotalCount" :: NullOrUndefined (TotalCount) } -> { "Rooms" :: NullOrUndefined (RoomDataList), "NextToken" :: NullOrUndefined (NextToken), "TotalCount" :: NullOrUndefined (TotalCount) }) -> SearchRoomsResponse
+newSearchRoomsResponse' :: ({ "Rooms" :: Maybe (RoomDataList), "NextToken" :: Maybe (NextToken), "TotalCount" :: Maybe (TotalCount) } -> { "Rooms" :: Maybe (RoomDataList), "NextToken" :: Maybe (NextToken), "TotalCount" :: Maybe (TotalCount) }) -> SearchRoomsResponse
 ```
 
 Constructs SearchRoomsResponse's fields from required parameters
@@ -2588,7 +2588,7 @@ Constructs SearchRoomsResponse's fields from required parameters
 
 ``` purescript
 newtype SearchSkillGroupsRequest
-  = SearchSkillGroupsRequest { "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults), "Filters" :: NullOrUndefined (FilterList), "SortCriteria" :: NullOrUndefined (SortList) }
+  = SearchSkillGroupsRequest { "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults), "Filters" :: Maybe (FilterList), "SortCriteria" :: Maybe (SortList) }
 ```
 
 ##### Instances
@@ -2611,7 +2611,7 @@ Constructs SearchSkillGroupsRequest from required parameters
 #### `newSearchSkillGroupsRequest'`
 
 ``` purescript
-newSearchSkillGroupsRequest' :: ({ "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults), "Filters" :: NullOrUndefined (FilterList), "SortCriteria" :: NullOrUndefined (SortList) } -> { "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults), "Filters" :: NullOrUndefined (FilterList), "SortCriteria" :: NullOrUndefined (SortList) }) -> SearchSkillGroupsRequest
+newSearchSkillGroupsRequest' :: ({ "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults), "Filters" :: Maybe (FilterList), "SortCriteria" :: Maybe (SortList) } -> { "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults), "Filters" :: Maybe (FilterList), "SortCriteria" :: Maybe (SortList) }) -> SearchSkillGroupsRequest
 ```
 
 Constructs SearchSkillGroupsRequest's fields from required parameters
@@ -2620,7 +2620,7 @@ Constructs SearchSkillGroupsRequest's fields from required parameters
 
 ``` purescript
 newtype SearchSkillGroupsResponse
-  = SearchSkillGroupsResponse { "SkillGroups" :: NullOrUndefined (SkillGroupDataList), "NextToken" :: NullOrUndefined (NextToken), "TotalCount" :: NullOrUndefined (TotalCount) }
+  = SearchSkillGroupsResponse { "SkillGroups" :: Maybe (SkillGroupDataList), "NextToken" :: Maybe (NextToken), "TotalCount" :: Maybe (TotalCount) }
 ```
 
 ##### Instances
@@ -2643,7 +2643,7 @@ Constructs SearchSkillGroupsResponse from required parameters
 #### `newSearchSkillGroupsResponse'`
 
 ``` purescript
-newSearchSkillGroupsResponse' :: ({ "SkillGroups" :: NullOrUndefined (SkillGroupDataList), "NextToken" :: NullOrUndefined (NextToken), "TotalCount" :: NullOrUndefined (TotalCount) } -> { "SkillGroups" :: NullOrUndefined (SkillGroupDataList), "NextToken" :: NullOrUndefined (NextToken), "TotalCount" :: NullOrUndefined (TotalCount) }) -> SearchSkillGroupsResponse
+newSearchSkillGroupsResponse' :: ({ "SkillGroups" :: Maybe (SkillGroupDataList), "NextToken" :: Maybe (NextToken), "TotalCount" :: Maybe (TotalCount) } -> { "SkillGroups" :: Maybe (SkillGroupDataList), "NextToken" :: Maybe (NextToken), "TotalCount" :: Maybe (TotalCount) }) -> SearchSkillGroupsResponse
 ```
 
 Constructs SearchSkillGroupsResponse's fields from required parameters
@@ -2652,7 +2652,7 @@ Constructs SearchSkillGroupsResponse's fields from required parameters
 
 ``` purescript
 newtype SearchUsersRequest
-  = SearchUsersRequest { "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults), "Filters" :: NullOrUndefined (FilterList), "SortCriteria" :: NullOrUndefined (SortList) }
+  = SearchUsersRequest { "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults), "Filters" :: Maybe (FilterList), "SortCriteria" :: Maybe (SortList) }
 ```
 
 ##### Instances
@@ -2675,7 +2675,7 @@ Constructs SearchUsersRequest from required parameters
 #### `newSearchUsersRequest'`
 
 ``` purescript
-newSearchUsersRequest' :: ({ "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults), "Filters" :: NullOrUndefined (FilterList), "SortCriteria" :: NullOrUndefined (SortList) } -> { "NextToken" :: NullOrUndefined (NextToken), "MaxResults" :: NullOrUndefined (MaxResults), "Filters" :: NullOrUndefined (FilterList), "SortCriteria" :: NullOrUndefined (SortList) }) -> SearchUsersRequest
+newSearchUsersRequest' :: ({ "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults), "Filters" :: Maybe (FilterList), "SortCriteria" :: Maybe (SortList) } -> { "NextToken" :: Maybe (NextToken), "MaxResults" :: Maybe (MaxResults), "Filters" :: Maybe (FilterList), "SortCriteria" :: Maybe (SortList) }) -> SearchUsersRequest
 ```
 
 Constructs SearchUsersRequest's fields from required parameters
@@ -2684,7 +2684,7 @@ Constructs SearchUsersRequest's fields from required parameters
 
 ``` purescript
 newtype SearchUsersResponse
-  = SearchUsersResponse { "Users" :: NullOrUndefined (UserDataList), "NextToken" :: NullOrUndefined (NextToken), "TotalCount" :: NullOrUndefined (TotalCount) }
+  = SearchUsersResponse { "Users" :: Maybe (UserDataList), "NextToken" :: Maybe (NextToken), "TotalCount" :: Maybe (TotalCount) }
 ```
 
 ##### Instances
@@ -2707,7 +2707,7 @@ Constructs SearchUsersResponse from required parameters
 #### `newSearchUsersResponse'`
 
 ``` purescript
-newSearchUsersResponse' :: ({ "Users" :: NullOrUndefined (UserDataList), "NextToken" :: NullOrUndefined (NextToken), "TotalCount" :: NullOrUndefined (TotalCount) } -> { "Users" :: NullOrUndefined (UserDataList), "NextToken" :: NullOrUndefined (NextToken), "TotalCount" :: NullOrUndefined (TotalCount) }) -> SearchUsersResponse
+newSearchUsersResponse' :: ({ "Users" :: Maybe (UserDataList), "NextToken" :: Maybe (NextToken), "TotalCount" :: Maybe (TotalCount) } -> { "Users" :: Maybe (UserDataList), "NextToken" :: Maybe (NextToken), "TotalCount" :: Maybe (TotalCount) }) -> SearchUsersResponse
 ```
 
 Constructs SearchUsersResponse's fields from required parameters
@@ -2716,7 +2716,7 @@ Constructs SearchUsersResponse's fields from required parameters
 
 ``` purescript
 newtype SendInvitationRequest
-  = SendInvitationRequest { "UserArn" :: NullOrUndefined (Arn) }
+  = SendInvitationRequest { "UserArn" :: Maybe (Arn) }
 ```
 
 ##### Instances
@@ -2739,7 +2739,7 @@ Constructs SendInvitationRequest from required parameters
 #### `newSendInvitationRequest'`
 
 ``` purescript
-newSendInvitationRequest' :: ({ "UserArn" :: NullOrUndefined (Arn) } -> { "UserArn" :: NullOrUndefined (Arn) }) -> SendInvitationRequest
+newSendInvitationRequest' :: ({ "UserArn" :: Maybe (Arn) } -> { "UserArn" :: Maybe (Arn) }) -> SendInvitationRequest
 ```
 
 Constructs SendInvitationRequest's fields from required parameters
@@ -2764,7 +2764,7 @@ Encode SendInvitationResponse
 
 ``` purescript
 newtype SkillGroup
-  = SkillGroup { "SkillGroupArn" :: NullOrUndefined (Arn), "SkillGroupName" :: NullOrUndefined (SkillGroupName), "Description" :: NullOrUndefined (SkillGroupDescription) }
+  = SkillGroup { "SkillGroupArn" :: Maybe (Arn), "SkillGroupName" :: Maybe (SkillGroupName), "Description" :: Maybe (SkillGroupDescription) }
 ```
 
 <p>A skill group with attributes.</p>
@@ -2789,7 +2789,7 @@ Constructs SkillGroup from required parameters
 #### `newSkillGroup'`
 
 ``` purescript
-newSkillGroup' :: ({ "SkillGroupArn" :: NullOrUndefined (Arn), "SkillGroupName" :: NullOrUndefined (SkillGroupName), "Description" :: NullOrUndefined (SkillGroupDescription) } -> { "SkillGroupArn" :: NullOrUndefined (Arn), "SkillGroupName" :: NullOrUndefined (SkillGroupName), "Description" :: NullOrUndefined (SkillGroupDescription) }) -> SkillGroup
+newSkillGroup' :: ({ "SkillGroupArn" :: Maybe (Arn), "SkillGroupName" :: Maybe (SkillGroupName), "Description" :: Maybe (SkillGroupDescription) } -> { "SkillGroupArn" :: Maybe (Arn), "SkillGroupName" :: Maybe (SkillGroupName), "Description" :: Maybe (SkillGroupDescription) }) -> SkillGroup
 ```
 
 Constructs SkillGroup's fields from required parameters
@@ -2798,7 +2798,7 @@ Constructs SkillGroup's fields from required parameters
 
 ``` purescript
 newtype SkillGroupData
-  = SkillGroupData { "SkillGroupArn" :: NullOrUndefined (Arn), "SkillGroupName" :: NullOrUndefined (SkillGroupName), "Description" :: NullOrUndefined (SkillGroupDescription) }
+  = SkillGroupData { "SkillGroupArn" :: Maybe (Arn), "SkillGroupName" :: Maybe (SkillGroupName), "Description" :: Maybe (SkillGroupDescription) }
 ```
 
 <p>The attributes of a skill group.</p>
@@ -2823,7 +2823,7 @@ Constructs SkillGroupData from required parameters
 #### `newSkillGroupData'`
 
 ``` purescript
-newSkillGroupData' :: ({ "SkillGroupArn" :: NullOrUndefined (Arn), "SkillGroupName" :: NullOrUndefined (SkillGroupName), "Description" :: NullOrUndefined (SkillGroupDescription) } -> { "SkillGroupArn" :: NullOrUndefined (Arn), "SkillGroupName" :: NullOrUndefined (SkillGroupName), "Description" :: NullOrUndefined (SkillGroupDescription) }) -> SkillGroupData
+newSkillGroupData' :: ({ "SkillGroupArn" :: Maybe (Arn), "SkillGroupName" :: Maybe (SkillGroupName), "Description" :: Maybe (SkillGroupDescription) } -> { "SkillGroupArn" :: Maybe (Arn), "SkillGroupName" :: Maybe (SkillGroupName), "Description" :: Maybe (SkillGroupDescription) }) -> SkillGroupData
 ```
 
 Constructs SkillGroupData's fields from required parameters
@@ -2928,7 +2928,7 @@ Encode SkillName
 
 ``` purescript
 newtype SkillSummary
-  = SkillSummary { "SkillId" :: NullOrUndefined (SkillId), "SkillName" :: NullOrUndefined (SkillName), "SupportsLinking" :: NullOrUndefined (Boolean) }
+  = SkillSummary { "SkillId" :: Maybe (SkillId), "SkillName" :: Maybe (SkillName), "SupportsLinking" :: Maybe (Boolean) }
 ```
 
 <p>The summary of skills.</p>
@@ -2953,7 +2953,7 @@ Constructs SkillSummary from required parameters
 #### `newSkillSummary'`
 
 ``` purescript
-newSkillSummary' :: ({ "SkillId" :: NullOrUndefined (SkillId), "SkillName" :: NullOrUndefined (SkillName), "SupportsLinking" :: NullOrUndefined (Boolean) } -> { "SkillId" :: NullOrUndefined (SkillId), "SkillName" :: NullOrUndefined (SkillName), "SupportsLinking" :: NullOrUndefined (Boolean) }) -> SkillSummary
+newSkillSummary' :: ({ "SkillId" :: Maybe (SkillId), "SkillName" :: Maybe (SkillName), "SupportsLinking" :: Maybe (Boolean) } -> { "SkillId" :: Maybe (SkillId), "SkillName" :: Maybe (SkillName), "SupportsLinking" :: Maybe (Boolean) }) -> SkillSummary
 ```
 
 Constructs SkillSummary's fields from required parameters
@@ -3076,7 +3076,7 @@ Encode SortValue
 
 ``` purescript
 newtype StartDeviceSyncRequest
-  = StartDeviceSyncRequest { "RoomArn" :: NullOrUndefined (Arn), "DeviceArn" :: NullOrUndefined (Arn), "Features" :: Features }
+  = StartDeviceSyncRequest { "RoomArn" :: Maybe (Arn), "DeviceArn" :: Maybe (Arn), "Features" :: Features }
 ```
 
 ##### Instances
@@ -3099,7 +3099,7 @@ Constructs StartDeviceSyncRequest from required parameters
 #### `newStartDeviceSyncRequest'`
 
 ``` purescript
-newStartDeviceSyncRequest' :: Features -> ({ "RoomArn" :: NullOrUndefined (Arn), "DeviceArn" :: NullOrUndefined (Arn), "Features" :: Features } -> { "RoomArn" :: NullOrUndefined (Arn), "DeviceArn" :: NullOrUndefined (Arn), "Features" :: Features }) -> StartDeviceSyncRequest
+newStartDeviceSyncRequest' :: Features -> ({ "RoomArn" :: Maybe (Arn), "DeviceArn" :: Maybe (Arn), "Features" :: Features } -> { "RoomArn" :: Maybe (Arn), "DeviceArn" :: Maybe (Arn), "Features" :: Features }) -> StartDeviceSyncRequest
 ```
 
 Constructs StartDeviceSyncRequest's fields from required parameters
@@ -3124,7 +3124,7 @@ Encode StartDeviceSyncResponse
 
 ``` purescript
 newtype Tag
-  = Tag { "Key" :: NullOrUndefined (TagKey), "Value" :: NullOrUndefined (TagValue) }
+  = Tag { "Key" :: Maybe (TagKey), "Value" :: Maybe (TagValue) }
 ```
 
 <p>A key-value pair that can be associated with a resource. </p>
@@ -3149,7 +3149,7 @@ Constructs Tag from required parameters
 #### `newTag'`
 
 ``` purescript
-newTag' :: ({ "Key" :: NullOrUndefined (TagKey), "Value" :: NullOrUndefined (TagValue) } -> { "Key" :: NullOrUndefined (TagKey), "Value" :: NullOrUndefined (TagValue) }) -> Tag
+newTag' :: ({ "Key" :: Maybe (TagKey), "Value" :: Maybe (TagValue) } -> { "Key" :: Maybe (TagKey), "Value" :: Maybe (TagValue) }) -> Tag
 ```
 
 Constructs Tag's fields from required parameters
@@ -3366,7 +3366,7 @@ Encode UntagResourceResponse
 
 ``` purescript
 newtype UpdateDeviceRequest
-  = UpdateDeviceRequest { "DeviceArn" :: NullOrUndefined (Arn), "DeviceName" :: NullOrUndefined (DeviceName) }
+  = UpdateDeviceRequest { "DeviceArn" :: Maybe (Arn), "DeviceName" :: Maybe (DeviceName) }
 ```
 
 ##### Instances
@@ -3389,7 +3389,7 @@ Constructs UpdateDeviceRequest from required parameters
 #### `newUpdateDeviceRequest'`
 
 ``` purescript
-newUpdateDeviceRequest' :: ({ "DeviceArn" :: NullOrUndefined (Arn), "DeviceName" :: NullOrUndefined (DeviceName) } -> { "DeviceArn" :: NullOrUndefined (Arn), "DeviceName" :: NullOrUndefined (DeviceName) }) -> UpdateDeviceRequest
+newUpdateDeviceRequest' :: ({ "DeviceArn" :: Maybe (Arn), "DeviceName" :: Maybe (DeviceName) } -> { "DeviceArn" :: Maybe (Arn), "DeviceName" :: Maybe (DeviceName) }) -> UpdateDeviceRequest
 ```
 
 Constructs UpdateDeviceRequest's fields from required parameters
@@ -3414,7 +3414,7 @@ Encode UpdateDeviceResponse
 
 ``` purescript
 newtype UpdateProfileRequest
-  = UpdateProfileRequest { "ProfileArn" :: NullOrUndefined (Arn), "ProfileName" :: NullOrUndefined (ProfileName), "Timezone" :: NullOrUndefined (Timezone), "Address" :: NullOrUndefined (Address), "DistanceUnit" :: NullOrUndefined (DistanceUnit), "TemperatureUnit" :: NullOrUndefined (TemperatureUnit), "WakeWord" :: NullOrUndefined (WakeWord), "SetupModeDisabled" :: NullOrUndefined (Boolean), "MaxVolumeLimit" :: NullOrUndefined (MaxVolumeLimit), "PSTNEnabled" :: NullOrUndefined (Boolean) }
+  = UpdateProfileRequest { "ProfileArn" :: Maybe (Arn), "ProfileName" :: Maybe (ProfileName), "Timezone" :: Maybe (Timezone), "Address" :: Maybe (Address), "DistanceUnit" :: Maybe (DistanceUnit), "TemperatureUnit" :: Maybe (TemperatureUnit), "WakeWord" :: Maybe (WakeWord), "SetupModeDisabled" :: Maybe (Boolean), "MaxVolumeLimit" :: Maybe (MaxVolumeLimit), "PSTNEnabled" :: Maybe (Boolean) }
 ```
 
 ##### Instances
@@ -3437,7 +3437,7 @@ Constructs UpdateProfileRequest from required parameters
 #### `newUpdateProfileRequest'`
 
 ``` purescript
-newUpdateProfileRequest' :: ({ "ProfileArn" :: NullOrUndefined (Arn), "ProfileName" :: NullOrUndefined (ProfileName), "Timezone" :: NullOrUndefined (Timezone), "Address" :: NullOrUndefined (Address), "DistanceUnit" :: NullOrUndefined (DistanceUnit), "TemperatureUnit" :: NullOrUndefined (TemperatureUnit), "WakeWord" :: NullOrUndefined (WakeWord), "SetupModeDisabled" :: NullOrUndefined (Boolean), "MaxVolumeLimit" :: NullOrUndefined (MaxVolumeLimit), "PSTNEnabled" :: NullOrUndefined (Boolean) } -> { "ProfileArn" :: NullOrUndefined (Arn), "ProfileName" :: NullOrUndefined (ProfileName), "Timezone" :: NullOrUndefined (Timezone), "Address" :: NullOrUndefined (Address), "DistanceUnit" :: NullOrUndefined (DistanceUnit), "TemperatureUnit" :: NullOrUndefined (TemperatureUnit), "WakeWord" :: NullOrUndefined (WakeWord), "SetupModeDisabled" :: NullOrUndefined (Boolean), "MaxVolumeLimit" :: NullOrUndefined (MaxVolumeLimit), "PSTNEnabled" :: NullOrUndefined (Boolean) }) -> UpdateProfileRequest
+newUpdateProfileRequest' :: ({ "ProfileArn" :: Maybe (Arn), "ProfileName" :: Maybe (ProfileName), "Timezone" :: Maybe (Timezone), "Address" :: Maybe (Address), "DistanceUnit" :: Maybe (DistanceUnit), "TemperatureUnit" :: Maybe (TemperatureUnit), "WakeWord" :: Maybe (WakeWord), "SetupModeDisabled" :: Maybe (Boolean), "MaxVolumeLimit" :: Maybe (MaxVolumeLimit), "PSTNEnabled" :: Maybe (Boolean) } -> { "ProfileArn" :: Maybe (Arn), "ProfileName" :: Maybe (ProfileName), "Timezone" :: Maybe (Timezone), "Address" :: Maybe (Address), "DistanceUnit" :: Maybe (DistanceUnit), "TemperatureUnit" :: Maybe (TemperatureUnit), "WakeWord" :: Maybe (WakeWord), "SetupModeDisabled" :: Maybe (Boolean), "MaxVolumeLimit" :: Maybe (MaxVolumeLimit), "PSTNEnabled" :: Maybe (Boolean) }) -> UpdateProfileRequest
 ```
 
 Constructs UpdateProfileRequest's fields from required parameters
@@ -3462,7 +3462,7 @@ Encode UpdateProfileResponse
 
 ``` purescript
 newtype UpdateRoomRequest
-  = UpdateRoomRequest { "RoomArn" :: NullOrUndefined (Arn), "RoomName" :: NullOrUndefined (RoomName), "Description" :: NullOrUndefined (RoomDescription), "ProviderCalendarId" :: NullOrUndefined (ProviderCalendarId), "ProfileArn" :: NullOrUndefined (Arn) }
+  = UpdateRoomRequest { "RoomArn" :: Maybe (Arn), "RoomName" :: Maybe (RoomName), "Description" :: Maybe (RoomDescription), "ProviderCalendarId" :: Maybe (ProviderCalendarId), "ProfileArn" :: Maybe (Arn) }
 ```
 
 ##### Instances
@@ -3485,7 +3485,7 @@ Constructs UpdateRoomRequest from required parameters
 #### `newUpdateRoomRequest'`
 
 ``` purescript
-newUpdateRoomRequest' :: ({ "RoomArn" :: NullOrUndefined (Arn), "RoomName" :: NullOrUndefined (RoomName), "Description" :: NullOrUndefined (RoomDescription), "ProviderCalendarId" :: NullOrUndefined (ProviderCalendarId), "ProfileArn" :: NullOrUndefined (Arn) } -> { "RoomArn" :: NullOrUndefined (Arn), "RoomName" :: NullOrUndefined (RoomName), "Description" :: NullOrUndefined (RoomDescription), "ProviderCalendarId" :: NullOrUndefined (ProviderCalendarId), "ProfileArn" :: NullOrUndefined (Arn) }) -> UpdateRoomRequest
+newUpdateRoomRequest' :: ({ "RoomArn" :: Maybe (Arn), "RoomName" :: Maybe (RoomName), "Description" :: Maybe (RoomDescription), "ProviderCalendarId" :: Maybe (ProviderCalendarId), "ProfileArn" :: Maybe (Arn) } -> { "RoomArn" :: Maybe (Arn), "RoomName" :: Maybe (RoomName), "Description" :: Maybe (RoomDescription), "ProviderCalendarId" :: Maybe (ProviderCalendarId), "ProfileArn" :: Maybe (Arn) }) -> UpdateRoomRequest
 ```
 
 Constructs UpdateRoomRequest's fields from required parameters
@@ -3510,7 +3510,7 @@ Encode UpdateRoomResponse
 
 ``` purescript
 newtype UpdateSkillGroupRequest
-  = UpdateSkillGroupRequest { "SkillGroupArn" :: NullOrUndefined (Arn), "SkillGroupName" :: NullOrUndefined (SkillGroupName), "Description" :: NullOrUndefined (SkillGroupDescription) }
+  = UpdateSkillGroupRequest { "SkillGroupArn" :: Maybe (Arn), "SkillGroupName" :: Maybe (SkillGroupName), "Description" :: Maybe (SkillGroupDescription) }
 ```
 
 ##### Instances
@@ -3533,7 +3533,7 @@ Constructs UpdateSkillGroupRequest from required parameters
 #### `newUpdateSkillGroupRequest'`
 
 ``` purescript
-newUpdateSkillGroupRequest' :: ({ "SkillGroupArn" :: NullOrUndefined (Arn), "SkillGroupName" :: NullOrUndefined (SkillGroupName), "Description" :: NullOrUndefined (SkillGroupDescription) } -> { "SkillGroupArn" :: NullOrUndefined (Arn), "SkillGroupName" :: NullOrUndefined (SkillGroupName), "Description" :: NullOrUndefined (SkillGroupDescription) }) -> UpdateSkillGroupRequest
+newUpdateSkillGroupRequest' :: ({ "SkillGroupArn" :: Maybe (Arn), "SkillGroupName" :: Maybe (SkillGroupName), "Description" :: Maybe (SkillGroupDescription) } -> { "SkillGroupArn" :: Maybe (Arn), "SkillGroupName" :: Maybe (SkillGroupName), "Description" :: Maybe (SkillGroupDescription) }) -> UpdateSkillGroupRequest
 ```
 
 Constructs UpdateSkillGroupRequest's fields from required parameters
@@ -3558,7 +3558,7 @@ Encode UpdateSkillGroupResponse
 
 ``` purescript
 newtype UserData
-  = UserData { "UserArn" :: NullOrUndefined (Arn), "FirstName" :: NullOrUndefined (User_FirstName'), "LastName" :: NullOrUndefined (User_LastName'), "Email" :: NullOrUndefined (Email), "EnrollmentStatus" :: NullOrUndefined (EnrollmentStatus), "EnrollmentId" :: NullOrUndefined (EnrollmentId) }
+  = UserData { "UserArn" :: Maybe (Arn), "FirstName" :: Maybe (User_FirstName'), "LastName" :: Maybe (User_LastName'), "Email" :: Maybe (Email), "EnrollmentStatus" :: Maybe (EnrollmentStatus), "EnrollmentId" :: Maybe (EnrollmentId) }
 ```
 
 <p>Information related to a user.</p>
@@ -3583,7 +3583,7 @@ Constructs UserData from required parameters
 #### `newUserData'`
 
 ``` purescript
-newUserData' :: ({ "UserArn" :: NullOrUndefined (Arn), "FirstName" :: NullOrUndefined (User_FirstName'), "LastName" :: NullOrUndefined (User_LastName'), "Email" :: NullOrUndefined (Email), "EnrollmentStatus" :: NullOrUndefined (EnrollmentStatus), "EnrollmentId" :: NullOrUndefined (EnrollmentId) } -> { "UserArn" :: NullOrUndefined (Arn), "FirstName" :: NullOrUndefined (User_FirstName'), "LastName" :: NullOrUndefined (User_LastName'), "Email" :: NullOrUndefined (Email), "EnrollmentStatus" :: NullOrUndefined (EnrollmentStatus), "EnrollmentId" :: NullOrUndefined (EnrollmentId) }) -> UserData
+newUserData' :: ({ "UserArn" :: Maybe (Arn), "FirstName" :: Maybe (User_FirstName'), "LastName" :: Maybe (User_LastName'), "Email" :: Maybe (Email), "EnrollmentStatus" :: Maybe (EnrollmentStatus), "EnrollmentId" :: Maybe (EnrollmentId) } -> { "UserArn" :: Maybe (Arn), "FirstName" :: Maybe (User_FirstName'), "LastName" :: Maybe (User_LastName'), "Email" :: Maybe (Email), "EnrollmentStatus" :: Maybe (EnrollmentStatus), "EnrollmentId" :: Maybe (EnrollmentId) }) -> UserData
 ```
 
 Constructs UserData's fields from required parameters
